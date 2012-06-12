@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manatsawin Hanmongkolchai</title>
+	<script src="//whs.whs.in.th/jquery/jq.js"></script>
+	<script src="/jquery.isotope.min.js"></script>
+	<link rel="stylesheet" href="/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Puritan&v1' rel='stylesheet' type='text/css'>
+	<style>
+.achievement{
+	width: 200px;
+	display: block;
+	margin: 20px;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+	</style>
+	<script>
+$(window).load(function(){
+	$("#container").isotope({
+		itemSelector: ".achievement"
+	});
+})
+	</script>
+	<script src="/script.js"></script>
+</head>
+<body>
+	<div id="headbar" class="headbar">
+		<a href="/toc.html">Contents</a>
+	</div>
+	<div class="pad">
+		<h1>Achievements</h1>
+		<div id="container">
+			<img src="/achievements/achievements.jpg" class="achievement">
+			<img src="/achievements/achievements 001.jpg" class="achievement">
+			<img src="/achievements/achievements 002.jpg" class="achievement">
+			<img src="/achievements/achievements 003.jpg" class="achievement">
+			<img src="/achievements/achievements 004.jpg" class="achievement">
+			<img src="/achievements/achievements 005.jpg" class="achievement">
+			<img src="/achievements/achievements 006.jpg" class="achievement">
+			<img src="/achievements/achievements 007.jpg" class="achievement">
+			<img src="/achievements/achievements 008.jpg" class="achievement">
+			<img src="/achievements/achievements 009.jpg" class="achievement">
+			<img src="/achievements/achievements 010.jpg" class="achievement">
+			<img src="/achievements/achievements 011.jpg" class="achievement">
+			<img src="/achievements/achievements 012.jpg" class="achievement">
+			<img src="/achievements/achievements 013.jpg" class="achievement">
+			<img src="/achievements/achievements 014.jpg" class="achievement">
+			<img src="/achievements/achievements 015.jpg" class="achievement">
+			<img src="/achievements/achievements 016.jpg" class="achievement">
+			<img src="/achievements/achievements 017.jpg" class="achievement">
+		</div>
+	</div>
+	<div id="footbar" class="headbar"></div>
+</body>
+</html>

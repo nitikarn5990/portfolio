@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Past works | Manatsawin Hanmongkolchai</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script>
+$(function(){
+	$(window).resize(function(){
+		$(".lightbox").css("height", $(window).height() * 80 / 100)
+	}).resize();
+	$(window).scroll(function(){
+		$(".lightbox").css("margin-top", $(window).scrollTop()+($(window).height() * 5 / 100));
+		$("#lbhelp").css("top", $(window).height() + $(window).scrollTop() - 80);
+	}).scroll();
+	$(".box a").click(function(){
+		$(window).scroll();
+		$("<div class='fake box' />").appendTo('.wrapper').css({
+			"position": "absolute",
+			"top": $(this).parent().position().top,
+			"left": $(this).parent().position().left,
+			"height": $(this).height(),
+			"width": $(this).height(),
+			"z-index": 1100,
+		}).animate({
+			"width": 800,
+			"height": $(window).height() * 80 / 100,
+			"top": $(window).scrollTop()+($(window).height() * 5 / 100),
+			"left": $(window).width() * 15 / 100,
+			"background": "white",
+			"opacity": 0
+		}, 500, function(){
+			$(this).remove();
+		});
+		$("body").css("overflow", "hidden");
+		$($(this).attr("href")).show();
+		window.history.pushState(null, $("h1", $(this).attr("href")).html()+" | Past works", "works.html"+$(this).attr("href"));
+		$(".scrim").fadeIn(600);
+		return false;
+	})
+	$(".lightbox").hide();
+	$(".scrim").click(function(){
+		window.history.replaceState(null, "Past works | Manatsawin Hanmongkolchai", "works.html");
+		$("body").css("overflow", "auto");
+		$(this).fadeOut(function(){
+			$(".lightbox").hide();
+		});
+	});
+	window.onpopstate = function(){
+		if(window.location.hash == ""){
+			$(".scrim").click();
+		}else if(window.location.hash.match(/^#([a-z0-9]+)$/) && $(window.location.hash).length == 1){
+			$(".scrim").show();
+			$(window).scroll();
+			$(window.location.hash).show();
+		}
+	}
+	if(window.location.hash != "" && window.location.hash.match(/^#([a-z0-9]+)$/) && $(window.location.hash).length == 1){
+		$(".scrim").show();
+		$(window).scroll();
+		$(window.location.hash).show();
+	}
+})
+	</script>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body class="works">
+<header>
+	<a href="index.html" class="backbtn">Back</a>
+	<h1>Past works</h1>
+</header>
+<div class="wrapper">
+	<div class="box">
+		<a href="#twitica">
+			<img src="work/twitica.png">
+			<h2>Twitica Desktop (2010-Present)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#bd2">
+			<img src="work/bd2.in.th.png">
+			<h2>bd2.in.th (2010-Present)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#ucbiz">
+			<img src="work/ucbiz.jpg">
+			<h2>Ubuntuclub &amp; ucbiz (2008-Present)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#physics">
+			<img src="work/physics.png">
+			<h2>Online Physics Exam (2011)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#sreg">
+			<img src="work/sreg.png">
+			<h2>Siriraj Joint Registry (2011)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#valvearg">
+			<img src="work/arg.png">
+			<h2>Valve ARG thank you whiteboard (2011)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#noke">
+			<img src="work/noke.png">
+			<h2>Noke (2011)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#ovzcp">
+			<img src="work/ovzcp.png">
+			<h2>OvzCP (2010-2011)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#tunyalit">
+			<img src="work/tunyalit.png">
+			<h2>Tunyalit Studio (2010-2011)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#bd2wifi">
+			<img src="work/bd2wifi.png">
+			<h2>Bodin 2 Wifi (2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#dstwitt">
+			<img src="work/dstwitt.png">
+			<h2>DSTwitt (2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#swc">
+			<img src="work/swc.png">
+			<h2>HTML5 Learning System (2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#dengine">
+			<img src="work/dengine.png">
+			<h2>DEngine (2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#bd2exam">
+			<img src="work/bd2score.png">
+			<h2>Online exam score viewer (2008-2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#cdpb">
+			<img src="work/cdpb.png">
+			<h2>Club Distro Package Builder (2008)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#trendy">
+			<img src="work/airsoft.png">
+			<h2>Trendy Airsoft Shop (2008)</h2>
+		</a>
+	</div>
+	<div style="padding-top: 20px; clear: both;"></div>
+</div>
+<div class="scrim">
+	<div class="lightbox" id="twitica">
+		<h1>Twitica Desktop</h1>
+		<h2>2010-Present</h2>
+		<img src="work/twitica.png" style="float: right;">
+		<p>
+			<a href="http://twitica.whs.in.th">http://twitica.whs.in.th</a>
+		</p>
+		<p>
+			If you combine the compactness of mobile Twitter client with keyboard shortcuts and some magic, you get Twitica Desktop.
+		</p>
+		<p>
+			Twitica Desktop is now being used by over 200 users.
+		</p>
+		<ul>
+			<li><strong>Technology:</strong> HTML5, CSS3, Chrome Extension, Twitter API</li>
+			<li><strong>Language:</strong> JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="bd2">
+		<h1>bd2.in.th</h1>
+		<h2>2010-Present</h2>
+		<img src="work/bd2.in.th.png" style="float: right;">
+		<p>
+			<a href="http://bd2.in.th">http://bd2.in.th</a>
+		</p>
+		<p>
+			Bodindecha 2 Student and alumni community. Consists of <a href="http://bd2.in.th">news site</a>, <a href="http://board.bd2.in.th">forum</a> and <a href="http://bd2.in.th/live/">online radio station</a>.
+		</p>
+		<p>
+			Behind the scene, <a href="http://bd2.in.th/live/">Blue Wave</a> (our online radio system) is a very complicated system. It started from IRC webchat based site with an IRC bot running in XChat to handle song requests, and have been evolved to a custom chat system with seperated song request system. The chat system used to have Facebook authentication and School's student database authentication using page scrapping. The latest version of chat integrates with WordPress and use Bayaux to handle realtime messaging.
+		</p>
+		<ul>
+			<li><strong>Technology:</strong> HTML5, CSS3, WordPress, VanillaForums, Shoutcast, IRC, Twitter API, Facebook Open Graph</li>
+			<li><strong>Language:</strong> PHP, JavaScript, Python</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="bd2exam">
+		<h1>Bodindecha 2 online exam score viewer</h1>
+		<h2>2008-2009</h2>
+		<img src="work/bd2score.png" style="float: right;">
+		<p>
+			<a href="http://bodin2.ac.th/test/">http://bodin2.ac.th/test/</a>
+		</p>
+		<p>
+			My school wanted to show students' exam score as soon as possible as they're already using machines to process the answer cards. This application have evolved from the first version that used MooTools and supported only Internet Explorer (as Internet Explorer is the only browser that can read AJAX data in the correct encoding) to the second version, using jQuery UI and the character encoding is handled server-side.
+		</p>
+		<p>I also gave permission to Minprasat Wittaya School to use the same script in their website. It can be viewed at <a href="http://www.minprasatwitaya.ac.th/test/index.php">http://www.minprasatwitaya.ac.th/test/index.php</a></p>
+		<ul>
+			<li><strong>Language:</strong> PHP, JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="valvearg">
+		<h1>Valve ARG test subject thank you whiteboard</h1>
+		<h2>2011</h2>
+		<img src="work/arg.png" style="float: right;">
+		<p>
+			<a href="http://valvearg.com/thankyou/whiteboard/">http://valvearg.com/thankyou/whiteboard/</a>
+		</p>
+		<p>
+			Marketing the launch of a highly anticipated game Portal 2, Valve cooperated with indie game developers created an ARG. (Alternate Reality Game) The ARG starts on 1 April 2011. On that day, various indie games have been updated. Players found that new, out of place stuff have been added to the games that could form cryptic clues that ultimately leads to <a href="http://www.aperturescience.com/glados@home/">GLaDOS@Home</a>.
+		</p>
+		<p>
+			During the ARG, events were recorded in the <a href="http://valvearg.com">ValveARG wiki</a>. After the ARG have ended, one of the key player decided to ask the community to create a thank you page. Few days have passed with no news from the team. On April 22<sup>nd</sup> 2011, a countdown appeared on ValveARG.com. Presses guessed it was a countdown to a DLC. After the countdown ended, people start flooding the message board with thank you messages to Valve. Over 1,722 people have shown their gratitude on the message board. The thank you messages were read by the indie developers and Valve.
+		</p>
+		<ul>
+			<li><strong>Technology:</strong> Steam API, OpenID, HTML5 Audio, CSS3</li>
+			<li><strong>Language:</strong> PHP</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="sreg">
+		<h1>Siriraj Joint Registry</h1>
+		<h2>2011</h2>
+		<img src="work/sreg.png" style="float: right;">
+		<p>Developed for the Siriraj Orthopedic department, this web-based application stores medical data and aid doctors to search the records easily.</p>
+		<ul>
+			<li><strong>Technology:</strong> Django</li>
+			<li><strong>Language:</strong> Python</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="noke">
+		<h1>Noke</h1>
+		<h2>2011</h2>
+		<img src="work/noke.png" style="float: right;">
+		<p><a href="https://github.com/whs/Noke">https://github.com/whs/Noke</a></p>
+		<p>Karaoke is a popular Thais pastime. So there're softwares for playing MIDI karaoke on Windows. However, the 3 file MIDI format originated from Nick Karaoke is not supported on Linux karaoke players so I made this web-based application to provide this feature.</p>
+		<p>Noke stands for Node+Karaoke. It uses midicore library to play MIDI on the host computer, and a Nodejs server polls midicore then broadcast it to WebSocket clients. The client then retrieve parsed lyric and cursor file and display the correct line and position according to the data received.</p>
+		<ul>
+			<li><strong>Technology:</strong> Node.js, WebSocket, UDP, CSS3</li>
+			<li><strong>Language:</strong> JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="ovzcp">
+		<h1>OvzCP</h1>
+		<h2>2010-2011</h2>
+		<img src="work/ovzcp.png" style="float: right;">
+		<p><strong>Second prize winner, National Software Competition 2011<br />Runner up, Thailand ICT Award 2011</strong></p>
+		<p><a href="http://whs.whs.in.th/ovzcp/">http://whs.whs.in.th/ovzcp/</a></p>
+		<p>OvzCP is a web-based control panel for OpenVZ, a virtualization system for Linux. OvzCP is aimed to be user friendly by supporting internationalization and visualizations. OvzCP does not reinvent the wheels, but integrate many existing services such as Munin and Varnish.</p>
+		<p>One of the most awesome feature of OvzCP is its mobile site. In the mobile site users can change their Varnish configuration and restart their container. Users also can access to their data using OvzCP API.</p>
+		<p>OvzCP won the second prize from 13<sup>th</sup> National Software Competition and runner-up in Thailand ICT Award 2011</p>
+		<ul>
+			<li><strong>Technology:</strong> OpenVZ, Varnish, jQuery Mobile, OpenID</li>
+			<li><strong>Language:</strong> Python, Shell Script</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="dstwitt">
+		<h1>DSTwitt</h1>
+		<h2>2009</h2>
+		<p><a href="https://github.com/whs/Twitica-Old-DS">https://github.com/whs/Twitica-Old-DS</a></p>
+		<div style="text-align: center;"><img src="work/dstwitt.png"></div>
+		<p>Nintendo DS have a browser called "Nintendo DS browser". It also supports JavaScript. However Twitter's mobile web is very slow so I decided to write my own client. It uses text to image to workaround lack of Thai characters support. No longer maintained as I have moved to TweetDeck for Android.</p>
+		<ul>
+			<li><strong>Technology:</strong> GD, Twitter API, CSS Mobile profile</li>
+			<li><strong>Language:</strong> PHP and a very little bit of JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="cdpb">
+		<h1>Club Distro Package Builder</h1>
+		<h2>2008</h2>
+		<p><strong>Final round, National Software Competition 2009</strong></p>
+		<p><a href="http://whs.whs.in.th/cdpb.tar.bz2">http://whs.whs.in.th/cdpb.tar.bz2</a></p>
+		<div style="text-align: center;"><img src="work/cdpb.png"></div>
+		<p>Why build it yourself when you got the cloud? CDPB enable you to upload your package to a server and the server would build it. You even get a Debian repository for free. This software passed to the final round of National Software Competition 2009.</p>
+		<ul>
+			<li><strong>Technology:</strong> Custom FTP server</li>
+			<li><strong>Language:</strong> Python</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="trendy">
+		<h1>Trendy Airsoft Shop</h1>
+		<h2>2008</h2>
+		<img src="work/airsoft.png" style="float: right;">
+		<p>With cooperation from <a href="http://tunyalit.info">Tunyalit Studio</a></p>
+		<p>First project for a client. E-commerce site for Airsoft gun shop. Fully configurable from ini file and a custom menu format. Unlimited markdown page creation.</p>
+		<ul>
+			<li><strong>Language:</strong> Python</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="tunyalit">
+		<h1>Tunyalit Studio</h1>
+		<h2>2010-2011</h2>
+		<img src="work/tunyalit.png" style="float: right;">
+		<p>With cooperation from <a href="http://tunyalit.info">Tunyalit Studio</a></p>
+		<p><a href="http://tunyalit.info">http://tunyalit.info</a>
+		<p>Portfolio site of Tunyalit Studio</p>
+		<ul>
+			<li><strong>Language:</strong> PHP, JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="swc">
+		<h1>HTML5 Learning System</h1>
+		<h2>2009</h2>
+		<div style="text-align: center;"><img src="work/swc.png"></div>
+		<p>Developed for the Suthi Website Contest, this website was developed ahead of its time using HTML5 Video API that was available only on Chrome developer builds. It didn't recieved any award from the contest, but it is a showcase on how HTML5 could change the way we learn.</p>
+		<p>The left pane shows images that would change according to video time or any HTML content. The video can have a subtitle using JSON-based file.</p>
+		<ul>
+			<li><strong>Technology:</strong> HTML5 Video API</li>
+			<li><strong>Language:</strong> JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="dengine">
+		<h1>DEngine</h1>
+		<h2>2009</h2>
+		<img src="work/dengine.png" style="float: right">
+		<p><a href="http://whs.whs.in.th/dengine/">http://whs.whs.in.th/dengine/</a></p>
+		<p>A Drupal RPG game engine. DEngine is the engine that powers DarkWorld, one of my scrapped project. DEngine is no longer maintained and now becomes open source. Consists of mostly JavaScript code and few PHP files to provide data persistent and anti-cheat.</p>
+		<p>DEngine, in fact is not a Drupal module, but it does use Drupal's user, hook, action, word filter and database system.  DEngine requires a DEngine integration module to be installed in Drupal which provides database schema and anti-cheat mechanism.</p>
+		<ul>
+			<li><strong>Technology:</strong> CSS3, AJAX push, Drupal module</li>
+			<li><strong>Language:</strong> PHP, JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="bd2wifi">
+		<h1>Bodin 2 Wifi</h1>
+		<h2>2009</h2>
+		<img src="work/bd2wifi.png" style="float: right">
+		<p>My school used to provide free WiFi for students. However, they have stopped provide that service since the computer-related crime act is in effect. I volunteered to implements authentication gateway to get the free WiFi service up again.</p>
+		<p>The first implementation I tried is custom Squid URL rewriter along with Web.py gateway. This doesn't works well in the production environment so I have changed to pfSense and serve the captive portal from the built in Lighttpd server. The service is running quite smoothly and was actively used by students until the school hired external contractor to manage the school's network.</p>
+		<ul>
+			<li><strong>Technology:</strong> pfSense Captive Portal</li>
+			<li><strong>Language:</strong> PHP, JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="physics">
+		<h1>Online Physics Exam</h1>
+		<h2>2011</h2>
+		<img src="work/physics.png" style="float: right">
+		<p><a href="http://physics.whs.in.th/">http://physics.whs.in.th/</a></p>
+		<p>Most online exam nowadays use Hot Potato or similar software to create HTML-based exam. This seems to be outdated and the interface doesn't look attractive.</p>
+		<p>This software is my take on online exam system, using modern technologies such as AJAX, CSS3 and HTML5 APIs</p>
+		<ul>
+			<li><strong>Technology:</strong> CSS3, HTML5 History API, HTML5 Local Storage API</li>
+			<li><strong>Language:</strong> JavaScript</li>
+		</ul>
+		<br style="clear: both;">
+	</div>
+	<div class="lightbox" id="ucbiz">
+		<h1>Ubuntuclub &amp ucbiz</h1>
+		<h2>2008-Present</h2>
+		<img src="work/ucbiz.jpg" style="float: right; ">
+		<p><a href="http://forum.ubuntuclub.com/forum/action,profile/area,summary/u,555.html">http://forum.ubuntuclub.com/</a></p>
+		<p>I develop and administrate ubuntuclub.com forum. The forum have over 10,926 registered users and 142,362 posts as of October 2011.</p>
+		<p>I also work with the <a href="http://ubuntuclub.biz/team">ucbiz team</a> to organize trainings and develop projects under contracts.</p>
+		<br style="clear: both;">
+	</div>
+	<div id="lbhelp">Click anywhere to close</div>
+</div>
+</body>
+</html>

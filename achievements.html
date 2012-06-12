@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Achievements | Manatsawin Hanmongkolchai</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script>
+$(function(){
+	$(window).resize(function(){
+		$(".lightbox").css("height", $(window).height() * 80 / 100)
+	}).resize();
+	$(window).scroll(function(){
+		$(".lightbox").css("margin-top", $(window).scrollTop()+($(window).height() * 5 / 100));
+		$("#lbhelp").css("top", $(window).height() + $(window).scrollTop() - 80);
+	}).scroll();
+	$(".box a").click(function(){
+		$(window).scroll();
+		$("<div class='fake box' />").appendTo('.wrapper').css({
+			"position": "absolute",
+			"top": $(this).parent().position().top,
+			"left": $(this).parent().position().left,
+			"height": $(this).height(),
+			"width": $(this).height(),
+			"z-index": 1100,
+		}).animate({
+			"width": 800,
+			"height": $(window).height() * 80 / 100,
+			"top": $(window).scrollTop()+($(window).height() * 5 / 100),
+			"left": $(window).width() * 15 / 100,
+			"background": "white",
+			"opacity": 0
+		}, 500, function(){
+			$(this).remove();
+		});
+		$("body").css("overflow", "hidden");
+		$($(this).attr("href")).show();
+		window.history.pushState(null, $("h1", $(this).attr("href")).html()+" | Achievements", "achievements.html"+$(this).attr("href"));
+		$(".scrim").fadeIn(600);
+		return false;
+	})
+	$(".lightbox").hide();
+	$(".scrim").click(function(){
+		window.history.replaceState(null, "Achievements | Manatsawin Hanmongkolchai", "achievements.html");
+		$("body").css("overflow", "auto");
+		$(this).fadeOut(function(){
+			$(".lightbox").hide();
+		});
+	});
+	$(".scroller img").click(function(e){
+		$(".bigimg", $(this).parent().parent()).attr("src", $(this).attr("src"));
+		e.stopPropagation();
+	})
+	window.onpopstate = function(){
+		if(window.location.hash == ""){
+			$(".scrim").click();
+		}else if(window.location.hash.match(/^#([a-z0-9]+)$/) && $(window.location.hash).length == 1){
+			$(".scrim").show();
+			$(window).scroll();
+			$(window.location.hash).show();
+		}
+	}
+	if(window.location.hash != "" && window.location.hash.match(/^#([a-z0-9]+)$/) && $(window.location.hash).length == 1){
+		$(".scrim").show();
+		$(window).scroll();
+		$(window.location.hash).show();
+	}
+})
+	</script>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body class="achievements works">
+<header>
+	<a href="index.html" class="backbtn">Back</a>
+	<h1>Achievements</h1>
+</header>
+<div class="wrapper">
+	<h3>2011</h3>
+	<div class="box">
+		<a href="#nsc13">
+			<img src="achievements/nsc13.jpg">
+			<h2>NSC13 2<sup>st</sup> place (2011)</h2>
+		</a>
+	</div>
+	<br style="clear: both;">
+	<h3>2010</h3>
+	<div class="box">
+		<a href="#nlc10">
+			<img src="achievements/nlc10.jpg">
+			<h2>NLC10 server 1<sup>st</sup> place (2010)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#cutep">
+			<img src="achievements/cutep.jpg">
+			<h2>CU-TEP &amp; CU-SSEPT (2010)</h2>
+		</a>
+	</div>
+	<br style="clear: both;">
+	<h3>2009</h3>
+	<div class="box">
+		<a href="#nlc9">
+			<img src="achievements/nlc9.jpg">
+			<h2>NLC9 client 1<sup>st</sup> place (2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#nlcp">
+			<img src="achievements/nlcp1.jpg">
+			<h2>NLCP Certified Level 1 &amp; 2 (2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#nsc11">
+			<img src="achievements/nsc11.jpg">
+			<h2>NSC11 (2009)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#student">
+			<img src="achievements/student.jpg">
+			<h2>Supreme Patriarch Award (2009)</h2>
+		</a>
+	</div>
+	<br style="clear: both;">
+	<h3>2008</h3>
+	<div class="box">
+		<a href="#nlc8">
+			<img src="achievements/nlc8.jpg">
+			<h2>NLC8 client 2<sup>nd</sup> place (2008)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#html08">
+			<img src="achievements/html08.jpg">
+			<h2>HTML Web Page Competition (2008)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#qa08">
+			<img src="achievements/qa08.jpg">
+			<h2>Computer competition (2008)</h2>
+		</a>
+	</div>
+	<div class="box">
+		<a href="#robot08">
+			<img src="achievements/robot08.jpg">
+			<h2>Robot competition (2008)</h2>
+		</a>
+	</div>
+	<div style="padding-top: 20px; clear: both;"></div>
+</div>
+<div class="scrim">
+	<div class="lightbox" id="nsc13">
+		<img src="achievements/nsc13.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/nsc13.jpg">
+			<img src="achievements/nsc13-1.jpg">
+			<img src="achimg/nsc13-1.jpg">
+			<img src="achimg/nsc13-2.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="nlc10">
+		<img src="achievements/nlc10.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/nlc10.jpg">
+			<img src="achievements/nlc10-1.jpg">
+			<img src="achievements/nlc10-2.jpg">
+			<img src="achimg/nlc10-2.jpg">
+			<img src="achimg/nlc10-3.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="cutep">
+		<img src="achievements/cutep.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/cutep.jpg">
+			<img src="achievements/cussept.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="nlc9">
+		<img src="achievements/nlc9.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/nlc9.jpg">
+			<img src="achievements/nlc9-1.jpg">
+			<img src="achievements/nlc9-2.jpg">
+			<img src="achimg/nlc9-2.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="nlcp">
+		<img src="achievements/nlcp1.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/nlcp1.jpg">
+			<img src="achievements/nlcp2.jpg">
+			<img src="achimg/nlcp-1.jpg">
+			<img src="achimg/nlcp-2.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="nsc11">
+		<img src="achievements/nsc11.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/nsc11.jpg">
+			<img src="achimg/nsc11-1.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="student">
+		<img src="achievements/student.jpg" class="bigimg">
+	</div>
+	<div class="lightbox" id="nlc8">
+		<img src="achievements/nlc8.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/nlc8.jpg">
+			<img src="achimg/nlc8-1.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="html08">
+		<img src="achievements/html08.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/html08.jpg">
+			<img src="achimg/html08-1.jpg">
+		</div>
+	</div>
+	<div class="lightbox" id="qa08">
+		<img src="achievements/qa08.jpg" class="bigimg">
+	</div>
+	<div class="lightbox" id="robot08">
+		<img src="achievements/robot08.jpg" class="bigimg">
+		<div class="scroller">
+			<img src="achievements/robot08.jpg">
+			<img src="achimg/robot08-1.jpg">
+			<img src="achimg/robot08-2.jpg">
+			<img src="achimg/robot08-3.jpg">
+		</div>
+	</div>
+	<div id="lbhelp">Click anywhere to close</div>
+</div>
+</body>
+</html>

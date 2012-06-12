@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manatsawin Hanmongkolchai</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script>
+$(function(){
+	$(".images a").click(function(){
+		$("body").css("-webkit-transform-origin", $(this).position().left + " center");
+		$(this).prevAll().not(".text").css("-webkit-transform", "rotateY(90deg)");
+		$(this).nextAll().not(".text").css("-webkit-transform", "rotateY(-90deg)");
+		setTimeout(function(){
+			$(".images a").css("-webkit-transform", "none");
+		}, 1000)
+	})
+})
+	</script>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+<div class="images">
+	<div class="text">Portfolio</div>
+	<a href="bio.html" class="biobg">
+		<div class="hscrim"></div>
+		<span>Biography</span>
+	</a>
+	<a href="works.html" class="worksbg">
+		<div class="hscrim"></div>
+		<span>Past work</span>
+	</a>
+	<a href="achievements.html" class="achievementsbg">
+		<div class="hscrim"></div>
+		<span>Achievements</span>
+	</a>
+	<a href="fun.html" class="funbg">
+		<div class="hscrim"></div>
+		<span>Fun life</span>
+	</a>
+</div>
+<footer>
+	Manatsawin Hanmongkolchai
+</footer>
+<a href="credit.html" class="credit">Acknowledgements</a>
+</body>
+</html>

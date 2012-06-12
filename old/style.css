@@ -1,0 +1,45 @@
+html,body{
+	margin:0;
+	width: 100%;
+	height: 100%;
+	font-family: Puritan;
+	font-size: 16pt;
+}
+#headbar{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	text-align: center;
+}
+.headbar{
+	background: #bfb;
+	height: 8%;
+	width: 100%;
+	overflow: hidden;
+}
+#footbar{
+}
+#headbar a{
+	font-family: monospace;
+	text-decoration: none;
+	color: gray;
+	padding: 10px;
+	display: block;
+}
+.pad{
+	padding: 20px;
+	min-height: 78%;
+}
+h1,h2,h3,h4,h5,h6{
+	margin:0;
+}
+h1{
+	font-size: 32pt;
+}
+a{
+	color: #5c3;
+	text-decoration: none;
+}
+a:hover{
+	color: #8e5;
+}
