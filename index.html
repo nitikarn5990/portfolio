@@ -1,46 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Manatsawin Hanmongkolchai</title>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script>
-$(function(){
-	$(".images a").click(function(){
-		$("body").css("-webkit-transform-origin", $(this).position().left + " center");
-		$(this).prevAll().not(".text").css("-webkit-transform", "rotateY(90deg)");
-		$(this).nextAll().not(".text").css("-webkit-transform", "rotateY(-90deg)");
-		setTimeout(function(){
-			$(".images a").css("-webkit-transform", "none");
-		}, 1000)
-	})
-})
-	</script>
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="style.css">
+	<style>
+#left{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+h1{
+	font-family: "Bree Serif";
+	font-size: 54pt;
+	margin:0;
+}
+#bio{
+	margin-top: 40px;
+}
+#bio a{
+	color: inherit;
+	text-decoration: none;
+	font-weight: 600;
+}
+#box{
+	float: right;
+	width: 404px;
+	margin-right: 50px;
+	margin-top: 30px;
+}
+.box{
+	background: #fefdb9;
+	margin: 0px 2px 2px 0px;
+	width: 200px;
+	height: 180px;
+	float: left;
+	position: relative;
+}
+.box:hover{
+	background: #cde691;
+}
+.box.double{
+	float: none;
+	width: 402px;
+	clear: both;
+}
+.box a{
+	width: 100%;
+	height: 100%;
+	display: block;
+	color: inherit;
+	text-decoration: none;
+}
+.box span{
+	position: absolute;
+	text-align: right;
+	bottom: 10px; right: 10px;
+	font-size: 18pt;
+	color: #434343;
+	font-weight: 400;
+}
+	</style>
 </head>
-<body class="home">
-<div class="images">
-	<div class="text">Portfolio</div>
-	<a href="bio.html" class="biobg">
-		<div class="hscrim"></div>
-		<span>Biography</span>
-	</a>
-	<a href="works.html" class="worksbg">
-		<div class="hscrim"></div>
-		<span>Past work</span>
-	</a>
-	<a href="achievements.html" class="achievementsbg">
-		<div class="hscrim"></div>
-		<span>Achievements</span>
-	</a>
-	<a href="fun.html" class="funbg">
-		<div class="hscrim"></div>
-		<span>Fun life</span>
-	</a>
-</div>
-<footer>
-	Manatsawin Hanmongkolchai
-</footer>
-<a href="credit.html" class="credit">Acknowledgements</a>
+<body>
+	<div id="box">
+		<div class="double box"><a href="bio.html"><span>Biography</span></a></div>
+		<div class="box"><a href="works.html"><span>Works</span></a></div>
+		<div class="box"><a href="achievements.html"><span>Achievements</span></a></div>
+	</div>
+	<div id="left">
+		<h1>Manatsawin Hanmongkolchai</h1>
+		<div id="bio">
+			<p>
+				<div>A student from <a href="http://www.bodin2.ac.th" target="_blank">Bodindecha (Sing Singhaseni) 2 School</a>.</div>
+				<div>Knows <strong>Thai, English</strong>. Learning <strong>Japanese</strong>.</div>
+				<div>Codes <strong>Python, PHP</strong> and <strong>JavaScript</strong>.</div>
+				<div>Prefers <strong>OSX</strong> for Desktop, <strong>Debian GNU/Linux</strong> for server.</div>
+			</p>
+
+			<!-- Todo: Make these icons -->
+			<ul class="unlist">
+				<li><a href="http://whs.in.th">http://whs.in.th</a></li>
+				<li><a href="https://twitter.com/awkwin">https://twitter.com/awkwin</a></li>
+				<li><a href="https://facebook.com/whsinth">https://facebook.com/whsinth</a></li>
+				<li><a href="https://github.com/whs">https://github.com/whs</a></li>
+			</ul>
+		</div>
+	</div>
 </body>
 </html>

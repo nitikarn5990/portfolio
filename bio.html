@@ -1,67 +1,193 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Biography | Manatsawin Hanmongkolchai</title>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script src="isotope.js"></script>
-	<script>
-$(window).load(function(){
-	$(".box:not(.img):lt(2)").css("margin-top", "40px");
-	$(".wrapper").isotope({
-		animationEngine: "jquery"
-	});
-});
-	</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="style.css">
-	<meta name="apple-mobile-web-app-capable" content="yes">
+	<style>
+.timeline{
+	position: relative;
+	width: 800px;
+	margin: auto;
+}
+.spine{
+	width: 3px;
+	height: 100%;
+	background: #0b89f6;
+	position: absolute;
+	top: 0;
+	right: 50%;
+}
+.left, .right{
+	width: 380px;
+}
+.left{
+	float: left;
+	clear: left;
+	margin-right: 20px;
+	text-align: right;
+}
+.right{
+	float: right;
+	clear: right;
+	margin-left: 20px;
+}
+li.center{
+	text-align: center;
+}
+.center .box{
+	display: inline-block;
+}
+.year{
+	color: white;
+	line-height: 50px;
+	clear: both;
+}
+.left.year{
+	text-align: right;
+}
+.right.year{
+	text-align: left;
+}
+.box{
+	display: inline-block;
+	background: #fefcb9;
+	color: black;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	text-align: center;
+	position: relative;
+}
+.box a{
+	color: #444;
+	text-decoration: none
+}
+.box strong{
+	font-size: 16pt;
+	font-weight: 400;
+	margin-top: 10px;
+	display: inline-block;
+}
+.multi{
+	clear: both;
+}
+	</style>
 </head>
-<body class="bio">
-<header>
-	<a href="index.html" class="backbtn">Back</a>
-	<h1>Biography</h1>
-</header>
-<div class="wrapper">
-	<div class="box img">
-	</div>
-	<div class="box">
-		<div class="red pin"></div>
-		<h3>Name</h3>
-		<h2>Manatsawin Hanmongkolchai</h2>
-	</div>
-	<div class="box">
-		<div class="white pin"></div>
-		<h3>Nickname</h3>
-		<h2>Win</h2>
-	</div>
-	<div class="box">
-		<div class="orange pin"></div>
-		<h3>Birthday</h3>
-		<h2>29 October 1994</h2>
-	</div>
-	<div class="box">
-		<div class="orange pin"></div>
-		<h3>School</h3>
-		<h2><a href="http://bodin2.ac.th">Bodindecha (Sing Singhaseni) 2</a></h2>
-		<br>
-		<h3>Elementary School</h3>
-		<h2><a href="http://www.pramoch.th.edu">Pramochwittaya Ramindra</a></h2>
-	</div>
-	<div class="box">
-		<div class="white pin"></div>
-		<h3>Blog</h3>
-		<h2><a href="http://blog.whs.in.th">Quietly Verbose</a></h2>
-	</div>
-	<div class="box">
-		<div class="white pin"></div>
-		<h3>Twitter</h3>
-		<h2><a href="http://twitter.com/manatsawin">@manatsawin</a></h2>
-	</div>
-	<div class="box">
-		<div class="white pin"></div>
-		<h3>Personal site</h3>
-		<h2><a href="http://whs.in.th">whs.in.th</a></h2>
-		<h2><a href="http://whsgroup.ath.cx">whsgroup.ath.cx</a></h2>
-	</div>
-</div>
+<body>
+	<h1><a href=".">Portfolio/</a>Biography</h1>
+	<ul class="timeline unlist">
+		<li class="spine"></li>
+		<li class="center"><div class="box">Born on 29<sup>th</sup> October, 1994</div></li>
+
+		<li class="left year">1996</li>
+		<li class="right"><div class="box">Have one younger sister</div></li>
+
+		<li class="right year">2001</li>
+		<li class="left"><div class="box">
+			Started school at
+			<div><a href="http://www.pramoch.th.edu" target="_blank"><strong>Pramochwittaya Ramindra</strong></a></div>
+		</div></li>
+
+		<li class="left year">2004</li>
+		<li class="right"><div class="box">
+			First computer award won
+			<div><strong>Windows setup</strong></div>
+			<div>ASDF Academy</div>
+		</div></li>
+		<li class="left multi"><div class="box">
+			Learnt <a href="http://php.net">PHP</a>
+		</div></li>
+
+		<li class="left year">2006</li>
+		<li class="right"><div class="box">
+			Created
+			<div><strong>Monster Land</strong></div>
+			<div>AJAX web-based game</div>
+		</div></li>
+
+		<li class="right year">2007</li>
+		<li class="left"><div class="box">
+			Started using <a href="http://ubuntu.com" target="_blank">Ubuntu 6.06</a>
+		</div></li>
+		<li class="right multi"><div class="box">
+			Started school at
+			<div><a href="http://www.bodin2.ac.th" target="_blank"><strong>Bodindecha (Sing Singhaseni) 2</strong></a></div>
+		</div></li>
+
+		<li class="right year">2008</li>
+		<li class="left"><div class="box">
+			Learnt Python
+		</div></li>
+		<li class="right multi"><div class="box">
+			Second place, Linux client category
+			<div><strong>8<sup>th</sup> NECTEC National Linux Competition</strong></div>
+		</div></li>
+
+		<li class="right year">2009</li>
+		<li class="left"><div class="box">
+			First place, Linux client category
+			<div><a href="http://nlc9.opentle.org/node/88" target="_blank"><strong>9<sup>th</sup> NECTEC National Linux Competition</strong></a></div>
+		</div></li>
+		<li class="right multi"><div class="box">
+			Finalist, Student's Application category
+			<div><strong>11<sup>th</sup> NECTEC National Software Competition</strong></div>
+			<div>"Automatic Debian Package Builder"</div>
+		</div></li>
+		<li class="left multi"><div class="box">
+			Created
+			<div><strong>DarkWorld</strong></div>
+			<div>3<sup>rd</sup> web-based RPG game project</div>
+		</div></li>
+
+		<li class="left year">2010</li>
+		<li class="right"><div class="box">
+			First place, Linux server category
+			<div><a href="http://nlc10.opentle.org/node/86" target="_blank"><strong>10<sup>th</sup> NECTEC National Linux Competition</strong></a></div>
+		</div></li>
+		<li class="left multi"><div class="box">
+			Passed entrance exam. to Triumudomsuksa School. (Turned down)
+		</div></li>
+
+		<li class="left year">2011</li>
+		<li class="right"><div class="box">
+			First place, Linux desktop category
+			<div><a href="http://nlc11.opentle.org/nlc11_FinalResult" target="_blank"><strong>11<sup>th</sup> NECTEC National Linux Competition</strong></a></div>
+		</div></li>
+		<li class="left multi"><div class="box">
+			Second place, Student's Application category
+			<div><a href="http://store.learnsquare.com/view/changeme:420" target="_blank"><strong>13<sup>th</sup> NECTEC National Software Competition</strong></a></div>
+			<div>"OvzCP"</div>
+		</div></li>
+		<li class="right multi"><div class="box">
+			Advanced the qualification round
+			<div><a href="http://www.go-hero.net/jam/11/name/willwill"><strong>Google Code Jam 2011</strong></a></div>
+		</div></li>
+		<li class="left multi"><div class="box">
+			Final round
+			<div><a href="http://www.hlpth.com/hackathon/"><strong>1<sup>st</sup> HLP Hackathon</strong></a></div>
+		</div></li>
+		<li class="right multi"><div class="box">Registered whs.in.th</div></a>
+		<li class="left multi"><div class="box">
+			First place
+			<div><strong>2011 IT KMITL Open House PHP Competition</strong></div>
+		</div></li>
+		<li class="right multi"><div class="box">
+			Started
+			<div><strong><a href="http://menome.in.th">project menome</a></strong></div>
+		</div></li>
+
+		<li class="right year">2012</li>
+		<li class="left"><div class="box">
+			Second place, Linux server category
+			<div><a href="http://nlc12.opentle.org/nlc12_Reward" target="_blank"><strong>12<sup>th</sup> NECTEC National Linux Competition</strong></a></div>
+		</div></li>
+		<li class="right multi"><div class="box">
+			Advanced the qualification round
+			<div><a href="http://www.go-hero.net/jam/12/name/willwill"><strong>Google Code Jam 2012</strong></a></div>
+		</div></li>
+		<li style="clear: both;height: 300px;"></li>
+	</ul>
 </body>
 </html>
