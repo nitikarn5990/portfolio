@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Works | Manatsawin Hanmongkolchai</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+.odd, .even{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	min-height: 100%;
+	box-sizing: border-box;
+}
+.odd{
+	background-color: #055E74;
+}
+.even{
+	background-color: #0788A9;	
+}
+h2{
+	font-family: Bree Serif;
+	font-size: 48pt;
+	margin: 0;
+	width: 90%;
+	min-width: 1000px;
+	margin: auto;
+}
+html,body,#scroller{
+	height: 100%;
+	box-sizing: border-box;
+}
+.first{
+	padding: 50px;
+}
+.first h1{
+	margin: 0;
+}
+.first li a{
+	font-size: 24pt;
+	color: white;
+	text-decoration: none;
+}
+	</style>
+</head>
+<body>
+<div id="scroller">
+	<div id="scrollerin">
+		<div class="item first">
+			<h1><a href=".">Portfolio/</a>Works</h1>
+			<ul class="unlist">
+				<li><a href="#">a</a></li>
+			</ul>
+		</div>
+		<div class="item odd">
+			<h2>Twitica Desktop</h2>
+			<p>asdf</p>
+		</div>
+		<div class="item even">
+			<h2>Twitica Desktop</h2>
+			<p>asdf</p>
+		</div>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="iscroll.js"></script>
+<script>
+$(".odd,.even,.first").css("min-height", $(window).height());
+new iScroll("scroller", {
+	hScroll: false,
+	snap: ".item",
+	momentum: false
+});
+</script>
+</body>
+</html>
