@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Manatsawin Hanmongkolchai</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,height=device-height,user-scaleble=no,maximum-scale=1.0,initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<style>
 #left{
@@ -58,6 +61,35 @@ h1{
 	font-size: 18pt;
 	color: #D7FAFF;
 	font-weight: 400;
+}
+@media (max-width: 1100px){
+	#box{
+		float: none;
+		margin: auto;
+		width: auto;
+	}
+	.box{
+		width: 49.5%;
+		box-sizing: border-box;
+	}
+	.box.double{
+		width: 100%;
+	}
+	#left{
+		clear: both;
+		margin-left: 10px;
+	}
+}
+@media (max-width: 600px){
+	h1{
+		font-size: 24pt;
+	}
+	.box span{
+		font-size: 16pt;
+	}
+	#bio{
+		margin-top: 0;
+	}
 }
 	</style>
 </head>

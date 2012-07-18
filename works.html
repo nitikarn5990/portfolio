@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Works | Manatsawin Hanmongkolchai</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,maximum-scale=1.0,initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<style>
 .item{
@@ -23,7 +26,6 @@ h2{
 	font-family: Bree Serif;
 	font-size: 48pt;
 	width: 90%;
-	min-width: 1000px;
 	margin: auto;
 	margin-bottom: 30px;
 }
@@ -52,7 +54,7 @@ html,body,#scroller{
 }
 .nav{
 	float: right;
-	margin: 40px 40px 0px 0px;
+	margin: 40px 40px 0px 20px;
 }
 .nav a{
 	background: #0AC5F4;
@@ -66,11 +68,12 @@ html,body,#scroller{
 .nav a:hover{
 	background: #187DA7;
 }
-.body{
-	margin-left: 50px;
+.content{
 	padding-right: 500px;
 	font-size: 16pt;
-	font-weight: normal;
+}
+.content.smallfont{
+	font-size: 12pt;
 }
 .image{
 	margin-right: 40px;
@@ -81,10 +84,86 @@ html,body,#scroller{
 .image img{
 	max-width: 100%;
 }
-.body a{
+a{
 	color: #0AC5F4;
 	text-decoration: none;
 	font-weight: bold;
+}
+.body{
+	width: 95%;
+	margin: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#worklist{
+	-webkit-column-count: 2;
+}
+#worklist a{
+	font-weight: 300;
+}
+#bottweets{
+	margin: auto;
+	width: 250px;
+	margin-bottom: 20px;
+}
+@media (min-width: 1081px){
+	#willwillbot .content{
+		padding-right: 350px;
+	}
+	#willwillbot .image{
+		width: 250px;
+	}
+}
+@media (max-width: 1080px){
+	.content{
+		font-size: 12pt;
+	}
+	.content.smallfont{
+		font-size: 11pt;
+	}
+	.nav{
+		margin-top: 20px;
+	}
+	h2{
+		font-size: 28pt;
+	}
+	.image{
+		float: none;
+		text-align: center;
+		width: auto;
+		margin-right: 0;
+	}
+	.body{
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.content{
+		padding-right: 0;
+	}
+}
+@media (max-width: 800px){
+	#worklist a{
+		font-size: 16pt;
+	}
+	.label{
+		font-size: 10pt;
+	}
+	.first{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	#worklist{
+		-webkit-column-count: 1;
+	}
+	h2{
+		text-align: center;
+	}
+	.nav{
+		margin: 0;
+		margin-bottom: 20px;
+		text-align: center;
+		float: none;
+	}
 }
 	</style>
 </head>
@@ -93,11 +172,11 @@ html,body,#scroller{
 	<div id="scrollerin">
 		<div class="item first" id="top">
 			<h1><a href=".">Portfolio/</a>Works</h1>
-			<ul class="unlist" id="worklist" style="-webkit-column-count:2;">
+			<ul class="unlist" id="worklist">
 				<li><a href="#twitica">Twitica Desktop</a></li>
 				<li><a href="#bd2">bd2.in.th</a></li>
 				<li><a href="#memorial">Bodin 2 Memorial Site #17-18</a></li>
-				<li><a href="#">willwillBot</a></li>
+				<li><a href="#willwillbot">@willwillBot</a></li>
 				<li><a href="#">Valve ARG thank you whiteboard</a></li>
 				<li><a href="#">Noke</a></li>
 				<li><a href="#">OvzCP <span class="label">NSC13 2<sup>nd</sup> prize</span></a></li>
@@ -114,55 +193,137 @@ html,body,#scroller{
 		<div class="item odd" id="twitica">
 			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
 			<h2>Twitica Desktop</h2>
-			<div class="image"><img src="http://portfolio.whs.in.th/work/twitica.png"></div>
 			<div class="body">
-				<p>Twitica Desktop started life in 2010. It was an attempt to clone thaiWitter with <a href="https://identi.ca">identi.ca</a> support. The first version ran on my personal server using API proxy. It is also one of the first Twitter client to support the User Stream feature.</p>
-				<p>Twitica Desktop used many HTML5 features, such as CSS3 Animations, CSS 3D Transformation, Web Worker, XMLHttpRequest 2, HTML5 File Drag &amp; Drop.</p>
-				<p>Twitica Desktop is now being used by over 200 users and being rewritten from scratch to be more optimized and customizable. The concept behind this is to bring mobile Twitter client experience to the desktop, and become configurable and programmable.</p>
-				<p><a href="https://chrome.google.com/webstore/detail/ogndknhgkahnialefpjkhmbekkobjfkh">Available in the Chrome Web Store</a></p>
+				<div class="image">
+					<img src="http://portfolio.whs.in.th/work/twitica.png">
+					<p><a href="https://chrome.google.com/webstore/detail/ogndknhgkahnialefpjkhmbekkobjfkh">Available in the Chrome Web Store</a></p>
+				</div>
+				<div class="content">
+					<p>Twitica Desktop started life in 2010. It was an attempt to clone thaiWitter with <a href="https://identi.ca">identi.ca</a> support. The first version ran on my personal server using an API proxy. It is one of the first Twitter client to support the User Stream feature. Later, an optional extension was created named Twitica Desktop+ that removed the need for API proxy. The extension was then merged to the main application and now Twitica Desktop is completely self-supporting using JavaScript only.</p>
+					<p>Twitica Desktop used many HTML5 features, such as CSS3 Animations, CSS 3D Transformation, Web Worker, XMLHttpRequest 2, HTML5 File Drag &amp; Drop.</p>
+					<p>Twitica Desktop is now being used by over 200 users and being rewritten from scratch to be more optimized and customizable. The concept behind this is to bring mobile Twitter client experience to the desktop, and become configurable and programmable.</p>
+				</div>
 			</div>
 		</div>
 		<div class="item even" id="bd2">
 			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
 			<h2>bd2.in.th</h2>
-			<div class="image"><img src="http://portfolio.whs.in.th/work/bd2.in.th.png"></div>
-			<div class="body" style="font-size: 12pt;">
-				<p>bd2.in.th was created by @ntklp in 2009. The first version was named Dek-BD2 and the forum was run on my personal server at my home. In 2010, we rebranded the site to bd2.in.th. The site was powered by WordPress and Simple Machines Forum. Later, WordPress was changed to Drupal with custom theme.</p>
-				<p>The major site redesign took place in summer 2011. The CMS was changed back to WordPress and the forum to Vanilla Forum. The site featured a prominent top bar that links to multiple section of the sites:</p>
-				<ul>
-					<li><strong>Front page:</strong> WordPress news site. User can also login with their Facebook account.</li>
-					<li><strong>Blue Wave:</strong> Our most popular section. A 24 hours internet radio. I wrote the custom DJ bot that handles this section when no DJ is online. Any user can request song in bot's database and it will be enqueued. When DJ is active, the request system can be viewed by DJ. The permission system is backed by WordPress'</li>
-					<li><strong>Webboard:</strong> Vanilla Forum powered site. Vanilla was chosen for its simplicity and modern. When a thread has new reply, people who subscribed will receive a site-wide notification which will appear in all section of the site, not just the webboard. Vanilla use WordPress as its one-click sign in provider.</li>
-					<li><strong>Playback:</strong> Videos of classes for self-learning. Use a custom built system backed with WordPress authentication</li>
-				</ul>
+			<div class="body">
+				<div class="image">
+					<img src="http://portfolio.whs.in.th/work/bd2.in.th.png">
+					<p>
+						<ul class="unlist">
+							<li><a href="http://bd2.in.th">bd2.in.th</a></li>
+							<li><a href="http://live.bd2.in.th">Blue Wave</a> (autoplay music)</li>
+						</ul>
+					</p>
+				</div>
+				<div class="content smallfont">
+					<p>bd2.in.th was created by @ntklp in 2009. The first version was named Dek-BD2 and the forum was run on my personal server at my home. In 2010, we rebranded the site to bd2.in.th. The site was powered by WordPress and Simple Machines Forum. Later, WordPress was changed to Drupal with custom theme.</p>
+					<p>Major site redesign took place in summer 2011. The CMS was changed back to WordPress and the forum to Vanilla Forum. The site features a prominent top bar that links to multiple section of the sites:</p>
+					<ul>
+						<li><strong>Front page:</strong> WordPress news site. User can also login with their Facebook account.</li>
+						<li><strong>Blue Wave:</strong> Our most popular section. A 24 hours internet radio. I wrote the custom DJ bot that handles this section when no DJ is online. Any user can request song in bot's database and it will be enqueued. When DJ is active, the request system can be viewed by DJ. The permission system is backed by WordPress'</li>
+						<li><strong>Webboard:</strong> Vanilla Forum powered site. Vanilla was chosen for its simplicity and modernness. When a thread has new reply, people who subscribed will receive a site-wide notification which will appear in all section of the site, not just the webboard. Vanilla use WordPress as its one-click sign in provider.</li>
+						<li><strong>Playback:</strong> Videos of classes for self-learning. Use a custom built system backed with WordPress authentication</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="item odd" id="memorial">
 			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
-			<h2 style="font-size: 40pt; margin-top: 10px;">Bodin 2 Memorial Site #17-18</h2>
-			<div class="image"><img src="http://portfolio.whs.in.th/work/bd2.in.th.png"></div>
-			<div class="body" style="font-size: 12pt;">
-				
+			<h2>Bodin 2 Memorial Site #17-18</h2>
+			<div class="body">
+				<div class="image">
+					<img src="http://portfolio.whs.in.th/work/">
+					<p><a href="http://anusorn17.bd2.in.th/register/">Class of 2012</a><br>
+					<a href="http://anusorn.bd2.in.th/register/">Class of 2013</a></p>
+				</div>
+				<div class="content">
+					<p>@ntklp asked me to create a site to preorder the year book for the class of 2012 (my senior). I used Django to accomplish this and hosted it on Heroku. The application can be access standalone, or accessed from <a href="https://www.facebook.com/anusornbodin2/app_230091100405985">Facebook Page Tab</a>.</p>
+					<p>Later, my guidance teacher asked me to create a site for students to register their university. I built it as another Django module to the same site. The site was completely success and guidance teachers in my school was happy with its analytical system that reduced manual labour.</p>
+					<p>In my year (class of 2013) the whole system was rewritten using PHP and MongoDB to be more faster and more complex analytics can be performed using MongoDB's powerful MapReduce system.</p>
+				</div>
+			</div>
+		</div>
+		<div class="item even" id="willwillbot">
+			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
+			<h2>@willwillBot</h2>
+			<div class="body">
+				<div class="image">
+					<div id="bottweets"></div>
+					<a href="https://twitter.com/intent/tweet?screen_name=willwillBot&text=%E0%B8%81%E0%B8%A5%E0%B8%B1%E0%B8%9A%20%E0%B9%89%E0%B8%B3%E0%B8%AA%E0%B8%AA%E0%B8%99%20%E0%B9%84%E0%B8%99%E0%B8%9E%E0%B8%AA%E0%B8%81" class="twitter-mention-button" data-size="large" data-dnt="true">Tweet to @willwillBot</a>
+					<a href="https://twitter.com/willwillBot" class="twitter-follow-button" data-show-count="true" data-size="large" data-dnt="true">Follow @willwillBot</a>
+					<p><small>Tweets are processed from users' input. The owner of the bot does not actively monitor the usage of the bot and is not responsible for any malicious output of the bot from user's input.</small></p>
+				</div>
+				<div class="content smallfont">
+					<p>The first version of willwillBot was created around 2007 using PHP. It was an IRC Bot using heavily modified version of theDtTvB's IRC bot framework. The source code was very messy, so I created the second version of the bot in Python. The feature set is not the same, and they was designed to be able to live in the same IRC channel without problem.</p>
+					<p>The third version of bot does not have much bells and whistles of the older versions. It runs on XChat's Python scripting engine. The bot allowed users to create, run and save custom Python with Jinja2 template code. Each user had their own RPython sandbox and each channel also had theirs. The wiki then can be viewed via Redmine. However, an incident happened and I lost the source code for every version except for version 1 which was open sourced for a while.</p>
+					<p>Version 3 of the bot then was reused for a new bot which was aimed for human-friendliness. Commands is issued in Thai directly to the bot just like mentioning any other IRC user. No more !command. In case of ambiguity, the bot tries to guess the correct command.</p>
+					<p>The bot then was cloned to JavaScript and runs under Node.js and became @willwillBot on Twitter. The user stream engine was detached afterwards and became Twitica Engine. One of the most popular features of the bot are คำผวน (spoonerism) and Thai-English keyboard layout switch.</p>
+					<p>The spoonerism engine is powered by PyICU and custom Python-based library.</p>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="iscroll.js"></script>
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js" async></script>
 <script>
-$(".odd,.even,.first").css("min-height", $(window).height());
-var scroller = new iScroll("scroller", {
-	hScroll: false,
-	snap: ".item",
-	momentum: false
+$(window).load(function(){
+new TWTR.Widget({id:"bottweets",version: 2,type: 'profile',rpp: 5,interval: 30000,width: 250,height: 300,theme: {shell: {background: '#32b4d1',color: '#ffffff'},tweets: {background: '#055e74',color: '#ffffff',links: '#0ac5f4'}},features: {scrollbar: false,loop: false,live: false,behavior: 'all'}}).render().setUser('willwillBot').start();
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 });
+</script>
+<script>
+function setupiScroll(){
+	// Detection code from Modernizr
+	if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+		window.iscr = new iScroll("scroller", {
+			hScroll: false,
+			snap: ".item",
+			momentum: false,
+			y: $(window).scrollTop() * -1
+		});
+	}
+}
+$(window).resize(function(){
+	$(".odd,.even,.first").css("min-height", $(window).height());
+	// wait for reflowing
+	setTimeout(function(){
+		var max=0, maxele=null;
+		$(".odd,.even,.first").each(function(){
+			if($(this).height() > max){
+				max = $(this).height();
+				maxele = this;
+			}
+		});
+		if(max > $(window).height()){
+			$("#scroller").css("overflow", "visible");
+			if(window.iscr){
+				var y = window.iscr.y * -1;
+				console.log(window.iscr)
+				window.iscr.destroy();
+				window.iscr = null;
+				$(window).scrollTop(y);
+			}
+		}else if(!window.iscr){
+			setupiScroll();
+		}
+	}, 10);
+}).resize();
+setupiScroll();
 $("body").delegate("a", "click", function(e){
 	var href = e.target.getAttribute("href");
 	if(!href.match(/^#/)){
 		return true;
 	}
-	console.log(href);
-	scroller.scrollToElement(href, 500);
+	if(window.iscr){
+		window.iscr.scrollToElement(href, 500);
+	}else{
+		$("body").animate({'scrollTop': $(href).position().top}, 300);
+	}
 	return false;
 });
 </script>
