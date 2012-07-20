@@ -16,7 +16,7 @@ ul.unlist{
 	padding: 0;
 }
 h1{
-	font-family: "Bree Serif";
+	font-family: "Bree Serif", serif;
 	font-size: 64pt;
 	margin: 50px;
 }
@@ -27,4 +27,15 @@ h1 a{
 	display: block;
 	line-height: 0.1em;
 	position: relative;
+}
+.icon{
+	padding-top: 8px;
+	width: 64px;
+	height: 56px;
+	display: inline-block;
+	text-align: center;
+	background: #0788A9;
+}
+.icon:hover{
+	background: #055E74;
 }
