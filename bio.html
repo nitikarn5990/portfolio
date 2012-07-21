@@ -38,9 +38,6 @@
 li.center{
 	text-align: center;
 }
-.center .box{
-	display: inline-block;
-}
 .year{
 	color: white;
 	line-height: 50px;
@@ -74,6 +71,53 @@ li.center{
 }
 .multi{
 	clear: both;
+}
+#back{
+	margin-top: 100px;
+}
+#after{
+	clear: both;
+	height: 100px;
+}
+@media (max-width: 800px){
+	.timeline{
+		position: static;
+		width: 100%;
+	}
+	.spine{
+		display: none;
+	}
+	.left,.right,.center{
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.box{
+		display: block;
+		margin-bottom: 10px;
+	}
+	.year{
+		text-align: center !important;
+		font-size: 24pt;
+		font-family: "Bree Serif", serif;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	#back{
+		margin: 0;
+	}
+	#back .box{
+		background: transparent;
+		font-size: 16pt;
+	}
+	#back .box a{
+		display: block;
+		padding: 40px;
+		color: white;
+	}
+	#after{
+		display: none;
+	}
 }
 	</style>
 </head>
@@ -120,8 +164,8 @@ li.center{
 		<li class="left"><div class="box">Registered whs.in.th</div></a>
 
 		<li style="clear: both;"></li>
-		<li class="center" style="margin-top: 100px;"><div class="box"><a href=".">Back to front page</a></div></li>
-		<li style="clear: both;height: 100px;"></li>
+		<li class="center" id="back"><div class="box"><a href=".">Back to front page</a></div></li>
+		<li id="after"></li>
 	</ul>
 </body>
 </html>
