@@ -116,6 +116,12 @@ h2.small{
 	width: 49%;
 	margin-right: 1%;
 }
+#navhelp-pc{
+	text-align: center;
+	margin-top: 60px;
+	font-size: 16pt;
+	color: #a4ecff;
+}
 @media (min-width: 1080px){
 	#willwillbot .content{
 		padding-right: 350px;
@@ -190,7 +196,7 @@ h2.small{
 <div id="scroller">
 	<div id="scrollerin">
 		<div class="item first" id="top">
-			<h1><a href=".">Portfolio/</a>Works</h1>
+			<h1><a href=".">Portfolio/ <small>&lt;&mdash; Click to go back</small></a>Works</h1>
 			<ul class="unlist" id="worklist">
 				<li><a href="#kyou">project Kyou <span class="label">NSC15</span></a></li>
 				<li><a href="#menome">menome</a></li>
@@ -209,6 +215,7 @@ h2.small{
 				<li><a href="#cdpb">Club Distro Package Builder <span class="label">NSC11 Finalist</span></a></li>
 				<li><a href="#amv">Anime Music Videos</a></li>
 			</ul>
+			<div id="navhelp-pc">Use up/down keyboard button to navigate.</div>
 		</div>
 		<div class="item odd" id="kyou">
 			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
@@ -456,7 +463,7 @@ h2.small{
 				<iframe src="https://www.youtube-nocookie.com/embed/liorxASpWv8?rel=0" frameborder="0" allowfullscreen></iframe>
 				<iframe src="https://www.youtube-nocookie.com/embed/YHjgjF5FE-g?rel=0" frameborder="0" allowfullscreen></iframe>
 				<br style="clear: both;">
-				<p style="margin-top: 20px;">I made several anime music videos (AMV). It had been featured in <a href="http://elise.tirkx.com/main/viewtopic.php?t=120481">Tirkx</a> (login required)</p>
+				<p style="margin-top: 20px;">I made several anime music videos (AMV). It had been featured in <a href="http://elise.tirkx.com/main/viewtopic.php?t=120481">Tirkx</a> (login required) and other sites.</p>
 			</div>
 		</div>
 
@@ -464,6 +471,7 @@ h2.small{
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="iscroll.js"></script>
+<script src="fullslide.js"></script>
 <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js" async></script>
 <script>
 $(window).load(function(){
@@ -472,15 +480,16 @@ new TWTR.Widget({id:"bottweets",version: 2,type: 'profile',rpp: 5,interval: 3000
 });
 </script>
 <script>
-function setupiScroll(){
+function setupiScroll(f){
 	// Detection code from Modernizr
-	if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+	if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch || f === true) {
 		window.iscr = new iScroll("scroller", {
 			hScroll: false,
 			snap: ".item",
 			momentum: false,
 			y: $(window).scrollTop() * -1
 		});
+		$("#navhelp-pc").remove();
 	}
 }
 $(window).resize(function(){

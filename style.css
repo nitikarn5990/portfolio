@@ -53,6 +53,14 @@ h1 a{
 	line-height: 0.1em;
 	position: relative;
 }
+h1 small{
+	color: #a4ecff;
+	font-size: 12pt;
+	font-family: "Open Sans", serif;
+	vertical-align: middle;
+	font-weight: 100;
+	margin-left: 40px;
+}
 .icon{
 	padding-top: 8px;
 	width: 64px;
