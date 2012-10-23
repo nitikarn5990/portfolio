@@ -31,10 +31,20 @@ jQuery.fn.iskip = function(options){
 			// Re-issue the loop
 			imgArr.push(options.images[0]);
 
-			if (options.method == "mousemove")
-				pic.mousemove(function(e) {
-					pic.attr("src",imgArr[Math.floor((e.pageX - pic.offset().left) / (pic.width()/imgArr.length))]);
+			if (options.method == "mousemove"){
+				// whs's mod -> also enable ontouchmove
+				pic.on("mousemove touchmove", function(e) {
+					var x = e.pageX;
+					if(e.type == "touchmove"){
+						x = e.originalEvent.touches[0].pageX;
+					}
+					pic.attr("src",imgArr[Math.floor((x - pic.offset().left) / (pic.width()/imgArr.length))]);
+					e.preventDefault();
 				});
+				pic.on("touchstart", function(e){
+					e.preventDefault();
+				});
+			}
 
 			if (options.method == "click")
 			{			

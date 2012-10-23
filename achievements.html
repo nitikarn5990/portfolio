@@ -44,15 +44,6 @@ html,body,#scroller{
 	color: white;
 	text-decoration: none;
 }
-.label{
-	font-family: "Open Sans", sans-serif;
-	background: #0788A9;
-	padding: 2px 5px 2px 5px;
-	font-size: 12pt;
-	font-weight: bold;
-	vertical-align: middle;
-	display: block-inline;
-}
 .nav{
 	float: right;
 	margin: 40px 40px 0px 20px;
@@ -168,6 +159,13 @@ a{
 	min-height: 300px;
 }
 @media (max-width: 1023px){
+	#blocks{
+		width: 105%;
+		margin-left: -30px;
+	}
+	.block{
+		width: 45%;
+	}
 	.content{
 		font-size: 12pt;
 	}
@@ -198,15 +196,29 @@ a{
 	}
 }
 @media (max-width: 800px){
-	#worklist a{
-		font-size: 16pt;
+	#blocks{
+		margin: 0;
+		width: 100%;
 	}
-	.label{
-		font-size: 10pt;
+	.block{
+		width: 95%;
+	}
+	.achsplit{
+		float: none;
+		width: 100%;
+	}
+	.iskiphelp{
+		text-align: center;
 	}
 	.first{
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+	h1{
+		font-size: 38pt;
+	}
+	h1 small{
+		display: none;
 	}
 	h2{
 		text-align: center;
@@ -470,7 +482,11 @@ $(window).resize(function(){
 	}, 10);
 }).resize();
 $('#blocks').masonry({
-	itemSelector: '.block'
+	itemSelector: '.block',
+	columnWidth: function(containerWidth){
+		return containerWidth/2;
+	},
+	isResizable: true
 });
 $("body").delegate("a", "click", function(e){
 	var href = this.getAttribute("href");
@@ -504,7 +520,7 @@ $("div[data-iskip]").each(function(){
 	$(this).css("height", $(this).height());
 	$("img", this).iskip({
 		images: iSkipData[$(this).data("iskip")],
-		method: 'mousemove'
+		method: 'mousemove',
 	});
 });
 
