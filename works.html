@@ -194,6 +194,7 @@ h2.small{
 		<div class="item first" id="top">
 			<h1><a href=".">Portfolio/ <small>&lt;&mdash; Click to go back</small></a>Works</h1>
 			<ul class="unlist" id="worklist">
+				<li><a href="#k2usb">Keepass2Android USB Keyboard plugin</a></li>
 				<li><a href="#bcbk5">Barcamp Bangkhen 5</a></li>
 				<li><a href="#grader">Grader</a></li>
 				<li><a href="#snakerun">Snake Run</a></li>
@@ -204,13 +205,27 @@ h2.small{
 				<li><a href="#twitica">Twitica Desktop</a></li>
 				<li><a href="#bd2">bd2.in.th</a></li>
 				<li><a href="#memorial">Bodin 2 Memorial Site #17-18</a></li>
-				<li><a href="#willwillbot">@willwillBot</a></li>
 				<li><a href="#arg">Valve ARG thank you whiteboard</a></li>
 				<li><a href="#ovzcp">OvzCP <span class="label">NSC13 2<sup>nd</sup> prize</span> <span class="label">TICTA 2011 Runner up</span></a></li>
 				<li><a href="#bd2score">Online Exam Score Viewer</a></li>
 				<li><a href="#cdpb">Club Distro Package Builder <span class="label">NSC11 Finalist</span></a></li>
 			</ul>
 			<div id="navhelp-pc">Use up/down keyboard button to navigate.</div>
+		</div>
+		<div class="item" id="k2usb">
+			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
+			<h2>K2A USB Keyboard plugin</h2>
+			<div class="body">
+				<div class="image">
+					<img src="work/k2usb.png">
+					<p><a href="https://play.google.com/store/apps/details?id=th.in.whs.k2ausbkbd" class="icon"><img src="android.png"></a> <a href="https://github.com/whs/K2AUSBKeyboard" class="icon"><img src="github.png"></a></p>
+				</div>
+				<div class="content">
+					<p>Ever have to type your 30 characters full strength password on someone else's computer?</p>
+					<p>Keepass2Android USB Keyboard Plugin is similar to the official InputStick plugin but requires no additional hardware. Just plug your phone into a PC and press type. Your password will be sent to the PC just like you type it.</p>
+					<p>The application use USB HID kernel API to allow phones to act as a keyboard to computers. It then convert password string from Keepass2Android to keyboard scancodes and send it to the kernel.</p>
+				</div>
+			</div>
 		</div>
 		<div class="item" id="bcbk5">
 			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
@@ -224,7 +239,7 @@ h2.small{
 					<p>Barcamp Bangkhen is an annual unconference event held by the students' club at Department of Computer Engineering, Kasetsart University.</p>
 					<p>I wrote the entire website of Barcamp Bangkhen 5 with web design from Chonnipa, a friend of mine at Software and Knowledge Engineering.</p>
 					<p>The website is designed with open data in mind. Every dynamic data are fetched by open, documented API. All dynamic content are rendered by AngularJS on the frontend. The site is also marked with <a href="http://schema.org">schema.org</a> markup and email communication has iCalendar event file.</p>
-					<p>During the event the website ran smoothly with no downtime even with over 2,000 visitors as the site hosts static contents at GitHub pages while my server only handle dynamic contents.</p>
+					<p>During the event the website ran smoothly with no downtime even with over 2,000 visitors.</p>
 				</div>
 			</div>
 		</div>
@@ -268,7 +283,7 @@ h2.small{
 				<div class="content">
 					<p>Created by Department of Civil Engineering, Kasetsart University, KUSmartBus project aims to help students to travel in the campus more efficiently by providing real time service bus location.</p>
 					<p>There are two user-visible parts I created in this project: the Android application which is available on the Play Store and the bus information display which is installed on 3 locations on campus.</p>
-					<p>The bus information display is powered by Arch Linux and Chromium. Smooth 24x7 operation is one of requirements for this task.</p>
+					<p>The bus information display is powered by CentOS and Chromium. 24x7 operation is one of requirements for this task which the system maintained for months.</p>
 				</div>
 			</div>
 		</div>
@@ -281,8 +296,9 @@ h2.small{
 					<p><a href="https://github.com/whs/streaming" class="icon"><img src="github.png"></a></p>
 				</div>
 				<div class="content">
-					<p>I was impressed by moments that several Twitterers were watching the same TV program or anime together. Also, I found <a href="http://reddit.com/r/clannaddiscussion">/r/clannaddiscussion</a> where redditors watch Clannad together and leads to the creation of this application in 2012.</p>
+					<p>Twitter people often discuss live TV shows together, which inspired me to create this application in 2012.</p>
 					<p>The application use HTML5 video tag and sync its state with master application using WebSocket with Socket.IO. The chat effects was inspired by <a href="http://niconico.com">Nico Nico Douga</a> and Summer Wars. The application used menome API to authenticate, then later switched to Facebook.</p>
+					<p>In 2015 the application now ships with a Dockerfile for ease of installation</p>
 				</div>
 			</div>
 		</div>
@@ -292,13 +308,13 @@ h2.small{
 			<div class="body">
 				<div class="image">
 					<img src="work/kyou.png">
-					<p><a href="http://kyou.whs.in.th">kyou.whs.in.th</a></p>
+					<p><a href="https://github.com/whs/kyou" class="icon"><img src="github.png"></a></p>
 				</div>
 				<div class="content">
 					<p>Kyou is a HTML5 ebook editor. Kyou is used to create the entire of <a href="https://chrome.google.com/webstore/detail/gjcchdjonjbnkcnafhbamkjpgchggbkn">CoreAnime 2</a>.</p>
 					<p>The goal of Kyou is to create an easy to use e-book editor that make books adapt to how we use the computers, instead of imitating paper books. No coding is nessesary to use Kyou.</p>
 					<p>Kyou won the first prize, H.R.H. Maha Chakri Sirindhorn's cup at National Software Competition 2012, Best in Edutainment at ICT Princess Awards, Runner-up at Thailand ICT Awards 2013 and Merit award at Asia-Pacific ICT Awards 2013, Hong Kong.</p>
-					<p>Kyou is commercially available with free trial at its <a href="http://kyou.whs.in.th/kyouinfo.html">project page</a>.</p>
+					<p>Kyou was open sourced in 2015</p>
 				</div>
 			</div>
 		</div>
@@ -308,13 +324,12 @@ h2.small{
 			<div class="body">
 				<div class="image">
 					<img src="work/menome.png">
-					<img src="http://sig.menome.in.th/whs.png">
 				</div>
 				<div class="content">
 					<p>menome started in 2011 from the idea that there's no anime database in available in Thai. Created under the concept "Social + Anime", menome brings socializing to anime by letting you know whenever your friends watched anime.</p>
 					<p>The backend is written with PHP, JavaScript (with Node.js backend) and Python. It use MongoDB and Redis as storage.</p>
 					<p>One notable part of the site is the forum. The forum is reinvented using realtime technology so that topics now feels like a combination of chat and conventional topic. New posts appears in realtime just like chatting, and posts can be seeked backwards like conventional forum.</p>
-					<p>menome is a product of <a href="http://sunburn.in.th">Sunburn Group</a> consisting of 3 coders and some writers that take part in CoreAnime project and menome site content. I wrote all the code of the site and about 95% of the design.</p>
+					<p>menome is a product of <a href="http://sunburn.in.th">Sunburn Group</a> consisting of 3 programmers and a handful writers who take part in CoreAnime project and menome site content. I wrote all the code of the site and nearly the entire design.</p>
 				</div>
 			</div>
 		</div>
@@ -359,25 +374,12 @@ h2.small{
 				<div class="image">
 					<img src="work/anusorn17.png">
 					<p><a href="http://anusorn17.bd2.in.th/register/">Class of 2012</a><br>
-					<a href="http://anusorn.bd2.in.th/register/">Class of 2013</a></p>
+					<a href="http://anusorn18.bd2.in.th.s3-website-ap-southeast-1.amazonaws.com">Class of 2013</a></p>
 				</div>
 				<div class="content">
 					<p>@ntklp asked me to create a site to preorder the year book for the class of 2012 (my senior). I used Django to accomplish this and hosted it on Heroku. The application can be access standalone, or accessed from <a href="https://www.facebook.com/anusornbodin2/app_230091100405985">Facebook Page Tab</a>. It also features responsive design that adapts to desktop, tablets and phones.</p>
 					<p>Later, my guidance teacher asked me to create a site for students to register their university. I built it as another Django module to the same site. The site was completely success and guidance teachers in my school was happy with its analytical system that reduced manual labour.</p>
 					<p>In my year (class of 2013) the whole system was rewritten using PHP and MongoDB to be more faster and more complex analytics can be performed using MongoDB's powerful MapReduce system.</p>
-				</div>
-			</div>
-		</div>
-		<div class="item" id="willwillbot">
-			<div class="nav"><a href=".">Portfolio</a> <a href="#top">To Top</a></div>
-			<h2>@willwillBot</h2>
-			<div class="body">
-				<div class="content smallfont">
-					<p>The first version of willwillBot was created around 2007 using PHP. It was an IRC Bot using heavily modified version of theDtTvB's IRC bot framework. The source code was very messy, so I created the second version of the bot in Python. The feature set is not the same, and they was designed to be able to live in the same IRC channel without problem.</p>
-					<p>The third version of bot does not have much bells and whistles of the older versions. It runs on XChat's Python scripting engine. The bot allowed users to create, run and save custom Python with Jinja2 template code. Each user had their own RPython sandbox and each channel also had theirs. The wiki then can be viewed via Redmine. However, an incident happened and I lost the source code for every version except for version 1 which was open sourced for a while.</p>
-					<p>Version 3 of the bot then was reused for a new bot which was aimed for human-friendliness. Commands is issued in Thai directly to the bot just like mentioning any other IRC user. No more !command. In case of ambiguity, the bot tries to guess the correct command.</p>
-					<p>The bot then was cloned to JavaScript and runs under Node.js and became @willwillBot on Twitter. The user stream engine was detached afterwards and became Twitica Engine. One of the most popular features of the bot are คำผวน (spoonerism) and Thai-English keyboard layout switch.</p>
-					<p>The spoonerism engine is powered by PyICU and custom Python-based library.</p>
 				</div>
 			</div>
 		</div>
