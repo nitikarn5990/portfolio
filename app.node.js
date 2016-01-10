@@ -229,14 +229,14 @@ module.exports =
   					{ className: 'row' },
   					_react2['default'].createElement(
   						'h2',
-  						{ className: 'col-xs-12 col-sm-9 ' + smallTitle },
+  						{ className: 'col-xs-12 col-sm-8 col-md-9 ' + smallTitle },
   						this.props.title,
   						' ',
   						badges
   					),
   					_react2['default'].createElement(
   						'div',
-  						{ className: 'col-xs-12 col-sm-3 ' + _styleScss4['default'].nav },
+  						{ className: 'col-xs-12 col-sm-4 col-md-3 ' + _styleScss4['default'].nav },
   						_react2['default'].createElement(
   							'a',
   							{ href: '/', onClick: _Link2['default'].handleClick },
@@ -636,12 +636,12 @@ module.exports =
   					{ className: 'row' },
   					_react2['default'].createElement(
   						'h2',
-  						{ className: 'col-xs-12 col-sm-9' },
+  						{ className: 'col-xs-12 col-sm-8 col-md-9' },
   						this.props.year
   					),
   					_react2['default'].createElement(
   						'div',
-  						{ className: 'col-xs-12 col-sm-3 ' + _styleScss4['default'].nav },
+  						{ className: 'col-xs-12 col-sm-4 col-md-3 ' + _styleScss4['default'].nav },
   						_react2['default'].createElement(
   							'a',
   							{ href: '/', onClick: _Link2['default'].handleClick },
@@ -659,6 +659,11 @@ module.exports =
   					'div',
   					{ className: _styleScss4['default'].skipHelp },
   					'Move mouse over images to view other images'
+  				),
+  				_react2['default'].createElement(
+  					'div',
+  					{ className: _styleScss4['default'].skipHelpMobile },
+  					'Swipe over images to view other images'
   				),
   				_react2['default'].createElement(
   					'div',
@@ -1667,7 +1672,7 @@ module.exports =
   					{ className: 'row' },
   					_react2['default'].createElement(
   						'div',
-  						{ className: 'col-xs-12 col-sm-8 ' + _componentsStyleScss2['default'].profile },
+  						{ className: 'col-xs-12 col-md-8 ' + _componentsStyleScss2['default'].profile },
   						_react2['default'].createElement(
   							'h1',
   							{ className: _componentsStyleScss2['default'].name },
@@ -1778,7 +1783,7 @@ module.exports =
   					),
   					_react2['default'].createElement(
   						'div',
-  						{ className: 'col-xs-12 col-sm-4 ' + _componentsStyleScss2['default'].menu },
+  						{ className: 'col-xs-12 col-md-4 ' + _componentsStyleScss2['default'].menu },
   						_react2['default'].createElement(
   							'div',
   							{ className: 'row' },
@@ -3629,7 +3634,7 @@ module.exports =
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
-  module.exports = {"smallTitle":"RjoJ0b2Hz2NAr6ry3fk49","nav":"_25YUENO5uH2IrLsPAA-YMI","image":"aSM9SDwY0mfRCWOr1x2vw","access":"_2vKxsSa3sl_FPD_bZkENAE","description":"_2AQ0yp-lyVr_a_YbMcDV6z","small":"_2t3Ubwoez5mX6-2WaCdnT4","achievement":"PcKCuLSumtEXIWP1SJaFX","title":"_3TSCGmtQs2HFm4gKJ-eemz","skipHelp":"_2mC5qjA5QJJuPakF_EVSIw"};
+  module.exports = {"smallTitle":"RjoJ0b2Hz2NAr6ry3fk49","nav":"_25YUENO5uH2IrLsPAA-YMI","image":"aSM9SDwY0mfRCWOr1x2vw","access":"_2vKxsSa3sl_FPD_bZkENAE","description":"_2AQ0yp-lyVr_a_YbMcDV6z","small":"_2t3Ubwoez5mX6-2WaCdnT4","achievement":"PcKCuLSumtEXIWP1SJaFX","title":"_3TSCGmtQs2HFm4gKJ-eemz","skipHelp":"_2mC5qjA5QJJuPakF_EVSIw","skipHelpMobile":"_28cuAtuZtX6yzdg5PtL51-"};
 
 /***/ },
 /* 36 */
