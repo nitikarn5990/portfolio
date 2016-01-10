@@ -13,9 +13,24 @@
 	margin-top: 10px;
 	display: block;
 }
-.skipHelp{
+.skipHelp, .skipHelpMobile{
 	font-size: 12pt;
-	margin-top: -30px;
 	color: #a4ecff;
 	margin-bottom: 20px;
+}
+.skipHelp{
+	margin-top: -20px;
+}
+.skipHelpMobile{
+	text-align: center;
+	display: none;
+}
+
+@media (max-width: $responsiveSm){
+	.skipHelp{
+		display: none;	
+	}
+	.skipHelpMobile{
+		display: block;
+	}
 }

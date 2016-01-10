@@ -12,7 +12,7 @@ export default class extends Component {
 		return (
 			<div className={`${style.main} container-fluid`}>
 				<div className="row">
-					<div className={`col-xs-12 col-sm-8 ${style.profile}`}>
+					<div className={`col-xs-12 col-md-8 ${style.profile}`}>
 						<h1 className={style.name}>Manatsawin Hanmongkolchai</h1>
 						<div className={style.profileText}>
 							<div>An undergraduate studying in Software and Knowledge Engineering<br />at <a href="http://iup.eng.ku.ac.th" target="_blank">Kasetsart University IUP program</a>.</div>
@@ -28,7 +28,7 @@ export default class extends Component {
 							<li><a href="https://github.com/whs" className="icon"><GitHub /></a></li>
 						</ul>
 					</div>
-					<div className={`col-xs-12 col-sm-4 ${style.menu}`}>
+					<div className={`col-xs-12 col-md-4 ${style.menu}`}>
 						<div className="row">
 							<div className={`${style.box} col-xs-12`}><a href="bio" onClick={Link.handleClick}><span>Biography</span></a></div>
 						</div>

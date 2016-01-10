@@ -24,8 +24,8 @@ export class Item extends Component {
 		return (
 			<div className={`${style.item} container-fluid`} id={this.props.id} key={this.props.id}>
 				<div className="row">
-					<h2 className={`col-xs-12 col-sm-9 ${smallTitle}`}>{this.props.title} {badges}</h2>
-					<div className={`col-xs-12 col-sm-3 ${itemstyle.nav}`}>
+					<h2 className={`col-xs-12 col-sm-8 col-md-9 ${smallTitle}`}>{this.props.title} {badges}</h2>
+					<div className={`col-xs-12 col-sm-4 col-md-3 ${itemstyle.nav}`}>
 						<a href="/" onClick={Link.handleClick}>Portfolio</a> <a href="#top">To Top</a>
 					</div>
 				</div>

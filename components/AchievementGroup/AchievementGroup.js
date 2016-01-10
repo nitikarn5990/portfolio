@@ -13,12 +13,13 @@ export class AchievementGroup extends Component {
 		return (
 			<div className={`${style.item} container-fluid`} id={this.props.year} key={this.props.year}>
 				<div className="row">
-					<h2 className={`col-xs-12 col-sm-9`}>{this.props.year}</h2>
-					<div className={`col-xs-12 col-sm-3 ${itemstyle.nav}`}>
+					<h2 className={`col-xs-12 col-sm-8 col-md-9`}>{this.props.year}</h2>
+					<div className={`col-xs-12 col-sm-4 col-md-3 ${itemstyle.nav}`}>
 						<a href="/" onClick={Link.handleClick}>Portfolio</a> <a href="#top">To Top</a>
 					</div>
 				</div>
 				<div className={itemstyle.skipHelp}>Move mouse over images to view other images</div>
+				<div className={itemstyle.skipHelpMobile}>Swipe over images to view other images</div>
 				<div className="row">
 					{this.props.children}
 				</div>
