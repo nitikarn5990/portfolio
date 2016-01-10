@@ -180,7 +180,7 @@ const pagesConfig = merge({}, config, {
       ...config.module.loaders,
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract(['css-loader?module', 'postcss-loader']),
+        loader: ExtractTextPlugin.extract(['css-loader?module&minimize', 'postcss-loader']),
       },
     ],
   },
