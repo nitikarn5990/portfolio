@@ -1,0 +1,96 @@
+@import "../variables.scss";
+
+.timeline{
+	position: relative;
+	width: 800px;
+	margin: auto;
+	padding-bottom: 100px;
+}
+.spine{
+	width: 3px;
+	height: 100%;
+	background: #0b89f6;
+	position: absolute;
+	top: 0;
+	right: 50%;
+}
+.left, .right{
+	width: 380px;
+}
+.left{
+	float: left;
+	clear: left;
+	margin-right: 20px;
+	text-align: right;
+}
+.right{
+	float: right;
+	clear: right;
+	margin-left: 20px;
+}
+.center{
+	clear: both;
+	text-align: center;
+}
+.year{
+	color: white;
+	line-height: 50px;
+	clear: both;
+}
+.left.year{
+	text-align: right;
+}
+.right.year{
+	text-align: left;
+}
+.box{
+	display: inline-block;
+	background: #F7FFD2;
+	color: black;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+	text-align: center;
+	position: relative;
+}
+.box a{
+	color: #917D42;
+	text-decoration: none
+}
+.box strong{
+	font-size: 16pt;
+	font-weight: 400;
+	margin-top: 10px;
+	display: inline-block;
+}
+.multi{
+	clear: both;
+}
+.clearfix{
+	clear: both;
+}
+@media (max-width: 800px){
+	.timeline{
+		position: static;
+		width: 100%;
+	}
+	.spine{
+		display: none;
+	}
+	.left,.right,.center{
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.box{
+		display: block;
+		margin-bottom: 10px;
+	}
+	.year{
+		text-align: center !important;
+		font-size: 24pt;
+		font-family: $font-flavor;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}

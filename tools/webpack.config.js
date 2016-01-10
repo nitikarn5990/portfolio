@@ -8,6 +8,7 @@ import path from 'path';
 import webpack from 'webpack';
 import merge from 'lodash.merge';
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const DEBUG = !process.argv.includes('release');
 const VERBOSE = process.argv.includes('verbose');
 const WATCH = global.watch;
@@ -27,6 +28,7 @@ const JS_LOADER = {
     path.resolve(__dirname, '../components'),
     path.resolve(__dirname, '../core'),
     path.resolve(__dirname, '../pages'),
+    path.resolve(__dirname, '../works'),
     path.resolve(__dirname, '../app.js'),
     path.resolve(__dirname, '../config.js'),
   ],
@@ -145,7 +147,7 @@ const appConfig = merge({}, config, {
       ...config.module.loaders,
       {
         test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'postcss-loader'],
+        loaders: ['style-loader', 'css-loader?module', 'postcss-loader'],
       },
     ],
   },
@@ -170,6 +172,7 @@ const pagesConfig = merge({}, config, {
   externals: /^[a-z][a-z\.\-\/0-9]*$/i,
   plugins: config.plugins.concat([
     new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
+    new ExtractTextPlugin('style.css')
   ]),
   module: {
     loaders: [
@@ -177,7 +180,7 @@ const pagesConfig = merge({}, config, {
       ...config.module.loaders,
       {
         test: /\.scss$/,
-        loaders: ['css-loader', 'postcss-loader'],
+        loader: ExtractTextPlugin.extract(['css-loader?module', 'postcss-loader']),
       },
     ],
   },

@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+.smallTitle{
+	font-size: 36pt;
+}
+.nav{
+	padding-top: 20px;
+}
+.nav a{
+	background: $color1;
+	color: white;
+	font-size: 16pt;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	margin-right: 10px;
+	font-weight: normal;
+}
+.nav a:hover{
+	background: #187DA7;
+}
+
+.image{
+	text-align: center;
+}
+.image img{
+	max-width: 100%;
+}
+.access{
+	margin-top: 20px;
+}
+
+.description{
+	font-size: 16pt;
+}
+.small{
+	font-size: 12pt;
+}
+.description a{
+	color: #0AC5F4;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+@media (max-width: 1023px){
+	.nav{
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.description{
+		font-size: 12pt;
+	}
+	.small{
+		font-size: 11pt;
+	}
+}

@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Bree+Serif);
+@import "variables.scss";
+
+html, body, :global(#app){
+	height: 100%;
+}
+
+body{
+	background: $color1;
+	font-family: $font-main;
+	font-weight: 300;
+	font-size: 13pt;
+	color: white;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+strong{
+	font-weight: 600;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+h1{
+	font-family: $font-flavor;
+	font-size: 64pt;
+	margin: 50px;
+}
+h1 a{
+	text-decoration: none;
+	color: #1269F7;
+	font-size: 32pt;
+	display: block;
+	line-height: 0.1em;
+	position: relative;
+}
+h1 small{
+	color: #a4ecff;
+	font-size: 12pt;
+	font-family: $font-main;
+	vertical-align: middle;
+	font-weight: 100;
+	margin-left: 40px;
+}
+h2{
+	font-family: $font-flavor;
+	font-size: 48pt;
+}
+
+.unlist{
+	list-style: none;
+	padding: 0;
+}
+
+/* index */
+
+.main{}
+
+.main h1{
+	font-family: $font-flavor;
+	font-size: 54pt;
+	margin:0;
+}
+
+.name{
+	padding-top: 20px;
+}
+
+.profile{
+	padding-left: 20px;
+}
+.profileText{
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+.iconBar{
+	list-style: none;
+	padding: 0;
+}
+.iconBar li{
+	display: block;
+	float: left;
+	text-align: center;
+	background: $color2;
+	margin-right: 10px;
+}
+.iconBar li:hover{
+	background: $color3;
+}
+.iconBar li a, .icon{
+	display: block;
+	width: 64px;
+	height: 64px;
+	line-height: 54px;
+	color: white;
+	font-size: 24pt;
+}
+.icon{
+	display: inline-block;
+	text-align: center;
+	background: $color2;
+	margin-right: 10px;
+}
+.icon:hover{
+	background: $color3;
+}
+
+.menu{
+	margin: 30px 0;
+}
+
+.box{
+	height: 180px;
+	padding: 2px;
+	position: relative;
+}
+.box a{
+	background-color: $color3;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.box a:hover{
+	background-color: $color2;
+}
+.box span{
+	position: absolute;
+	text-align: right;
+	bottom: 10px; right: 10px;
+	font-size: 18pt;
+	color: white;
+	font-weight: 400;
+}
+
+/* works, achievements */
+.works, .achievements{
+	height: 100%;
+}
+.item{
+	width: 100%;
+	min-height: 100%;
+	box-sizing: border-box;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	clear: both;
+}
+.item:nth-child(odd){
+	background-color: $color3;
+}
+.item:nth-child(even){
+	background-color: $color2;	
+}
+.item h2{
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+.toc{
+	padding: 50px;
+	background-color: transparent !important;
+}
+.toc h1{
+	margin: 0;
+}
+.workList{
+	column-count: 2;
+	list-style: none;
+	padding: 0;
+}
+.workList a{
+	font-weight: 300;
+	font-size: 24pt;
+	color: white;
+	text-decoration: none;
+}
+.badge{
+	font-family: $font-main;
+	background: $color2;
+	padding: 2px 5px 2px 5px;
+	font-size: 12pt;
+	font-weight: bold;
+	vertical-align: middle;
+	display: inline-block;
+	margin-right: 2px;
+}
+
+/* achievement */
+
+.toc h1{
+	margin-bottom: 40px;
+}
+
+.tocblock{
+	display: block;
+	color: white;
+	background: #055E74;
+	margin: 0px 3px 30px 0px;
+	padding: 15px;
+	padding-bottom: 5px;
+}
+.tocblock h2{
+	font-size: 22pt;
+	margin: 0;
+}
+.tocblock li{
+	color: #eee;
+	font-size: 12pt;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+.tocblock li strong{
+	color: white;
+	display: block;
+	font-size: 14pt;
+	letter-spacing: -1px;
+}
+
+@media (max-width: 1100px){
+	.main h1{
+		font-size: 42pt;
+	}
+}
+@media (max-width: 1023px){
+	h2{
+		font-size: 28pt;
+	}
+	.item h2{
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 800px){
+	h1{
+		margin: 0;
+		margin-top: 50px;
+		margin-bottom: 50px;
+		font-size: 32pt;
+	}
+	h1 a{
+		font-size: 22pt;
+		line-height: 0.3em;
+	}
+	h1 small{
+		display: none;
+	}
+	h2{
+		text-align: center;
+	}
+
+	.main h1{
+		font-size: 28pt;
+	}
+	.profileText{
+		font-size: 12pt;
+	}
+	.box span{
+		font-size: 16pt;
+	}
+
+	.workList{
+		column-count: 1;
+	}
+	.workList a{
+		font-size: 16pt;
+	}
+	.item .badge{
+		display: block;
+	}
+}
