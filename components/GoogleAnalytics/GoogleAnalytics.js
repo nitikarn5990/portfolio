@@ -17,6 +17,9 @@ const trackingCode = { __html:
 };
 
 function GoogleAnalytics() {
+  if(googleAnalyticsId == ''){
+    return <noscript />;
+  }
   return <script dangerouslySetInnerHTML={trackingCode} />;
 }
 

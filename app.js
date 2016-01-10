@@ -23,8 +23,9 @@ function run() {
   const container = document.getElementById('app');
   Location.listen(location => {
     route(location.pathname, async (component) => ReactDOM.render(component, container, () => {
-      // Track the page view event via Google Analytics
-      window.ga('send', 'pageview');
+      if(window.ga){
+        window.ga('send', 'pageview');
+      }
     }));
   });
 }
