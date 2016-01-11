@@ -14,7 +14,7 @@ export default class Work extends Component{
 					<img src="/work/anusorn17.png" />
 				</Image>
 				<Access>
-					<a href="http://anusorn18.bd2.in.th.s3.amazonaws.com/register/index.html" className={style.icon}><Globe /></a>
+					<a href="http://anusorn18.bd2.in.th.s3-website-ap-southeast-1.amazonaws.com/register/" className={style.icon}><Globe /></a>
 				</Access>
 				<Description>
 					<p>@ntklp asked me to create a site to preorder the year book for the class of 2012 (my senior). I used Django to accomplish this and hosted it on Heroku. The application can be access standalone, or accessed from <a href="https://www.facebook.com/anusornbodin2/app_230091100405985">Facebook Page Tab</a>. It also features responsive design that adapts to desktop, tablets and phones.</p>
