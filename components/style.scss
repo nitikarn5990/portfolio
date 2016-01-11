@@ -224,6 +224,37 @@ h2{
 	letter-spacing: -1px;
 }
 
+/* donate */
+.donate .tocblock h2{
+	margin-bottom: 30px;
+}
+.donate .tocblock{
+	padding-bottom: 30px;
+	font-weight: 400;
+}
+.message{
+	font-weight: 600;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	font-size: 16pt;
+}
+input[type=number], input[type=text]{
+	width: 100%;
+	background-color: $color1;
+	color: black;
+	border: $color2 solid 1px;
+	font-weight: 400;
+	padding: 2px;
+	box-sizing: border-box;
+}
+input[type=number]:active, input[type=text]:active{
+	border: $color3 solid 1px;
+}
+input[type=number]::placeholder, input[type=text]::placeholder{
+	color: $color3;
+}
+
 @media (max-width: 1100px){
 	.main h1{
 		font-size: 42pt;
