@@ -105,7 +105,7 @@ h2{
 	margin-right: 10px;
 }
 .icon:hover{
-	background: $color3;
+	background: $color1;
 }
 
 .menu{
@@ -153,6 +153,12 @@ h2{
 }
 .item:nth-child(even){
 	background-color: $color2;	
+}
+.item:nth-child(even) .icon{
+	display: inline-block;
+	text-align: center;
+	background: $color3;
+	margin-right: 10px;
 }
 .item h2{
 	margin-top: 0;

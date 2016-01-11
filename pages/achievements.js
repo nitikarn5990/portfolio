@@ -162,6 +162,12 @@ export default class extends Component {
 					<span style={{fontWeight: 400}}>Project:</span> <a href="http://mixic.whs.in.th">Mixic</a>
 				</AchievementItem>
 				<AchievementItem 
+					image={["/achimg/nsc17-1.jpg", "/achimg/nsc17-2.jpg", "/achimg/nsc17-3.jpg"]}
+					title="National Software Competition 2015 (NSC17)"
+					category="Third place, Linux desktop software category">
+					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#juiz" onClick={Link.handleClick}>Juiz: Locally installed Platform as a Service</a>
+				</AchievementItem>
+				<AchievementItem 
 					image={["/achfile/asc.jpg", "/achimg/asc-1.jpg", "/achimg/asc-2.jpg", "/achimg/asc-3.jpg"]}
 					title="ASC Student Computer Challenge 2015, China"
 					category="Team Lighting Green: First prize" />
