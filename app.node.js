@@ -65,7 +65,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(43);
+  var _reactDom = __webpack_require__(45);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -84,10 +84,12 @@ module.exports =
       return __webpack_require__(16);
     }, '/bio': function bio() {
       return __webpack_require__(17);
-    }, '/': function _() {
+    }, '/donate': function donate() {
       return __webpack_require__(18);
-    }, '/works': function works() {
+    }, '/': function _() {
       return __webpack_require__(19);
+    }, '/works': function works() {
+      return __webpack_require__(20);
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   var route = function route(path, callback) {
@@ -158,7 +160,7 @@ module.exports =
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
-  module.exports = {"unlist":"_1OSj6gUXgvS9JXRgg3-hAA","main":"_3Nn71GE9lUIeFWwU0tI0YA","name":"_3ri6_G6vvIPcZ088LMwZbm","profile":"_1gTjrRmeRzcQJMaCuL0hoa","profileText":"E0cyNhzVB_3w6zz-wh3Kz","iconBar":"_1tD_9pPWUY4YdQlGudZnT6","icon":"TaEdSmfEkSKfFKi1rNwg3","menu":"T3w8V3xryeMprnV5Hro1w","box":"_18QsPTufdv17bF0U6nbEia","works":"amqIylUW6iK4NEWZdJ_7F","achievements":"_10nH7MgEdAEu9jW37EkOm1","item":"_3TIZxL4ii7Ctcdht4AuD15","toc":"_3e6m9DMKxXusNmwdexG7dj","workList":"_3EpFhwLsuz5pgVLRvjZL6y","badge":"_1JyxB-bE_KKZymodhaE5c-","tocblock":"_2P4y37h7MiGL9zUTmx4WQ5"};
+  module.exports = {"unlist":"_1OSj6gUXgvS9JXRgg3-hAA","main":"_3Nn71GE9lUIeFWwU0tI0YA","name":"_3ri6_G6vvIPcZ088LMwZbm","profile":"_1gTjrRmeRzcQJMaCuL0hoa","profileText":"E0cyNhzVB_3w6zz-wh3Kz","iconBar":"_1tD_9pPWUY4YdQlGudZnT6","icon":"TaEdSmfEkSKfFKi1rNwg3","menu":"T3w8V3xryeMprnV5Hro1w","box":"_18QsPTufdv17bF0U6nbEia","works":"amqIylUW6iK4NEWZdJ_7F","achievements":"_10nH7MgEdAEu9jW37EkOm1","item":"_3TIZxL4ii7Ctcdht4AuD15","toc":"_3e6m9DMKxXusNmwdexG7dj","workList":"_3EpFhwLsuz5pgVLRvjZL6y","badge":"_1JyxB-bE_KKZymodhaE5c-","tocblock":"_2P4y37h7MiGL9zUTmx4WQ5","donate":"_2jfgh6HnQNYrDLDqcNB36g","message":"_2ke3NE-DEyKZ6Bws1afSIY"};
 
 /***/ },
 /* 3 */
@@ -192,7 +194,7 @@ module.exports =
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
-  var _styleScss3 = __webpack_require__(36);
+  var _styleScss3 = __webpack_require__(38);
 
   var _styleScss4 = _interopRequireDefault(_styleScss3);
 
@@ -418,7 +420,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(37);
+  __webpack_require__(39);
 
   var _coreLocation = __webpack_require__(7);
 
@@ -525,15 +527,15 @@ module.exports =
 
   var _fbjsLibExecutionEnvironment = __webpack_require__(9);
 
-  var _historyLibCreateBrowserHistory = __webpack_require__(40);
+  var _historyLibCreateBrowserHistory = __webpack_require__(42);
 
   var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 
-  var _historyLibCreateMemoryHistory = __webpack_require__(41);
+  var _historyLibCreateMemoryHistory = __webpack_require__(43);
 
   var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 
-  var _historyLibUseQueries = __webpack_require__(42);
+  var _historyLibUseQueries = __webpack_require__(44);
 
   var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 
@@ -547,6 +549,7 @@ module.exports =
 /***/ function(module, exports) {
 
   module.exports = [
+  	"juiz",
   	"k2aandroid",
   	"bcbk5",
   	"grader",
@@ -612,7 +615,7 @@ module.exports =
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
-  var _styleScss3 = __webpack_require__(35);
+  var _styleScss3 = __webpack_require__(37);
 
   var _styleScss4 = _interopRequireDefault(_styleScss3);
 
@@ -763,7 +766,8 @@ module.exports =
 
   		this.state = {
   			image: 0,
-  			height: 300
+  			height: 300,
+  			initial: true
   		};
   	}
 
@@ -773,17 +777,37 @@ module.exports =
   			var _this = this;
 
   			var image = this.props.src;
-  			if (Array.isArray(image)) {
-  				image = image[this.state.image];
+  			if (!Array.isArray(image)) {
+  				image = [image];
   			}
+  			if (this.state.initial) {
+  				// on first load or server side rendering
+  				// prioritize first image only
+  				image = image.slice(0, 1);
+  			}
+
+  			image = image.map(function (url, index) {
+  				return _react2['default'].createElement('img', { key: index, src: url, onLoad: _this.onImageLoad.bind(_this), style: {
+  						display: _this.state.image == index ? 'inline' : 'none'
+  					} });
+  			});
 
   			return _react2['default'].createElement(
   				'div',
-  				{ style: { width: '100%', minHeight: this.state.height }, onMouseMove: this.onMouseMove.bind(this), onTouchMove: this.onMouseMove.bind(this), ref: function (elem) {
+  				{ style: {
+  						width: '100%',
+  						minHeight: this.state.height,
+  						textAlign: 'center'
+  					}, onMouseMove: this.onMouseMove.bind(this), onTouchMove: this.onMouseMove.bind(this), ref: function (elem) {
   						return _this._elem = elem;
   					} },
-  				_react2['default'].createElement('img', { src: image, onLoad: this.onImageLoad.bind(this) })
+  				image
   			);
+  		}
+  	}, {
+  		key: 'componentDidMount',
+  		value: function componentDidMount() {
+  			this.setState({ initial: false });
   		}
   	}, {
   		key: 'onMouseMove',
@@ -850,7 +874,7 @@ module.exports =
 
   var _Link2 = _interopRequireDefault(_Link);
 
-  var _styleScss = __webpack_require__(38);
+  var _styleScss = __webpack_require__(40);
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
@@ -1205,7 +1229,7 @@ module.exports =
   				_componentsAchievementGroup.AchievementGroup,
   				{ year: 2007, key: 2007 },
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
-  					image: ["/achievements/nlc8.jpg", "/achimg/nlc8-1.jpg"],
+  					image: ["/achfile/nlc8.jpg", "/achimg/nlc8-1.jpg"],
   					title: 'The Eight National Linux Competition (NLC8)',
   					category: 'Second place, Linux client category' }),
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
@@ -1216,35 +1240,35 @@ module.exports =
   				_componentsAchievementGroup.AchievementGroup,
   				{ year: 2008, key: 2008 },
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
-  					image: ["/achievements/nlc9.jpg", "/achievements/nlc9-1.jpg", "/achievements/nlc9-2.jpg", "/achimg/nlc9-1.jpg", "/achimg/nlc9-2.jpg"],
+  					image: ["/achfile/nlc9.jpg", "/achfile/nlc9-1.jpg", "/achfile/nlc9-2.jpg", "/achimg/nlc9-1.jpg", "/achimg/nlc9-2.jpg"],
   					title: 'The Ninth National Linux Competition (NLC9)',
   					category: 'First place, Linux client category' }),
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
-  					image: ["/achievements/html08.jpg", "/achimg/html08-1.jpg"],
+  					image: ["/achfile/html08.jpg", "/achimg/html08-1.jpg"],
   					title: 'HTML web page competition, Seri Thai area',
   					category: 'Second place, silver medal' }),
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
-  					image: '/achievements/qa08.jpg',
+  					image: '/achfile/qa08.jpg',
   					title: 'Computer competition, NMR. Bodindecha school',
   					category: 'Gold medal' })
   			), _react2['default'].createElement(
   				_componentsAchievementGroup.AchievementGroup,
   				{ year: 2009, key: 2009 },
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
-  					image: ["/achievements/nlc10.jpg", "/achievements/nlc10-1.jpg", "/achievements/nlc10-2.jpg", "/achimg/nlc10-1.jpg", "/achimg/nlc10-2.jpg", "/achimg/nlc10-3.jpg"],
+  					image: ["/achfile/nlc10.jpg", "/achfile/nlc10-1.jpg", "/achfile/nlc10-2.jpg", "/achimg/nlc10-1.jpg", "/achimg/nlc10-2.jpg", "/achimg/nlc10-3.jpg"],
   					title: 'The Tenth National Linux Competition (NLC10)',
   					category: 'First place, Linux server category' }),
   				_react2['default'].createElement(
   					_componentsAchievementGroup.AchievementItem,
   					{
-  						image: ["/achievements/nlcp2.jpg", "/achievements/nlcp1.jpg"],
+  						image: ["/achfile/nlcp2.jpg", "/achfile/nlcp1.jpg"],
   						title: 'NECTEC Certified Linux Professional (NLCP) Level 1 & 2' },
   					'Awarded as a part of NLC10 competition.'
   				),
   				_react2['default'].createElement(
   					_componentsAchievementGroup.AchievementItem,
   					{
-  						image: ["/achievements/nsc11.jpg", "/achimg/nsc11-1.jpg", "/work/cdpb.png"],
+  						image: ["/achfile/nsc11.jpg", "/achimg/nsc11-1.jpg", "/work/cdpb.png"],
   						title: 'National Software Competition 2009 (NSC11)',
   						category: 'Finalist, student\'s application software category' },
   					_react2['default'].createElement(
@@ -1260,7 +1284,7 @@ module.exports =
   					)
   				),
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
-  					image: '/achievements/student.jpg',
+  					image: '/achfile/student.jpg',
   					title: 'Supreme Patriarch Award' })
   			), _react2['default'].createElement(
   				_componentsAchievementGroup.AchievementGroup,
@@ -1272,7 +1296,7 @@ module.exports =
   				_react2['default'].createElement(
   					_componentsAchievementGroup.AchievementItem,
   					{
-  						image: ["/achievements/nsc13.jpg", "/achimg/nsc13-1.jpg", "/achimg/nsc13-2.jpg", "/work/ovzcp.png"],
+  						image: ["/achfile/nsc13.jpg", "/achimg/nsc13-1.jpg", "/achimg/nsc13-2.jpg", "/work/ovzcp.png"],
   						title: 'National Software Competition 2011 (NSC13)',
   						category: 'Second place, student\'s application software category' },
   					_react2['default'].createElement(
@@ -1312,7 +1336,7 @@ module.exports =
   				_react2['default'].createElement(
   					_componentsAchievementGroup.AchievementItem,
   					{
-  						image: ["/achievements/nsc15.jpg", "/achimg/nsc15-4.jpg", "/achimg/nsc15-1.jpg", "/achimg/nsc15-2.jpg", "/achimg/nsc15-3.jpg", "/work/kyou.png"],
+  						image: ["/achfile/nsc15.jpg", "/achimg/nsc15-4.jpg", "/achimg/nsc15-1.jpg", "/achimg/nsc15-2.jpg", "/achimg/nsc15-3.jpg", "/work/kyou.png"],
   						title: 'National Software Competition 2013 (NSC15)',
   						category: 'Winner, student\'s application software category' },
   					_react2['default'].createElement(
@@ -1346,7 +1370,7 @@ module.exports =
   				_react2['default'].createElement(
   					_componentsAchievementGroup.AchievementItem,
   					{
-  						image: ["/achievements/apicta.jpg", "/achimg/apicta-1.jpg", "/achimg/apicta-2.jpg", "/achimg/apicta-3.jpg", "/achimg/apicta-4.jpg"],
+  						image: ["/achfile/apicta.jpg", "/achimg/apicta-1.jpg", "/achimg/apicta-2.jpg", "/achimg/apicta-3.jpg", "/achimg/apicta-4.jpg"],
   						title: 'Asia Pacific ICT Award 2013 (APICTA 2013), Hong Kong',
   						category: 'Merit, school project category' },
   					_react2['default'].createElement(
@@ -1367,7 +1391,7 @@ module.exports =
   				_react2['default'].createElement(
   					_componentsAchievementGroup.AchievementItem,
   					{
-  						image: '/achievements/youthday.jpg',
+  						image: '/achfile/youthday.jpg',
   						title: 'Thailand Youth Award 2014',
   						category: 'Merit, school project category' },
   					'In Mathematics, Science, Computer and Technology major from participating in Asia Pacific ICT Award 2013'
@@ -1378,7 +1402,7 @@ module.exports =
   				_react2['default'].createElement(
   					_componentsAchievementGroup.AchievementItem,
   					{
-  						image: ["/achievements/ywc.jpg", "/achimg/ywc-1.jpg", "/achimg/ywc-2.jpg", "/achimg/ywc-3.jpg"],
+  						image: ["/achfile/ywc.jpg", "/achimg/ywc-1.jpg", "/achimg/ywc-2.jpg", "/achimg/ywc-3.jpg"],
   						title: 'Young Webmaster Camp 12',
   						category: 'Best Teamwork' },
   					_react2['default'].createElement(
@@ -1393,8 +1417,26 @@ module.exports =
   						'Mixic'
   					)
   				),
+  				_react2['default'].createElement(
+  					_componentsAchievementGroup.AchievementItem,
+  					{
+  						image: ["/achimg/nsc17-1.jpg", "/achimg/nsc17-2.jpg", "/achimg/nsc17-3.jpg"],
+  						title: 'National Software Competition 2015 (NSC17)',
+  						category: 'Third place, Linux desktop software category' },
+  					_react2['default'].createElement(
+  						'span',
+  						{ style: { fontWeight: 400 } },
+  						'Project:'
+  					),
+  					' ',
+  					_react2['default'].createElement(
+  						'a',
+  						{ href: '/works#juiz', onClick: _componentsLink2['default'].handleClick },
+  						'Juiz: Locally installed Platform as a Service'
+  					)
+  				),
   				_react2['default'].createElement(_componentsAchievementGroup.AchievementItem, {
-  					image: ["/achievements/asc.jpg", "/achimg/asc-1.jpg", "/achimg/asc-2.jpg", "/achimg/asc-3.jpg"],
+  					image: ["/achfile/asc.jpg", "/achimg/asc-1.jpg", "/achimg/asc-2.jpg", "/achimg/asc-3.jpg"],
   					title: 'ASC Student Computer Challenge 2015, China',
   					category: 'Team Lighting Green: First prize' })
   			)];
@@ -1632,11 +1674,312 @@ module.exports =
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
 
+  var _componentsStyleScss = __webpack_require__(2);
+
+  var _componentsStyleScss2 = _interopRequireDefault(_componentsStyleScss);
+
+  var _reactIconsLibFaRedditAlien = __webpack_require__(52);
+
+  var _reactIconsLibFaRedditAlien2 = _interopRequireDefault(_reactIconsLibFaRedditAlien);
+
+  var _reactIconsLibFaPaypal = __webpack_require__(51);
+
+  var _reactIconsLibFaPaypal2 = _interopRequireDefault(_reactIconsLibFaPaypal);
+
+  var _reactIconsLibFaBitcoin = __webpack_require__(46);
+
+  var _reactIconsLibFaBitcoin2 = _interopRequireDefault(_reactIconsLibFaBitcoin);
+
+  var _reactIconsLibFaSteamSquare = __webpack_require__(53);
+
+  var _reactIconsLibFaSteamSquare2 = _interopRequireDefault(_reactIconsLibFaSteamSquare);
+
+  var _default = (function (_Component) {
+  	_inherits(_default, _Component);
+
+  	function _default() {
+  		_classCallCheck(this, _default);
+
+  		_get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+  	}
+
+  	_createClass(_default, [{
+  		key: 'render',
+  		value: function render() {
+  			return _react2['default'].createElement(
+  				'div',
+  				{ className: _componentsStyleScss2['default'].donate + ' container-fluid' },
+  				_react2['default'].createElement(
+  					'h1',
+  					null,
+  					_react2['default'].createElement(
+  						'a',
+  						{ href: '/', onClick: _componentsLink2['default'].handleClick },
+  						'Portfolio/ ',
+  						_react2['default'].createElement(
+  							'small',
+  							null,
+  							'<— Click to go back'
+  						)
+  					),
+  					'Donate'
+  				),
+  				_react2['default'].createElement(
+  					'div',
+  					{ className: _componentsStyleScss2['default'].message },
+  					_react2['default'].createElement(
+  						'strong',
+  						null,
+  						'Thank you for using my work. If you like it, please consider donating.'
+  					)
+  				),
+  				_react2['default'].createElement(
+  					'div',
+  					{ className: 'row' },
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'div',
+  							{ className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								_react2['default'].createElement(_reactIconsLibFaPaypal2['default'], null),
+  								' PayPal'
+  							),
+  							_react2['default'].createElement(
+  								'form',
+  								{ action: 'https://www.paypal.com/cgi-bin/webscr', method: 'post', target: '_top' },
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'cmd', value: '_donations' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'business', value: 'manatsawin@gmail.com' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'lc', value: 'US' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'no_note', value: '0' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'currency_code', value: 'USD' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'bn', value: 'PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest' }),
+  								_react2['default'].createElement('input', { type: 'image', src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif', border: '0', name: 'submit', alt: 'PayPal - The safer, easier way to pay online!' }),
+  								_react2['default'].createElement('img', { alt: '', border: '0', src: 'https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width: '1', height: '1' })
+  							)
+  						)
+  					),
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'a',
+  							{ href: 'bitcoin:1HErNnBU47caE2tbBvZ45ixoCu1hLcUN9g', className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								_react2['default'].createElement(_reactIconsLibFaBitcoin2['default'], null),
+  								' Bitcoin'
+  							),
+  							_react2['default'].createElement(
+  								'div',
+  								{ style: { wordBreak: "break-word" } },
+  								'1HErNnBU47caE2tbBvZ45ixoCu1hLcUN9g'
+  							),
+  							_react2['default'].createElement(
+  								'div',
+  								null,
+  								_react2['default'].createElement(
+  									'small',
+  									null,
+  									'(please let me know if you have donated to me on Bitcoin)'
+  								)
+  							)
+  						)
+  					),
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'div',
+  							{ className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								'Flattr'
+  							),
+  							_react2['default'].createElement(Flattr, { uid: 'awkwin', title: 'Donate', description: 'Donation from portfolio', category: 'people' })
+  						)
+  					),
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'div',
+  							{ className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								'PaySbuy'
+  							),
+  							_react2['default'].createElement(
+  								'p',
+  								null,
+  								_react2['default'].createElement(
+  									'small',
+  									null,
+  									'(loaded balance, credit card or cash)'
+  								)
+  							),
+  							_react2['default'].createElement(
+  								'form',
+  								{ method: 'post', action: 'https://www.paysbuy.com/paynow.aspx?lang=e' },
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'psb', value: 'psb' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'biz', value: 'manatsawin@gmail.com' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'inv', value: '' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'itm', value: 'Donate' }),
+  								_react2['default'].createElement('input', { type: 'number', name: 'amt', required: true, min: '100', step: '20', placeholder: 'Enter amount in THB' }),
+  								_react2['default'].createElement('p', null),
+  								_react2['default'].createElement('input', { type: 'image', src: 'https://www.paysbuy.com/imgs/powerby5.jpg', border: '0', name: 'submit' })
+  							)
+  						)
+  					),
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'a',
+  							{ href: 'https://www.reddit.com/gold?goldtype=gift&recipient=awkwin', className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								_react2['default'].createElement(_reactIconsLibFaRedditAlien2['default'], null),
+  								' Reddit'
+  							),
+  							'Send me a reddit gold'
+  						)
+  					),
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'a',
+  							{ href: 'https://steamcommunity.com/id/manatsawin/wishlist', className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								_react2['default'].createElement(_reactIconsLibFaSteamSquare2['default'], null),
+  								' Steam'
+  							),
+  							_react2['default'].createElement(
+  								'div',
+  								null,
+  								_react2['default'].createElement(
+  									'small',
+  									null,
+  									'(please send to manatsawin@gmail.com)'
+  								)
+  							)
+  						)
+  					)
+  				)
+  			);
+  		}
+  	}]);
+
+  	return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+
+  var Flattr = (function (_Component2) {
+  	_inherits(Flattr, _Component2);
+
+  	function Flattr() {
+  		_classCallCheck(this, Flattr);
+
+  		_get(Object.getPrototypeOf(Flattr.prototype), 'constructor', this).apply(this, arguments);
+  	}
+
+  	_createClass(Flattr, [{
+  		key: 'render',
+  		value: function render() {
+  			var _this = this;
+
+  			return _react2['default'].createElement('div', { ref: function (ref) {
+  					return _this._button = ref;
+  				} });
+  		}
+  	}, {
+  		key: 'componentDidMount',
+  		value: function componentDidMount() {
+  			this._script = document.createElement('script');
+
+  			this._script.async = true;
+  			this._script.src = '//api.flattr.com/js/0.6/load.js?mode=manual';
+  			this._script.onload = this.onLoad.bind(this);
+
+  			document.head.appendChild(this._script);
+  		}
+  	}, {
+  		key: 'componentWillUnmount',
+  		value: function componentWillUnmount() {
+  			document.head.removeChild(this._script);
+  		}
+  	}, {
+  		key: 'onLoad',
+  		value: function onLoad() {
+  			FlattrLoader.render({
+  				title: this.props.title,
+  				description: this.props.description,
+  				category: this.props.category,
+  				uid: this.props.uid,
+  				url: this.props.url || window.location.toString()
+  			}, this._button, 'replace');
+  		}
+  	}], [{
+  		key: 'propTypes',
+  		value: {
+  			uid: _react2['default'].PropTypes.string.isRequired,
+  			url: _react2['default'].PropTypes.string,
+  			title: _react2['default'].PropTypes.string.isRequired,
+  			description: _react2['default'].PropTypes.string.isRequired,
+  			category: _react2['default'].PropTypes.oneOf(['text', 'images', 'video', 'audio', 'software', 'people', 'rest'])
+  		},
+  		enumerable: true
+  	}]);
+
+  	return Flattr;
+  })(_react.Component);
+
+  module.exports = exports['default'];
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+  	value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsLink = __webpack_require__(5);
+
+  var _componentsLink2 = _interopRequireDefault(_componentsLink);
+
   var _reactIconsLibFaGlobe = __webpack_require__(6);
 
   var _reactIconsLibFaGlobe2 = _interopRequireDefault(_reactIconsLibFaGlobe);
 
-  var _reactIconsLibFaLinkedin = __webpack_require__(47);
+  var _reactIconsLibFaLinkedin = __webpack_require__(50);
 
   var _reactIconsLibFaLinkedin2 = _interopRequireDefault(_reactIconsLibFaLinkedin);
 
@@ -1644,7 +1987,7 @@ module.exports =
 
   var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
-  var _reactIconsLibFaFacebookOfficial = __webpack_require__(45);
+  var _reactIconsLibFaFacebookOfficial = __webpack_require__(48);
 
   var _reactIconsLibFaFacebookOfficial2 = _interopRequireDefault(_reactIconsLibFaFacebookOfficial);
 
@@ -1844,7 +2187,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 19 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1920,7 +2263,7 @@ module.exports =
   	}, {
   		key: 'loadWork',
   		value: function loadWork(name) {
-  			return __webpack_require__(39)("./" + name + '.js');
+  			return __webpack_require__(41)("./" + name + '.js');
   		}
   	}, {
   		key: 'renderWork',
@@ -2020,7 +2363,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 20 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2133,7 +2476,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 21 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2244,7 +2587,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2370,7 +2713,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2470,7 +2813,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2560,7 +2903,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2660,7 +3003,111 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 26 */
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+  	value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsItem = __webpack_require__(3);
+
+  var _reactIconsLibFaGithub = __webpack_require__(4);
+
+  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
+
+  var _componentsStyleScss = __webpack_require__(2);
+
+  var _componentsStyleScss2 = _interopRequireDefault(_componentsStyleScss);
+
+  var Work = (function (_Component) {
+  	_inherits(Work, _Component);
+
+  	function Work() {
+  		_classCallCheck(this, Work);
+
+  		_get(Object.getPrototypeOf(Work.prototype), 'constructor', this).apply(this, arguments);
+  	}
+
+  	_createClass(Work, [{
+  		key: 'render',
+  		value: function render() {
+  			return _react2['default'].createElement(
+  				_componentsItem.Item,
+  				{ id: Work.id, title: Work.title, badges: Work.badges },
+  				_react2['default'].createElement(
+  					_componentsItem.Image,
+  					null,
+  					_react2['default'].createElement('img', { src: '/work/juiz.png' })
+  				),
+  				_react2['default'].createElement(
+  					_componentsItem.Access,
+  					null,
+  					_react2['default'].createElement(
+  						'a',
+  						{ href: 'https://github.com/whs/juiz', className: _componentsStyleScss2['default'].icon },
+  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  					)
+  				),
+  				_react2['default'].createElement(
+  					_componentsItem.Description,
+  					null,
+  					_react2['default'].createElement(
+  						'p',
+  						null,
+  						'Juiz is a novelty PaaS-like shipped as a desktop application. Web developers can import their project, add API key for Amazon Web Services or DigitalOcean and start deploying in one click without preparing any server-side system.'
+  					),
+  					_react2['default'].createElement(
+  						'p',
+  						null,
+  						'Juiz works by using libcloud to spawn new cloud machine, then install Heroku Buildpack and user application using Ansible. The interface use WxWidget and could be run on both OS X and Linux.'
+  					),
+  					_react2['default'].createElement(
+  						'p',
+  						null,
+  						'Juiz was placed third place at National Software Competition 2015. No team won the second and first place.'
+  					)
+  				)
+  			);
+  		}
+  	}], [{
+  		key: 'id',
+  		value: 'juiz',
+  		enumerable: true
+  	}, {
+  		key: 'title',
+  		value: 'project Juiz',
+  		enumerable: true
+  	}, {
+  		key: 'badges',
+  		value: ['NSC17 3rd place'],
+  		enumerable: true
+  	}]);
+
+  	return Work;
+  })(_react.Component);
+
+  exports['default'] = Work;
+  module.exports = exports['default'];
+
+/***/ },
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2768,7 +3215,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2881,7 +3328,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2996,7 +3443,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3102,7 +3549,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3200,7 +3647,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3310,7 +3757,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3335,7 +3782,7 @@ module.exports =
 
   var _componentsItem = __webpack_require__(3);
 
-  var _reactIconsLibFaGamepad = __webpack_require__(46);
+  var _reactIconsLibFaGamepad = __webpack_require__(49);
 
   var _reactIconsLibFaGamepad2 = _interopRequireDefault(_reactIconsLibFaGamepad);
 
@@ -3418,7 +3865,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3524,7 +3971,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3549,7 +3996,7 @@ module.exports =
 
   var _componentsItem = __webpack_require__(3);
 
-  var _reactIconsLibFaChrome = __webpack_require__(44);
+  var _reactIconsLibFaChrome = __webpack_require__(47);
 
   var _reactIconsLibFaChrome2 = _interopRequireDefault(_reactIconsLibFaChrome);
 
@@ -3630,53 +4077,54 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"smallTitle":"RjoJ0b2Hz2NAr6ry3fk49","nav":"_25YUENO5uH2IrLsPAA-YMI","image":"aSM9SDwY0mfRCWOr1x2vw","access":"_2vKxsSa3sl_FPD_bZkENAE","description":"_2AQ0yp-lyVr_a_YbMcDV6z","small":"_2t3Ubwoez5mX6-2WaCdnT4","achievement":"PcKCuLSumtEXIWP1SJaFX","title":"_3TSCGmtQs2HFm4gKJ-eemz","skipHelp":"_2mC5qjA5QJJuPakF_EVSIw","skipHelpMobile":"_28cuAtuZtX6yzdg5PtL51-"};
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"smallTitle":"_1Sa9-gITV43l5U4rkod9TY","nav":"_3cCdNKfX-BgxGA2SHNNgtj","image":"_1S0L-kyXP0G5naSuOmp0vB","access":"_3ZTMzobdI63F21zAEdSJOT","description":"_3QbWE1IAVrOTly3A8bexYk","small":"_2-aI-SWHvTAJh14p3oqCRs"};
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"Link":"_1bdDNy9DBd2brlhpxBvH-1"};
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"timeline":"_2SIcR-ZxY1_lTnOw1hvP4a","spine":"_3Ju1FqE6WAPmW6N7Gnyte0","left":"_1vo1j0Yxj9K5IKYXhFoFMN","right":"Jm_do-V1MkzFeTxuzqE0I","center":"S3vnqzuhSrlVT9ueHG9Vy","year":"_1F8whUvPYR1UaFxcL7OqdU","box":"_1RPv89XfNcC10GTDxGd0Tu","multi":"_2es0gqjdxYacTX9VTNngK7","clearfix":"_1AEPYkTVVpJvq-V7PhiUnC"};
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
   var map = {
-  	"./arg.js": 20,
-  	"./bcbk5.js": 21,
-  	"./bd2.js": 22,
-  	"./bd2score.js": 23,
-  	"./cdpb.js": 24,
-  	"./grader.js": 25,
-  	"./k2aandroid.js": 26,
-  	"./kusmartbus.js": 27,
-  	"./kyou.js": 28,
-  	"./memorial.js": 29,
-  	"./menome.js": 30,
-  	"./ovzcp.js": 31,
-  	"./snakerun.js": 32,
-  	"./streaming.js": 33,
-  	"./twitica.js": 34
+  	"./arg.js": 21,
+  	"./bcbk5.js": 22,
+  	"./bd2.js": 23,
+  	"./bd2score.js": 24,
+  	"./cdpb.js": 25,
+  	"./grader.js": 26,
+  	"./juiz.js": 27,
+  	"./k2aandroid.js": 28,
+  	"./kusmartbus.js": 29,
+  	"./kyou.js": 30,
+  	"./memorial.js": 31,
+  	"./menome.js": 32,
+  	"./ovzcp.js": 33,
+  	"./snakerun.js": 34,
+  	"./streaming.js": 35,
+  	"./twitica.js": 36
   };
   function webpackContext(req) {
   	return __webpack_require__(webpackContextResolve(req));
@@ -3689,56 +4137,80 @@ module.exports =
   };
   webpackContext.resolve = webpackContextResolve;
   module.exports = webpackContext;
-  webpackContext.id = 39;
+  webpackContext.id = 41;
 
-
-/***/ },
-/* 40 */
-/***/ function(module, exports) {
-
-  module.exports = require("history/lib/createBrowserHistory");
-
-/***/ },
-/* 41 */
-/***/ function(module, exports) {
-
-  module.exports = require("history/lib/createMemoryHistory");
 
 /***/ },
 /* 42 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/useQueries");
+  module.exports = require("history/lib/createBrowserHistory");
 
 /***/ },
 /* 43 */
 /***/ function(module, exports) {
 
-  module.exports = require("react-dom");
+  module.exports = require("history/lib/createMemoryHistory");
 
 /***/ },
 /* 44 */
 /***/ function(module, exports) {
 
-  module.exports = require("react-icons/lib/fa/chrome");
+  module.exports = require("history/lib/useQueries");
 
 /***/ },
 /* 45 */
 /***/ function(module, exports) {
 
-  module.exports = require("react-icons/lib/fa/facebook-official");
+  module.exports = require("react-dom");
 
 /***/ },
 /* 46 */
 /***/ function(module, exports) {
 
-  module.exports = require("react-icons/lib/fa/gamepad");
+  module.exports = require("react-icons/lib/fa/bitcoin");
 
 /***/ },
 /* 47 */
 /***/ function(module, exports) {
 
+  module.exports = require("react-icons/lib/fa/chrome");
+
+/***/ },
+/* 48 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-icons/lib/fa/facebook-official");
+
+/***/ },
+/* 49 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-icons/lib/fa/gamepad");
+
+/***/ },
+/* 50 */
+/***/ function(module, exports) {
+
   module.exports = require("react-icons/lib/fa/linkedin");
+
+/***/ },
+/* 51 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-icons/lib/fa/paypal");
+
+/***/ },
+/* 52 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-icons/lib/fa/reddit-alien");
+
+/***/ },
+/* 53 */
+/***/ function(module, exports) {
+
+  module.exports = require("react-icons/lib/fa/steam-square");
 
 /***/ }
 /******/ ]);
