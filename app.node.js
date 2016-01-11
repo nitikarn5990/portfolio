@@ -65,31 +65,31 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(45);
+  var _reactDom = __webpack_require__(41);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
-  var _fbjsLibExecutionEnvironment = __webpack_require__(9);
+  var _fbjsLibExecutionEnvironment = __webpack_require__(6);
 
-  var _coreLocation = __webpack_require__(7);
+  var _coreLocation = __webpack_require__(5);
 
   var _coreLocation2 = _interopRequireDefault(_coreLocation);
 
   var routes = {
     '/404': function _() {
-      return __webpack_require__(14);
+      return __webpack_require__(10);
     }, '/500': function _() {
-      return __webpack_require__(15);
+      return __webpack_require__(11);
     }, '/achievements': function achievements() {
-      return __webpack_require__(16);
+      return __webpack_require__(12);
     }, '/bio': function bio() {
-      return __webpack_require__(17);
+      return __webpack_require__(13);
     }, '/donate': function donate() {
-      return __webpack_require__(18);
+      return __webpack_require__(14);
     }, '/': function _() {
-      return __webpack_require__(19);
+      return __webpack_require__(15);
     }, '/works': function works() {
-      return __webpack_require__(20);
+      return __webpack_require__(16);
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   var route = function route(path, callback) {
@@ -123,6 +123,7 @@ module.exports =
           while (1) switch (context$3$0.prev = context$3$0.next) {
             case 0:
               return context$3$0.abrupt('return', _reactDom2['default'].render(component, container, function () {
+                window.scrollTop = 0;
                 if (window.ga) {
                   window.ga('send', 'pageview');
                 }
@@ -186,7 +187,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _Link = __webpack_require__(5);
+  var _Link = __webpack_require__(4);
 
   var _Link2 = _interopRequireDefault(_Link);
 
@@ -194,7 +195,7 @@ module.exports =
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
-  var _styleScss3 = __webpack_require__(38);
+  var _styleScss3 = __webpack_require__(35);
 
   var _styleScss4 = _interopRequireDefault(_styleScss3);
 
@@ -380,12 +381,6 @@ module.exports =
 
 /***/ },
 /* 4 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/github");
-
-/***/ },
-/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -420,9 +415,9 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(39);
+  __webpack_require__(36);
 
-  var _coreLocation = __webpack_require__(7);
+  var _coreLocation = __webpack_require__(5);
 
   var _coreLocation2 = _interopRequireDefault(_coreLocation);
 
@@ -502,13 +497,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/globe");
-
-/***/ },
-/* 7 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -525,17 +514,17 @@ module.exports =
 
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-  var _fbjsLibExecutionEnvironment = __webpack_require__(9);
+  var _fbjsLibExecutionEnvironment = __webpack_require__(6);
 
-  var _historyLibCreateBrowserHistory = __webpack_require__(42);
+  var _historyLibCreateBrowserHistory = __webpack_require__(38);
 
   var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 
-  var _historyLibCreateMemoryHistory = __webpack_require__(43);
+  var _historyLibCreateMemoryHistory = __webpack_require__(39);
 
   var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 
-  var _historyLibUseQueries = __webpack_require__(44);
+  var _historyLibUseQueries = __webpack_require__(40);
 
   var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 
@@ -545,42 +534,13 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-  module.exports = [
-  	"juiz",
-  	"k2aandroid",
-  	"bcbk5",
-  	"grader",
-  	"snakerun",
-  	"kusmartbus",
-  	"streaming",
-  	"kyou",
-  	"menome",
-  	"twitica",
-  	"bd2",
-  	"memorial",
-  	"arg",
-  	"ovzcp",
-  	"bd2score",
-  	"cdpb"
-  ];
-
-/***/ },
-/* 9 */
+/* 6 */
 /***/ function(module, exports) {
 
   module.exports = require("fbjs/lib/ExecutionEnvironment");
 
 /***/ },
-/* 10 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/android");
-
-/***/ },
-/* 11 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -603,11 +563,11 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _Link = __webpack_require__(5);
+  var _Link = __webpack_require__(4);
 
   var _Link2 = _interopRequireDefault(_Link);
 
-  var _ScrubImage = __webpack_require__(12);
+  var _ScrubImage = __webpack_require__(8);
 
   var _ScrubImage2 = _interopRequireDefault(_ScrubImage);
 
@@ -615,7 +575,7 @@ module.exports =
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
-  var _styleScss3 = __webpack_require__(37);
+  var _styleScss3 = __webpack_require__(34);
 
   var _styleScss4 = _interopRequireDefault(_styleScss3);
 
@@ -733,7 +693,7 @@ module.exports =
   exports.AchievementItem = AchievementItem;
 
 /***/ },
-/* 12 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -819,7 +779,7 @@ module.exports =
   			var rect = this._elem.getBoundingClientRect();
   			var elemX = e.clientX - rect.left;
   			var percent = elemX / rect.width;
-  			var image = Math.round(percent * (this.props.src.length - 1));
+  			var image = Math.min(Math.round(percent * (this.props.src.length - 1)), this.props.src.length - 1);
 
   			this.setState({
   				image: image
@@ -847,7 +807,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 13 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -870,11 +830,11 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _Link = __webpack_require__(5);
+  var _Link = __webpack_require__(4);
 
   var _Link2 = _interopRequireDefault(_Link);
 
-  var _styleScss = __webpack_require__(40);
+  var _styleScss = __webpack_require__(37);
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
@@ -969,7 +929,7 @@ module.exports =
   exports.TimelineItem = TimelineItem;
 
 /***/ },
-/* 14 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1034,7 +994,7 @@ module.exports =
   module.exports = exports["default"];
 
 /***/ },
-/* 15 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1105,7 +1065,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 16 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1128,11 +1088,11 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsLink = __webpack_require__(5);
+  var _componentsLink = __webpack_require__(4);
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
 
-  var _componentsAchievementGroup = __webpack_require__(11);
+  var _componentsAchievementGroup = __webpack_require__(7);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -1450,7 +1410,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 17 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1473,11 +1433,11 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsLink = __webpack_require__(5);
+  var _componentsLink = __webpack_require__(4);
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
 
-  var _componentsTimeline = __webpack_require__(13);
+  var _componentsTimeline = __webpack_require__(9);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -1647,7 +1607,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 18 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1670,29 +1630,13 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsLink = __webpack_require__(5);
+  var _componentsLink = __webpack_require__(4);
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
 
   var _componentsStyleScss = __webpack_require__(2);
 
   var _componentsStyleScss2 = _interopRequireDefault(_componentsStyleScss);
-
-  var _reactIconsLibFaRedditAlien = __webpack_require__(52);
-
-  var _reactIconsLibFaRedditAlien2 = _interopRequireDefault(_reactIconsLibFaRedditAlien);
-
-  var _reactIconsLibFaPaypal = __webpack_require__(51);
-
-  var _reactIconsLibFaPaypal2 = _interopRequireDefault(_reactIconsLibFaPaypal);
-
-  var _reactIconsLibFaBitcoin = __webpack_require__(46);
-
-  var _reactIconsLibFaBitcoin2 = _interopRequireDefault(_reactIconsLibFaBitcoin);
-
-  var _reactIconsLibFaSteamSquare = __webpack_require__(53);
-
-  var _reactIconsLibFaSteamSquare2 = _interopRequireDefault(_reactIconsLibFaSteamSquare);
 
   var _default = (function (_Component) {
   	_inherits(_default, _Component);
@@ -1745,7 +1689,7 @@ module.exports =
   							_react2['default'].createElement(
   								'h2',
   								null,
-  								_react2['default'].createElement(_reactIconsLibFaPaypal2['default'], null),
+  								_react2['default'].createElement('i', { className: 'fa fa-paypal' }),
   								' PayPal'
   							),
   							_react2['default'].createElement(
@@ -1771,7 +1715,7 @@ module.exports =
   							_react2['default'].createElement(
   								'h2',
   								null,
-  								_react2['default'].createElement(_reactIconsLibFaBitcoin2['default'], null),
+  								_react2['default'].createElement('i', { className: 'fa fa-bitcoin' }),
   								' Bitcoin'
   							),
   							_react2['default'].createElement(
@@ -1846,7 +1790,7 @@ module.exports =
   							_react2['default'].createElement(
   								'h2',
   								null,
-  								_react2['default'].createElement(_reactIconsLibFaRedditAlien2['default'], null),
+  								_react2['default'].createElement('i', { className: 'fa fa-reddit-alien' }),
   								' Reddit'
   							),
   							'Send me a reddit gold'
@@ -1861,7 +1805,7 @@ module.exports =
   							_react2['default'].createElement(
   								'h2',
   								null,
-  								_react2['default'].createElement(_reactIconsLibFaSteamSquare2['default'], null),
+  								_react2['default'].createElement('i', { className: 'fa fa-steam-square' }),
   								' Steam'
   							),
   							_react2['default'].createElement(
@@ -1948,7 +1892,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 19 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1971,25 +1915,9 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsLink = __webpack_require__(5);
+  var _componentsLink = __webpack_require__(4);
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
-
-  var _reactIconsLibFaGlobe = __webpack_require__(6);
-
-  var _reactIconsLibFaGlobe2 = _interopRequireDefault(_reactIconsLibFaGlobe);
-
-  var _reactIconsLibFaLinkedin = __webpack_require__(50);
-
-  var _reactIconsLibFaLinkedin2 = _interopRequireDefault(_reactIconsLibFaLinkedin);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
-
-  var _reactIconsLibFaFacebookOfficial = __webpack_require__(48);
-
-  var _reactIconsLibFaFacebookOfficial2 = _interopRequireDefault(_reactIconsLibFaFacebookOfficial);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -2092,7 +2020,7 @@ module.exports =
   								_react2['default'].createElement(
   									'a',
   									{ href: 'http://whs.in.th', className: 'icon' },
-  									_react2['default'].createElement(_reactIconsLibFaGlobe2['default'], null)
+  									_react2['default'].createElement('i', { className: 'fa fa-globe' })
   								)
   							),
   							_react2['default'].createElement(
@@ -2101,7 +2029,7 @@ module.exports =
   								_react2['default'].createElement(
   									'a',
   									{ href: 'http://th.linkedin.com/in/manatsawin', className: 'icon' },
-  									_react2['default'].createElement(_reactIconsLibFaLinkedin2['default'], null)
+  									_react2['default'].createElement('i', { className: 'fa fa-linkedin' })
   								)
   							),
   							_react2['default'].createElement(
@@ -2110,7 +2038,7 @@ module.exports =
   								_react2['default'].createElement(
   									'a',
   									{ href: 'https://facebook.com/whsinth', className: 'icon' },
-  									_react2['default'].createElement(_reactIconsLibFaFacebookOfficial2['default'], null)
+  									_react2['default'].createElement('i', { className: 'fa fa-facebook-official' })
   								)
   							),
   							_react2['default'].createElement(
@@ -2119,7 +2047,7 @@ module.exports =
   								_react2['default'].createElement(
   									'a',
   									{ href: 'https://github.com/whs', className: 'icon' },
-  									_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  									_react2['default'].createElement('i', { className: 'fa fa-github' })
   								)
   							)
   						)
@@ -2187,7 +2115,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 20 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2210,13 +2138,17 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _componentsLink = __webpack_require__(5);
+  var _componentsLink = __webpack_require__(4);
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
 
   var _componentsStyleScss = __webpack_require__(2);
 
   var _componentsStyleScss2 = _interopRequireDefault(_componentsStyleScss);
+
+  var _worksIndex = __webpack_require__(23);
+
+  var _worksIndex2 = _interopRequireDefault(_worksIndex);
 
   var _default = (function (_Component) {
   	_inherits(_default, _Component);
@@ -2261,11 +2193,6 @@ module.exports =
   			);
   		}
   	}, {
-  		key: 'loadWork',
-  		value: function loadWork(name) {
-  			return __webpack_require__(41)("./" + name + '.js');
-  		}
-  	}, {
   		key: 'renderWork',
   		value: function renderWork() {
   			var contents = [];
@@ -2275,10 +2202,8 @@ module.exports =
   			var _iteratorError = undefined;
 
   			try {
-  				for (var _iterator = __webpack_require__(8)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-  					var item = _step.value;
-
-  					var element = this.loadWork(item);
+  				for (var _iterator = _worksIndex2['default'][Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+  					var element = _step.value;
 
   					contents.push(_react2['default'].createElement(element, { key: element.id }));
   				}
@@ -2302,17 +2227,16 @@ module.exports =
   	}, {
   		key: 'renderWorkList',
   		value: function renderWorkList() {
-  			var workList = [];
+  			var contents = [];
 
   			var _iteratorNormalCompletion2 = true;
   			var _didIteratorError2 = false;
   			var _iteratorError2 = undefined;
 
   			try {
-  				for (var _iterator2 = __webpack_require__(8)[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-  					var item = _step2.value;
+  				for (var _iterator2 = _worksIndex2['default'][Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+  					var element = _step2.value;
 
-  					var element = this.loadWork(item);
   					var badges = [];
 
   					if (element.badges) {
@@ -2325,7 +2249,7 @@ module.exports =
   						});
   					}
 
-  					workList.push(_react2['default'].createElement(
+  					contents.push(_react2['default'].createElement(
   						'li',
   						{ key: element.id },
   						_react2['default'].createElement(
@@ -2352,7 +2276,7 @@ module.exports =
   				}
   			}
 
-  			return workList;
+  			return contents;
   		}
   	}]);
 
@@ -2363,7 +2287,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 21 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2387,10 +2311,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGlobe = __webpack_require__(6);
-
-  var _reactIconsLibFaGlobe2 = _interopRequireDefault(_reactIconsLibFaGlobe);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -2422,7 +2342,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'http://valvearg.com/thankyou/whiteboard/', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGlobe2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-globe' })
   					)
   				),
   				_react2['default'].createElement(
@@ -2476,7 +2396,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 22 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2500,10 +2420,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGlobe = __webpack_require__(6);
-
-  var _reactIconsLibFaGlobe2 = _interopRequireDefault(_reactIconsLibFaGlobe);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -2535,7 +2451,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'http://2014.barcampbangkhen.org/', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGlobe2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-globe' })
   					)
   				),
   				_react2['default'].createElement(
@@ -2587,7 +2503,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 23 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2713,7 +2629,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 24 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2737,10 +2653,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGlobe = __webpack_require__(6);
-
-  var _reactIconsLibFaGlobe2 = _interopRequireDefault(_reactIconsLibFaGlobe);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -2772,7 +2684,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'http://www.bodin2.ac.th/test/', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGlobe2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-globe' })
   					)
   				),
   				_react2['default'].createElement(
@@ -2813,7 +2725,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 25 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2837,10 +2749,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -2903,7 +2811,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 26 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2927,10 +2835,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -2962,7 +2866,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whs/grader', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3003,7 +2907,19 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 27 */
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+  	value: true
+  });
+  exports['default'] = [__webpack_require__(24), __webpack_require__(25), __webpack_require__(18), __webpack_require__(22), __webpack_require__(31), __webpack_require__(26), __webpack_require__(32), __webpack_require__(27), __webpack_require__(29), __webpack_require__(33), __webpack_require__(19), __webpack_require__(28), __webpack_require__(17), __webpack_require__(30), __webpack_require__(20), __webpack_require__(21)];
+  module.exports = exports['default'];
+
+/***/ },
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3027,10 +2943,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3062,7 +2974,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whs/juiz', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3107,7 +3019,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 28 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3131,14 +3043,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
-
-  var _reactIconsLibFaAndroid = __webpack_require__(10);
-
-  var _reactIconsLibFaAndroid2 = _interopRequireDefault(_reactIconsLibFaAndroid);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3170,7 +3074,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://play.google.com/store/apps/details?id=th.in.whs.k2ausbkbd', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaAndroid2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-android' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3179,7 +3083,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whs/K2AUSBKeyboard', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3215,7 +3119,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 29 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3239,14 +3143,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
-
-  var _reactIconsLibFaAndroid = __webpack_require__(10);
-
-  var _reactIconsLibFaAndroid2 = _interopRequireDefault(_reactIconsLibFaAndroid);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3278,7 +3174,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://play.google.com/store/apps/details?id=th.in.whs.ku.bus', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaAndroid2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-android' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3287,7 +3183,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whs/kubus-android', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3328,7 +3224,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 30 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3352,10 +3248,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3387,7 +3279,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whs/kyou', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3443,7 +3335,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3467,10 +3359,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGlobe = __webpack_require__(6);
-
-  var _reactIconsLibFaGlobe2 = _interopRequireDefault(_reactIconsLibFaGlobe);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3502,7 +3390,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'http://anusorn18.bd2.in.th.s3-website-ap-southeast-1.amazonaws.com/register/', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGlobe2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-globe' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3549,7 +3437,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 32 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3647,7 +3535,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3671,10 +3559,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3706,7 +3590,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whs/OvzCP', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3757,7 +3641,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 34 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3781,14 +3665,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGamepad = __webpack_require__(49);
-
-  var _reactIconsLibFaGamepad2 = _interopRequireDefault(_reactIconsLibFaGamepad);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3820,7 +3696,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'http://ske.whs.in.th/awkwin/snake/', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGamepad2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-play-circle' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3829,7 +3705,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whsatku/snake', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3865,7 +3741,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3889,10 +3765,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaGithub = __webpack_require__(4);
-
-  var _reactIconsLibFaGithub2 = _interopRequireDefault(_reactIconsLibFaGithub);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -3924,7 +3796,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://github.com/whs/streaming', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaGithub2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-github' })
   					)
   				),
   				_react2['default'].createElement(
@@ -3971,7 +3843,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 36 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3995,10 +3867,6 @@ module.exports =
   var _react2 = _interopRequireDefault(_react);
 
   var _componentsItem = __webpack_require__(3);
-
-  var _reactIconsLibFaChrome = __webpack_require__(47);
-
-  var _reactIconsLibFaChrome2 = _interopRequireDefault(_reactIconsLibFaChrome);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -4030,7 +3898,7 @@ module.exports =
   					_react2['default'].createElement(
   						'a',
   						{ href: 'https://chrome.google.com/webstore/detail/ogndknhgkahnialefpjkhmbekkobjfkh', className: _componentsStyleScss2['default'].icon },
-  						_react2['default'].createElement(_reactIconsLibFaChrome2['default'], null)
+  						_react2['default'].createElement('i', { className: 'fa fa-chrome' })
   					)
   				),
   				_react2['default'].createElement(
@@ -4077,140 +3945,56 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 37 */
+/* 34 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"smallTitle":"RjoJ0b2Hz2NAr6ry3fk49","nav":"_25YUENO5uH2IrLsPAA-YMI","image":"aSM9SDwY0mfRCWOr1x2vw","access":"_2vKxsSa3sl_FPD_bZkENAE","description":"_2AQ0yp-lyVr_a_YbMcDV6z","small":"_2t3Ubwoez5mX6-2WaCdnT4","achievement":"PcKCuLSumtEXIWP1SJaFX","title":"_3TSCGmtQs2HFm4gKJ-eemz","skipHelp":"_2mC5qjA5QJJuPakF_EVSIw","skipHelpMobile":"_28cuAtuZtX6yzdg5PtL51-"};
 
 /***/ },
-/* 38 */
+/* 35 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"smallTitle":"_1Sa9-gITV43l5U4rkod9TY","nav":"_3cCdNKfX-BgxGA2SHNNgtj","image":"_1S0L-kyXP0G5naSuOmp0vB","access":"_3ZTMzobdI63F21zAEdSJOT","description":"_3QbWE1IAVrOTly3A8bexYk","small":"_2-aI-SWHvTAJh14p3oqCRs"};
 
 /***/ },
-/* 39 */
+/* 36 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"Link":"_1bdDNy9DBd2brlhpxBvH-1"};
 
 /***/ },
-/* 40 */
+/* 37 */
 /***/ function(module, exports) {
 
   // removed by extract-text-webpack-plugin
   module.exports = {"timeline":"_2SIcR-ZxY1_lTnOw1hvP4a","spine":"_3Ju1FqE6WAPmW6N7Gnyte0","left":"_1vo1j0Yxj9K5IKYXhFoFMN","right":"Jm_do-V1MkzFeTxuzqE0I","center":"S3vnqzuhSrlVT9ueHG9Vy","year":"_1F8whUvPYR1UaFxcL7OqdU","box":"_1RPv89XfNcC10GTDxGd0Tu","multi":"_2es0gqjdxYacTX9VTNngK7","clearfix":"_1AEPYkTVVpJvq-V7PhiUnC"};
 
 /***/ },
-/* 41 */
-/***/ function(module, exports, __webpack_require__) {
-
-  var map = {
-  	"./arg.js": 21,
-  	"./bcbk5.js": 22,
-  	"./bd2.js": 23,
-  	"./bd2score.js": 24,
-  	"./cdpb.js": 25,
-  	"./grader.js": 26,
-  	"./juiz.js": 27,
-  	"./k2aandroid.js": 28,
-  	"./kusmartbus.js": 29,
-  	"./kyou.js": 30,
-  	"./memorial.js": 31,
-  	"./menome.js": 32,
-  	"./ovzcp.js": 33,
-  	"./snakerun.js": 34,
-  	"./streaming.js": 35,
-  	"./twitica.js": 36
-  };
-  function webpackContext(req) {
-  	return __webpack_require__(webpackContextResolve(req));
-  };
-  function webpackContextResolve(req) {
-  	return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-  };
-  webpackContext.keys = function webpackContextKeys() {
-  	return Object.keys(map);
-  };
-  webpackContext.resolve = webpackContextResolve;
-  module.exports = webpackContext;
-  webpackContext.id = 41;
-
-
-/***/ },
-/* 42 */
+/* 38 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/createBrowserHistory");
 
 /***/ },
-/* 43 */
+/* 39 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/createMemoryHistory");
 
 /***/ },
-/* 44 */
+/* 40 */
 /***/ function(module, exports) {
 
   module.exports = require("history/lib/useQueries");
 
 /***/ },
-/* 45 */
+/* 41 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
-
-/***/ },
-/* 46 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/bitcoin");
-
-/***/ },
-/* 47 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/chrome");
-
-/***/ },
-/* 48 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/facebook-official");
-
-/***/ },
-/* 49 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/gamepad");
-
-/***/ },
-/* 50 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/linkedin");
-
-/***/ },
-/* 51 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/paypal");
-
-/***/ },
-/* 52 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/reddit-alien");
-
-/***/ },
-/* 53 */
-/***/ function(module, exports) {
-
-  module.exports = require("react-icons/lib/fa/steam-square");
 
 /***/ }
 /******/ ]);
