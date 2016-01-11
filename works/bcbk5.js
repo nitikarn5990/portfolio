@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import Globe from 'react-icons/lib/fa/globe';
 import style from '../components/style.scss';
 
 export default class Work extends Component{
@@ -14,7 +13,7 @@ export default class Work extends Component{
 					<img src="/work/bcbk5.jpg" />
 				</Image>
 				<Access>
-					<a href="http://2014.barcampbangkhen.org/" className={style.icon}><Globe /></a>
+					<a href="http://2014.barcampbangkhen.org/" className={style.icon}><i className="fa fa-globe" /></a>
 				</Access>
 				<Description>
 					<p>Barcamp Bangkhen is an annual unconference event held by the students' club at Department of Computer Engineering, Kasetsart University.</p>

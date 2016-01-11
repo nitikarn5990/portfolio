@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import Link from '../components/Link';
-import Globe from 'react-icons/lib/fa/globe';
-import LinkedIn from 'react-icons/lib/fa/linkedin';
-import GitHub from 'react-icons/lib/fa/github';
-import Facebook from 'react-icons/lib/fa/facebook-official';
 import style from '../components/style.scss';
 
 export default class extends Component {
@@ -22,10 +18,10 @@ export default class extends Component {
 						</div>
 
 						<ul className={style.iconBar}>
-							<li><a href="http://whs.in.th" className="icon"><Globe /></a></li>
-							<li><a href="http://th.linkedin.com/in/manatsawin" className="icon"><LinkedIn /></a></li>
-							<li><a href="https://facebook.com/whsinth" className="icon"><Facebook /></a></li>
-							<li><a href="https://github.com/whs" className="icon"><GitHub /></a></li>
+							<li><a href="http://whs.in.th" className="icon"><i className="fa fa-globe" /></a></li>
+							<li><a href="http://th.linkedin.com/in/manatsawin" className="icon"><i className="fa fa-linkedin" /></a></li>
+							<li><a href="https://facebook.com/whsinth" className="icon"><i className="fa fa-facebook-official" /></a></li>
+							<li><a href="https://github.com/whs" className="icon"><i className="fa fa-github" /></a></li>
 						</ul>
 					</div>
 					<div className={`col-xs-12 col-md-4 ${style.menu}`}>

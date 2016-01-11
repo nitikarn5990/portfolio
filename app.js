@@ -22,6 +22,7 @@ function run() {
   const container = document.getElementById('app');
   Location.listen(location => {
     route(location.pathname, async (component) => ReactDOM.render(component, container, () => {
+      window.scrollTop = 0;
       if(window.ga){
         window.ga('send', 'pageview');
       }

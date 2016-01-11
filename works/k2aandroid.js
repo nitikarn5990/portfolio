@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import GitHub from 'react-icons/lib/fa/github';
-import Android from 'react-icons/lib/fa/android';
 import style from '../components/style.scss';
 
 export default class Work extends Component{
@@ -16,12 +14,12 @@ export default class Work extends Component{
 				</Image>
 				<Access>
 					<a href="https://play.google.com/store/apps/details?id=th.in.whs.k2ausbkbd" className={style.icon}>
-						<Android />
+						<i className="fa fa-android" />
 					</a>
 				</Access>
 				<Access>
 					<a href="https://github.com/whs/K2AUSBKeyboard" className={style.icon}>
-						<GitHub />
+						<i className="fa fa-github" />
 					</a>
 				</Access>
 				<Description>

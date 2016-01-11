@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Link from '../components/Link';
 import style from '../components/style.scss';
 
+import workList from '../works/index';
+
 export default class extends Component {
 
 	render() {
@@ -21,16 +23,10 @@ export default class extends Component {
 		);
 	}
 
-	loadWork(name){
-		return require('../works/' + name + '.js');
-	}
-
 	renderWork(){
 		let contents = [];
 
-		for(let item of require('../works/works.json')){
-			let element = this.loadWork(item);
-
+		for(let element of workList){
 			contents.push(React.createElement(element, {key: element.id}));
 		}
 
@@ -38,10 +34,9 @@ export default class extends Component {
 	}
 
 	renderWorkList(){
-		let workList = [];
+		let contents = [];
 
-		for(let item of require('../works/works.json')){
-			let element = this.loadWork(item);
+		for(let element of workList){
 			let badges = [];
 
 			if(element.badges){
@@ -50,12 +45,12 @@ export default class extends Component {
 				});
 			}
 
-			workList.push(<li key={element.id}>
+			contents.push(<li key={element.id}>
 				<a href={`#${element.id}`} key={element.id}>{element.title} {badges}</a>
 			</li>);
 		}
 
-		return workList;
+		return contents;
 	}
 
 }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import Gamepad from 'react-icons/lib/fa/gamepad';
-import GitHub from 'react-icons/lib/fa/github';
 import style from '../components/style.scss';
 
 export default class Work extends Component{
@@ -15,11 +13,13 @@ export default class Work extends Component{
 					<img src="/work/snakerun.png" />
 				</Image>
 				<Access>
-					<a href="http://ske.whs.in.th/awkwin/snake/" className={style.icon}><Gamepad /></a>
+					<a href="http://ske.whs.in.th/awkwin/snake/" className={style.icon}>
+						<i className="fa fa-play-circle" />
+					</a>
 				</Access>
 				<Access>
 					<a href="https://github.com/whsatku/snake" className={style.icon}>
-						<GitHub />
+						<i className="fa fa-github" />
 					</a>
 				</Access>
 				<Description>

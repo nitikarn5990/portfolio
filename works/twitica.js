@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import Chrome from 'react-icons/lib/fa/chrome';
 import style from '../components/style.scss';
 
 export default class Work extends Component{
@@ -15,7 +14,7 @@ export default class Work extends Component{
 				</Image>
 				<Access>
 					<a href="https://chrome.google.com/webstore/detail/ogndknhgkahnialefpjkhmbekkobjfkh" className={style.icon}>
-						<Chrome />
+						<i className="fa fa-chrome" />
 					</a>
 				</Access>
 				<Description>

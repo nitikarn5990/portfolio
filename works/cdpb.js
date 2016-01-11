@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import GitHub from 'react-icons/lib/fa/github';
 import style from '../components/style.scss';
 
 export default class Work extends Component{

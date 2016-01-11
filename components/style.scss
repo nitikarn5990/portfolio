@@ -94,7 +94,7 @@ h2{
 	display: block;
 	width: 64px;
 	height: 64px;
-	line-height: 54px;
+	line-height: 64px;
 	color: white;
 	font-size: 24pt;
 }
@@ -302,7 +302,8 @@ input[type=number]::placeholder, input[type=text]::placeholder{
 	.workList a{
 		font-size: 16pt;
 	}
-	.item .badge{
+	.item:not(.toc) .badge{
 		display: block;
+		margin: 5px 0;
 	}
 }

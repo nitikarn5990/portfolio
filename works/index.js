@@ -1,0 +1,18 @@
+export default [
+	require('./juiz'),
+	require('./k2aandroid'),
+	require('./bcbk5'),
+	require('./grader'),
+	require('./snakerun'),
+	require('./kusmartbus'),
+	require('./streaming'),
+	require('./kyou'),
+	require('./menome'),
+	require('./twitica'),
+	require('./bd2'),
+	require('./memorial'),
+	require('./arg'),
+	require('./ovzcp'),
+	require('./bd2score'),
+	require('./cdpb'),
+];

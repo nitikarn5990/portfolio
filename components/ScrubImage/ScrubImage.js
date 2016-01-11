@@ -54,7 +54,7 @@ export default class extends Component {
 		let rect = this._elem.getBoundingClientRect();
 		let elemX = e.clientX - rect.left;
 		let percent = elemX/rect.width;
-		let image = Math.round(percent * (this.props.src.length - 1));
+		let image = Math.min(Math.round(percent * (this.props.src.length - 1)), this.props.src.length - 1);
 
 		this.setState({
 			image: image

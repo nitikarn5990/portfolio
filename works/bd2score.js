@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import Globe from 'react-icons/lib/fa/globe';
 import style from '../components/style.scss';
 
 export default class Work extends Component{
@@ -14,7 +13,7 @@ export default class Work extends Component{
 					<img src="/work/bd2score.png" />
 				</Image>
 				<Access>
-					<a href="http://www.bodin2.ac.th/test/" className={style.icon}><Globe /></a>
+					<a href="http://www.bodin2.ac.th/test/" className={style.icon}><i className="fa fa-globe" /></a>
 				</Access>
 				<Description>
 					<p>

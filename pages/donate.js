@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import Link from '../components/Link';
 import style from '../components/style.scss';
-import Reddit from 'react-icons/lib/fa/reddit-alien';
-import PayPal from 'react-icons/lib/fa/paypal';
-import Bitcoin from 'react-icons/lib/fa/bitcoin';
-import Steam from 'react-icons/lib/fa/steam-square';
 
 export default class extends Component {
 
@@ -21,7 +17,7 @@ export default class extends Component {
 				<div className="row">
 					<div className="col-xs-12 col-sm-6 col-md-4">
 						<div className={style.tocblock}>
-							<h2><PayPal /> PayPal</h2>
+							<h2><i className="fa fa-paypal" /> PayPal</h2>
 							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 								<input type="hidden" name="cmd" value="_donations" />
 								<input type="hidden" name="business" value="manatsawin@gmail.com" />
@@ -36,7 +32,7 @@ export default class extends Component {
 					</div>
 					<div className="col-xs-12 col-sm-6 col-md-4">
 						<a href="bitcoin:1HErNnBU47caE2tbBvZ45ixoCu1hLcUN9g" className={style.tocblock}>
-							<h2><Bitcoin /> Bitcoin</h2>
+							<h2><i className="fa fa-bitcoin" /> Bitcoin</h2>
 							<div style={{wordBreak: "break-word"}}>1HErNnBU47caE2tbBvZ45ixoCu1hLcUN9g</div>
 							<div><small>(please let me know if you have donated to me on Bitcoin)</small></div>
 						</a>
@@ -64,13 +60,13 @@ export default class extends Component {
 					</div>
 					<div className="col-xs-12 col-sm-6 col-md-4">
 						<a href="https://www.reddit.com/gold?goldtype=gift&recipient=awkwin" className={style.tocblock}>
-							<h2><Reddit /> Reddit</h2>
+							<h2><i className="fa fa-reddit-alien" /> Reddit</h2>
 							Send me a reddit gold
 						</a>
 					</div>
 					<div className="col-xs-12 col-sm-6 col-md-4">
 						<a href="https://steamcommunity.com/id/manatsawin/wishlist" className={style.tocblock}>
-							<h2><Steam /> Steam</h2>
+							<h2><i className="fa fa-steam-square" /> Steam</h2>
 							<div><small>(please send to manatsawin@gmail.com)</small></div>
 						</a>
 					</div>

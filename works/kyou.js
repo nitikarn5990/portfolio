@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import GitHub from 'react-icons/lib/fa/github';
 import style from '../components/style.scss';
 
 export default class Work extends Component{
@@ -19,7 +18,7 @@ export default class Work extends Component{
 				</Image>
 				<Access>
 					<a href="https://github.com/whs/kyou" className={style.icon}>
-						<GitHub />
+						<i className="fa fa-github" />
 					</a>
 				</Access>
 				<Description>
