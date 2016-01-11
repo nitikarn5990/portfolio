@@ -3501,7 +3501,7 @@ module.exports =
   					null,
   					_react2['default'].createElement(
   						'a',
-  						{ href: 'http://anusorn18.bd2.in.th.s3.amazonaws.com/register/index.html', className: _componentsStyleScss2['default'].icon },
+  						{ href: 'http://anusorn18.bd2.in.th.s3-website-ap-southeast-1.amazonaws.com/register/', className: _componentsStyleScss2['default'].icon },
   						_react2['default'].createElement(_reactIconsLibFaGlobe2['default'], null)
   					)
   				),
