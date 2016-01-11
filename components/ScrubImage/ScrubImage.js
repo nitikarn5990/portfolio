@@ -10,20 +10,40 @@ export default class extends Component {
 
 	state = {
 		image: 0,
-		height: 300
+		height: 300,
+		initial: true
 	};
 
 	render() {
 		let image = this.props.src;
-		if(Array.isArray(image)){
-			image = image[this.state.image];
+		if(!Array.isArray(image)){
+			image = [image];
+		}
+		if(this.state.initial){
+			// on first load or server side rendering
+			// prioritize first image only
+			image = image.slice(0, 1);
 		}
 
+		image = image.map((url, index) => {
+			return <img key={index} src={url} onLoad={this.onImageLoad.bind(this)} style={{
+				display: this.state.image == index ? 'inline' : 'none'
+			}} />
+		});
+
 		return (
-			<div style={{width: '100%', minHeight: this.state.height}} onMouseMove={this.onMouseMove.bind(this)} onTouchMove={this.onMouseMove.bind(this)} ref={(elem) => this._elem = elem}>
-				<img src={image} onLoad={this.onImageLoad.bind(this)} />
+			<div style={{
+				width: '100%',
+				minHeight: this.state.height,
+				textAlign: 'center'
+			}} onMouseMove={this.onMouseMove.bind(this)} onTouchMove={this.onMouseMove.bind(this)} ref={(elem) => this._elem = elem}>
+				{image}
 			</div>
 		);
+	}
+
+	componentDidMount(){
+		this.setState({initial: false});
 	}
 
 	onMouseMove(e){

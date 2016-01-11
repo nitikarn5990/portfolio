@@ -49,7 +49,7 @@ export default class extends Component {
 		return [
 			<AchievementGroup year={2007} key={2007}>
 				<AchievementItem 
-					image={["/ahfile/nlc8.jpg", "/achimg/nlc8-1.jpg"]}
+					image={["/achfile/nlc8.jpg", "/achimg/nlc8-1.jpg"]}
 					title="The Eight National Linux Competition (NLC8)"
 					category="Second place, Linux client category" />
 				<AchievementItem 
@@ -59,36 +59,36 @@ export default class extends Component {
 			</AchievementGroup>,
 			<AchievementGroup year={2008} key={2008}>
 				<AchievementItem 
-					image={["/ahfile/nlc9.jpg", "/ahfile/nlc9-1.jpg", "/ahfile/nlc9-2.jpg", "/achimg/nlc9-1.jpg", "/achimg/nlc9-2.jpg"]}
+					image={["/achfile/nlc9.jpg", "/achfile/nlc9-1.jpg", "/achfile/nlc9-2.jpg", "/achimg/nlc9-1.jpg", "/achimg/nlc9-2.jpg"]}
 					title="The Ninth National Linux Competition (NLC9)"
 					category="First place, Linux client category" />
 				<AchievementItem 
-					image={["/ahfile/html08.jpg", "/achimg/html08-1.jpg"]}
+					image={["/achfile/html08.jpg", "/achimg/html08-1.jpg"]}
 					title="HTML web page competition, Seri Thai area"
 					category="Second place, silver medal" />
 				<AchievementItem 
-					image="/ahfile/qa08.jpg"
+					image="/achfile/qa08.jpg"
 					title="Computer competition, NMR. Bodindecha school"
 					category="Gold medal" />
 			</AchievementGroup>,
 			<AchievementGroup year={2009} key={2009}>
 				<AchievementItem 
-					image={["/ahfile/nlc10.jpg", "/ahfile/nlc10-1.jpg", "/ahfile/nlc10-2.jpg", "/achimg/nlc10-1.jpg", "/achimg/nlc10-2.jpg", "/achimg/nlc10-3.jpg"]}
+					image={["/achfile/nlc10.jpg", "/achfile/nlc10-1.jpg", "/achfile/nlc10-2.jpg", "/achimg/nlc10-1.jpg", "/achimg/nlc10-2.jpg", "/achimg/nlc10-3.jpg"]}
 					title="The Tenth National Linux Competition (NLC10)"
 					category="First place, Linux server category" />
 				<AchievementItem 
-					image={["/ahfile/nlcp2.jpg", "/ahfile/nlcp1.jpg"]}
+					image={["/achfile/nlcp2.jpg", "/achfile/nlcp1.jpg"]}
 					title="NECTEC Certified Linux Professional (NLCP) Level 1 &amp; 2">
 					Awarded as a part of NLC10 competition.
 				</AchievementItem>
 				<AchievementItem 
-					image={["/ahfile/nsc11.jpg", "/achimg/nsc11-1.jpg", "/work/cdpb.png"]}
+					image={["/achfile/nsc11.jpg", "/achimg/nsc11-1.jpg", "/work/cdpb.png"]}
 					title="National Software Competition 2009 (NSC11)"
 					category="Finalist, student's application software category">
 					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#cdpb" onClick={Link.handleClick}>Club Distro Package Builder</a>
 				</AchievementItem>
 				<AchievementItem 
-					image="/ahfile/student.jpg"
+					image="/achfile/student.jpg"
 					title="Supreme Patriarch Award" />
 			</AchievementGroup>,
 			<AchievementGroup year={2010} key={2010}>
@@ -97,7 +97,7 @@ export default class extends Component {
 					title="The Eleventh National Linux Competition (NLC11)"
 					category="First place, Linux client category" />
 				<AchievementItem 
-					image={["/ahfile/nsc13.jpg", "/achimg/nsc13-1.jpg", "/achimg/nsc13-2.jpg", "/work/ovzcp.png"]}
+					image={["/achfile/nsc13.jpg", "/achimg/nsc13-1.jpg", "/achimg/nsc13-2.jpg", "/work/ovzcp.png"]}
 					title="National Software Competition 2011 (NSC13)"
 					category="Second place, student's application software category">
 					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#ovzcp" onClick={Link.handleClick}>Web-based Linux virtualisation control panel (OvzCP)</a>
@@ -123,7 +123,7 @@ export default class extends Component {
 			</AchievementGroup>,
 			<AchievementGroup year={2012} key={2012}>
 				<AchievementItem 
-					image={["/ahfile/nsc15.jpg", "/achimg/nsc15-4.jpg", "/achimg/nsc15-1.jpg", "/achimg/nsc15-2.jpg", "/achimg/nsc15-3.jpg", "/work/kyou.png"]}
+					image={["/achfile/nsc15.jpg", "/achimg/nsc15-4.jpg", "/achimg/nsc15-1.jpg", "/achimg/nsc15-2.jpg", "/achimg/nsc15-3.jpg", "/work/kyou.png"]}
 					title="National Software Competition 2013 (NSC15)"
 					category="Winner, student's application software category">
 					<div>H.R.H. Maha Chakri Sirindhorn's cup.</div>
@@ -140,7 +140,7 @@ export default class extends Component {
 			</AchievementGroup>,
 			<AchievementGroup year={2013} key={2013}>
 				<AchievementItem 
-					image={["/ahfile/apicta.jpg", "/achimg/apicta-1.jpg", "/achimg/apicta-2.jpg", "/achimg/apicta-3.jpg", "/achimg/apicta-4.jpg"]}
+					image={["/achfile/apicta.jpg", "/achimg/apicta-1.jpg", "/achimg/apicta-2.jpg", "/achimg/apicta-3.jpg", "/achimg/apicta-4.jpg"]}
 					title="Asia Pacific ICT Award 2013 (APICTA 2013), Hong Kong"
 					category="Merit, school project category">
 					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#kyou" onClick={Link.handleClick}>Kyou: HTML5 Interactive Digital Magazine Creator</a>
@@ -148,7 +148,7 @@ export default class extends Component {
 			</AchievementGroup>,
 			<AchievementGroup year={2014} key={2014}>
 				<AchievementItem 
-					image="/ahfile/youthday.jpg"
+					image="/achfile/youthday.jpg"
 					title="Thailand Youth Award 2014"
 					category="Merit, school project category">
 					In Mathematics, Science, Computer and Technology major from participating in Asia Pacific ICT Award 2013
@@ -156,13 +156,13 @@ export default class extends Component {
 			</AchievementGroup>,
 			<AchievementGroup year={2015} key={2015}>
 				<AchievementItem 
-					image={["/ahfile/ywc.jpg", "/achimg/ywc-1.jpg", "/achimg/ywc-2.jpg", "/achimg/ywc-3.jpg"]}
+					image={["/achfile/ywc.jpg", "/achimg/ywc-1.jpg", "/achimg/ywc-2.jpg", "/achimg/ywc-3.jpg"]}
 					title="Young Webmaster Camp 12"
 					category="Best Teamwork">
 					<span style={{fontWeight: 400}}>Project:</span> <a href="http://mixic.whs.in.th">Mixic</a>
 				</AchievementItem>
 				<AchievementItem 
-					image={["/ahfile/asc.jpg", "/achimg/asc-1.jpg", "/achimg/asc-2.jpg", "/achimg/asc-3.jpg"]}
+					image={["/achfile/asc.jpg", "/achimg/asc-1.jpg", "/achimg/asc-2.jpg", "/achimg/asc-3.jpg"]}
 					title="ASC Student Computer Challenge 2015, China"
 					category="Team Lighting Green: First prize" />
 			</AchievementGroup>,
