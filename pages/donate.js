@@ -6,8 +6,8 @@ export default class extends Component {
 
 	render() {
 		return (
-			<div className={`${style.donate} container-fluid`}>
-				<h1>
+			<div className={`${style.donate} container`}>
+				<h1 style={{marginTop: 0, paddingTop: 40}}>
 					<a href="/" onClick={Link.handleClick}>Portfolio/ <small>&lt;&mdash; Click to go back</small></a>
 					Donate
 				</h1>
@@ -38,37 +38,17 @@ export default class extends Component {
 						</a>
 					</div>
 					<div className="col-xs-12 col-sm-6 col-md-4">
-						<div className={style.tocblock}>
-							<h2>Flattr</h2>
-							<Flattr uid="awkwin" title="Donate" description="Donation from portfolio" category="people" />
-						</div>
-					</div>
-					<div className="col-xs-12 col-sm-6 col-md-4">
-						<div className={style.tocblock}>
-							<h2>PaySbuy</h2>
-							<p><small>(loaded balance, credit card or cash)</small></p>
-							<form method="post" action="https://www.paysbuy.com/paynow.aspx?lang=e">
-								<input type="hidden" name="psb" value="psb" />
-								<input type="hidden" name="biz" value="manatsawin@gmail.com" />
-								<input type="hidden" name="inv" value="" />
-								<input type="hidden" name="itm" value="Donate" />
-								<input type="number" name="amt" required={true} min="100" step="20" placeholder="Enter amount in THB" />
-								<p />
-								<input type="image" src="https://www.paysbuy.com/imgs/powerby5.jpg" border="0" name="submit" />
-							</form>
-						</div>
-					</div>
-					<div className="col-xs-12 col-sm-6 col-md-4">
 						<a href="https://www.reddit.com/gold?goldtype=gift&recipient=awkwin" className={style.tocblock}>
 							<h2><i className="fa fa-reddit-alien" /> Reddit</h2>
 							Send me a reddit gold
 						</a>
 					</div>
 					<div className="col-xs-12 col-sm-6 col-md-4">
-						<a href="https://steamcommunity.com/id/manatsawin/wishlist" className={style.tocblock}>
-							<h2><i className="fa fa-steam-square" /> Steam</h2>
-							<div><small>(please send to manatsawin@gmail.com)</small></div>
-						</a>
+					<div className={style.tocblock}>
+						<h2><i className="fa fa-steam-square" /> Games</h2>
+						<div><a href="https://steamcommunity.com/id/manatsawin/wishlist">Steam wishlist</a></div>
+						<div><a href="https://www.gog.com/u/manatsawin/wishlist">GOG Wishlist</a></div>
+					</div>
 					</div>
 				</div>
 			</div>
