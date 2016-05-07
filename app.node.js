@@ -65,7 +65,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  var _reactDom = __webpack_require__(41);
+  var _reactDom = __webpack_require__(42);
 
   var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -77,19 +77,21 @@ module.exports =
 
   var routes = {
     '/404': function _() {
-      return __webpack_require__(14);
+      return __webpack_require__(10);
     }, '/500': function _() {
-      return __webpack_require__(15);
+      return __webpack_require__(11);
     }, '/achievements': function achievements() {
-      return __webpack_require__(16);
+      return __webpack_require__(12);
     }, '/bio': function bio() {
-      return __webpack_require__(17);
+      return __webpack_require__(13);
+    }, '/donate-th': function donateTh() {
+      return __webpack_require__(14);
     }, '/donate': function donate() {
-      return __webpack_require__(18);
+      return __webpack_require__(15);
     }, '/': function _() {
-      return __webpack_require__(19);
+      return __webpack_require__(16);
     }, '/works': function works() {
-      return __webpack_require__(20);
+      return __webpack_require__(17);
     } }; // Auto-generated on build. See tools/lib/routes-loader.js
 
   var route = function route(path, callback) {
@@ -195,7 +197,7 @@ module.exports =
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
-  var _styleScss3 = __webpack_require__(8);
+  var _styleScss3 = __webpack_require__(36);
 
   var _styleScss4 = _interopRequireDefault(_styleScss3);
 
@@ -415,7 +417,7 @@ module.exports =
 
   var _react2 = _interopRequireDefault(_react);
 
-  __webpack_require__(9);
+  __webpack_require__(37);
 
   var _coreLocation = __webpack_require__(5);
 
@@ -516,15 +518,15 @@ module.exports =
 
   var _fbjsLibExecutionEnvironment = __webpack_require__(6);
 
-  var _historyLibCreateBrowserHistory = __webpack_require__(38);
+  var _historyLibCreateBrowserHistory = __webpack_require__(39);
 
   var _historyLibCreateBrowserHistory2 = _interopRequireDefault(_historyLibCreateBrowserHistory);
 
-  var _historyLibCreateMemoryHistory = __webpack_require__(39);
+  var _historyLibCreateMemoryHistory = __webpack_require__(40);
 
   var _historyLibCreateMemoryHistory2 = _interopRequireDefault(_historyLibCreateMemoryHistory);
 
-  var _historyLibUseQueries = __webpack_require__(40);
+  var _historyLibUseQueries = __webpack_require__(41);
 
   var _historyLibUseQueries2 = _interopRequireDefault(_historyLibUseQueries);
 
@@ -541,34 +543,6 @@ module.exports =
 
 /***/ },
 /* 7 */
-/***/ function(module, exports) {
-
-  // removed by extract-text-webpack-plugin
-  module.exports = {"smallTitle":"RjoJ0b2Hz2NAr6ry3fk49","nav":"_25YUENO5uH2IrLsPAA-YMI","image":"aSM9SDwY0mfRCWOr1x2vw","access":"_2vKxsSa3sl_FPD_bZkENAE","description":"_2AQ0yp-lyVr_a_YbMcDV6z","small":"_2t3Ubwoez5mX6-2WaCdnT4","achievement":"PcKCuLSumtEXIWP1SJaFX","title":"_3TSCGmtQs2HFm4gKJ-eemz","skipHelp":"_2mC5qjA5QJJuPakF_EVSIw","skipHelpMobile":"_28cuAtuZtX6yzdg5PtL51-"};
-
-/***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-  // removed by extract-text-webpack-plugin
-  module.exports = {"smallTitle":"_1Sa9-gITV43l5U4rkod9TY","nav":"_3cCdNKfX-BgxGA2SHNNgtj","image":"_1S0L-kyXP0G5naSuOmp0vB","access":"_3ZTMzobdI63F21zAEdSJOT","description":"_3QbWE1IAVrOTly3A8bexYk","small":"_2-aI-SWHvTAJh14p3oqCRs"};
-
-/***/ },
-/* 9 */
-/***/ function(module, exports) {
-
-  // removed by extract-text-webpack-plugin
-  module.exports = {"Link":"_1bdDNy9DBd2brlhpxBvH-1"};
-
-/***/ },
-/* 10 */
-/***/ function(module, exports) {
-
-  // removed by extract-text-webpack-plugin
-  module.exports = {"timeline":"_2SIcR-ZxY1_lTnOw1hvP4a","spine":"_3Ju1FqE6WAPmW6N7Gnyte0","left":"_1vo1j0Yxj9K5IKYXhFoFMN","right":"Jm_do-V1MkzFeTxuzqE0I","center":"S3vnqzuhSrlVT9ueHG9Vy","year":"_1F8whUvPYR1UaFxcL7OqdU","box":"_1RPv89XfNcC10GTDxGd0Tu","multi":"_2es0gqjdxYacTX9VTNngK7","clearfix":"_1AEPYkTVVpJvq-V7PhiUnC"};
-
-/***/ },
-/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -595,7 +569,7 @@ module.exports =
 
   var _Link2 = _interopRequireDefault(_Link);
 
-  var _ScrubImage = __webpack_require__(12);
+  var _ScrubImage = __webpack_require__(8);
 
   var _ScrubImage2 = _interopRequireDefault(_ScrubImage);
 
@@ -603,7 +577,7 @@ module.exports =
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
-  var _styleScss3 = __webpack_require__(7);
+  var _styleScss3 = __webpack_require__(35);
 
   var _styleScss4 = _interopRequireDefault(_styleScss3);
 
@@ -721,7 +695,7 @@ module.exports =
   exports.AchievementItem = AchievementItem;
 
 /***/ },
-/* 12 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -835,7 +809,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 13 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -862,7 +836,7 @@ module.exports =
 
   var _Link2 = _interopRequireDefault(_Link);
 
-  var _styleScss = __webpack_require__(10);
+  var _styleScss = __webpack_require__(38);
 
   var _styleScss2 = _interopRequireDefault(_styleScss);
 
@@ -957,7 +931,7 @@ module.exports =
   exports.TimelineItem = TimelineItem;
 
 /***/ },
-/* 14 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1022,7 +996,7 @@ module.exports =
   module.exports = exports["default"];
 
 /***/ },
-/* 15 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
   /**
@@ -1093,7 +1067,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 16 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1120,7 +1094,7 @@ module.exports =
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
 
-  var _componentsAchievementGroup = __webpack_require__(11);
+  var _componentsAchievementGroup = __webpack_require__(7);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -1438,7 +1412,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 17 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1465,7 +1439,7 @@ module.exports =
 
   var _componentsLink2 = _interopRequireDefault(_componentsLink);
 
-  var _componentsTimeline = __webpack_require__(13);
+  var _componentsTimeline = __webpack_require__(9);
 
   var _componentsStyleScss = __webpack_require__(2);
 
@@ -1635,7 +1609,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 18 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -1680,10 +1654,159 @@ module.exports =
   		value: function render() {
   			return _react2['default'].createElement(
   				'div',
-  				{ className: _componentsStyleScss2['default'].donate + ' container-fluid' },
+  				{ className: _componentsStyleScss2['default'].donate + ' container' },
   				_react2['default'].createElement(
   					'h1',
-  					null,
+  					{ style: { marginTop: 0, paddingTop: 40 } },
+  					'Donate'
+  				),
+  				_react2['default'].createElement(
+  					'div',
+  					{ className: _componentsStyleScss2['default'].message },
+  					_react2['default'].createElement(
+  						'strong',
+  						null,
+  						'ขอบคุณที่สนใจงานของผมครับ สามารถบริจาคสนับสนุนงานพัฒนาได้ที่หน้านี้'
+  					),
+  					_react2['default'].createElement(
+  						'p',
+  						null,
+  						'สำหรับ ',
+  						_react2['default'].createElement(
+  							'a',
+  							{ href: 'https://chrome.google.com/webstore/detail/mylive-enhancements-2/dkkapfcpodifgaabdlmohjpokenggcml', target: '_blank' },
+  							'MyLive Enhancements'
+  						),
+  						' รบกวนระบุชื่อที่ให้ลงเครดิตไว้ด้วยครับ จะลงให้ในรุ่นถัดไป'
+  					)
+  				),
+  				_react2['default'].createElement(
+  					'div',
+  					{ className: 'row' },
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'div',
+  							{ className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								_react2['default'].createElement('i', { className: 'fa fa-paypal' }),
+  								' PayPal'
+  							),
+  							_react2['default'].createElement(
+  								'p',
+  								null,
+  								'PayPal หักค่าธรรมเนียม 11 บาท + 3.9% รบกวนระบุจำนวนเงินมากกว่า 11 บาทครับ'
+  							),
+  							_react2['default'].createElement(
+  								'form',
+  								{ action: 'https://www.paypal.com/cgi-bin/webscr', method: 'post', target: '_top', style: { margin: 'auto' } },
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'cmd', value: '_donations' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'business', value: 'manatsawin@gmail.com' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'lc', value: 'th_TH' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'no_note', value: '0' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'currency_code', value: 'THB' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'bn', value: 'PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest' }),
+  								_react2['default'].createElement('input', { type: 'image', src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif', border: '0', name: 'submit', alt: 'PayPal - The safer, easier way to pay online!' }),
+  								_react2['default'].createElement('img', { alt: '', border: '0', src: 'https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width: '1', height: '1' })
+  							)
+  						)
+  					),
+  					_react2['default'].createElement(
+  						'div',
+  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
+  						_react2['default'].createElement(
+  							'div',
+  							{ className: _componentsStyleScss2['default'].tocblock },
+  							_react2['default'].createElement(
+  								'h2',
+  								null,
+  								_react2['default'].createElement('i', { className: 'fa fa-steam-square' }),
+  								' Games'
+  							),
+  							_react2['default'].createElement(
+  								'div',
+  								null,
+  								_react2['default'].createElement(
+  									'a',
+  									{ href: 'https://steamcommunity.com/id/manatsawin/wishlist' },
+  									'Steam wishlist'
+  								)
+  							),
+  							_react2['default'].createElement(
+  								'div',
+  								null,
+  								_react2['default'].createElement(
+  									'a',
+  									{ href: 'https://www.gog.com/u/manatsawin/wishlist' },
+  									'GOG Wishlist'
+  								)
+  							)
+  						)
+  					)
+  				)
+  			);
+  		}
+  	}]);
+
+  	return _default;
+  })(_react.Component);
+
+  exports['default'] = _default;
+  module.exports = exports['default'];
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+  'use strict';
+
+  Object.defineProperty(exports, '__esModule', {
+  	value: true
+  });
+
+  var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+  var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _react = __webpack_require__(1);
+
+  var _react2 = _interopRequireDefault(_react);
+
+  var _componentsLink = __webpack_require__(4);
+
+  var _componentsLink2 = _interopRequireDefault(_componentsLink);
+
+  var _componentsStyleScss = __webpack_require__(2);
+
+  var _componentsStyleScss2 = _interopRequireDefault(_componentsStyleScss);
+
+  var _default = (function (_Component) {
+  	_inherits(_default, _Component);
+
+  	function _default() {
+  		_classCallCheck(this, _default);
+
+  		_get(Object.getPrototypeOf(_default.prototype), 'constructor', this).apply(this, arguments);
+  	}
+
+  	_createClass(_default, [{
+  		key: 'render',
+  		value: function render() {
+  			return _react2['default'].createElement(
+  				'div',
+  				{ className: _componentsStyleScss2['default'].donate + ' container' },
+  				_react2['default'].createElement(
+  					'h1',
+  					{ style: { marginTop: 0, paddingTop: 40 } },
   					_react2['default'].createElement(
   						'a',
   						{ href: '/', onClick: _componentsLink2['default'].handleClick },
@@ -1766,53 +1889,6 @@ module.exports =
   						'div',
   						{ className: 'col-xs-12 col-sm-6 col-md-4' },
   						_react2['default'].createElement(
-  							'div',
-  							{ className: _componentsStyleScss2['default'].tocblock },
-  							_react2['default'].createElement(
-  								'h2',
-  								null,
-  								'Flattr'
-  							),
-  							_react2['default'].createElement(Flattr, { uid: 'awkwin', title: 'Donate', description: 'Donation from portfolio', category: 'people' })
-  						)
-  					),
-  					_react2['default'].createElement(
-  						'div',
-  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
-  						_react2['default'].createElement(
-  							'div',
-  							{ className: _componentsStyleScss2['default'].tocblock },
-  							_react2['default'].createElement(
-  								'h2',
-  								null,
-  								'PaySbuy'
-  							),
-  							_react2['default'].createElement(
-  								'p',
-  								null,
-  								_react2['default'].createElement(
-  									'small',
-  									null,
-  									'(loaded balance, credit card or cash)'
-  								)
-  							),
-  							_react2['default'].createElement(
-  								'form',
-  								{ method: 'post', action: 'https://www.paysbuy.com/paynow.aspx?lang=e' },
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'psb', value: 'psb' }),
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'biz', value: 'manatsawin@gmail.com' }),
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'inv', value: '' }),
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'itm', value: 'Donate' }),
-  								_react2['default'].createElement('input', { type: 'number', name: 'amt', required: true, min: '100', step: '20', placeholder: 'Enter amount in THB' }),
-  								_react2['default'].createElement('p', null),
-  								_react2['default'].createElement('input', { type: 'image', src: 'https://www.paysbuy.com/imgs/powerby5.jpg', border: '0', name: 'submit' })
-  							)
-  						)
-  					),
-  					_react2['default'].createElement(
-  						'div',
-  						{ className: 'col-xs-12 col-sm-6 col-md-4' },
-  						_react2['default'].createElement(
   							'a',
   							{ href: 'https://www.reddit.com/gold?goldtype=gift&recipient=awkwin', className: _componentsStyleScss2['default'].tocblock },
   							_react2['default'].createElement(
@@ -1828,21 +1904,30 @@ module.exports =
   						'div',
   						{ className: 'col-xs-12 col-sm-6 col-md-4' },
   						_react2['default'].createElement(
-  							'a',
-  							{ href: 'https://steamcommunity.com/id/manatsawin/wishlist', className: _componentsStyleScss2['default'].tocblock },
+  							'div',
+  							{ className: _componentsStyleScss2['default'].tocblock },
   							_react2['default'].createElement(
   								'h2',
   								null,
   								_react2['default'].createElement('i', { className: 'fa fa-steam-square' }),
-  								' Steam'
+  								' Games'
   							),
   							_react2['default'].createElement(
   								'div',
   								null,
   								_react2['default'].createElement(
-  									'small',
-  									null,
-  									'(please send to manatsawin@gmail.com)'
+  									'a',
+  									{ href: 'https://steamcommunity.com/id/manatsawin/wishlist' },
+  									'Steam wishlist'
+  								)
+  							),
+  							_react2['default'].createElement(
+  								'div',
+  								null,
+  								_react2['default'].createElement(
+  									'a',
+  									{ href: 'https://www.gog.com/u/manatsawin/wishlist' },
+  									'GOG Wishlist'
   								)
   							)
   						)
@@ -1920,7 +2005,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 19 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2143,7 +2228,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 20 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2174,7 +2259,7 @@ module.exports =
 
   var _componentsStyleScss2 = _interopRequireDefault(_componentsStyleScss);
 
-  var _worksIndex = __webpack_require__(27);
+  var _worksIndex = __webpack_require__(24);
 
   var _worksIndex2 = _interopRequireDefault(_worksIndex);
 
@@ -2315,7 +2400,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 21 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2424,7 +2509,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 22 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2531,7 +2616,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 23 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2657,7 +2742,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 24 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2753,7 +2838,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 25 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2839,7 +2924,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 26 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2935,7 +3020,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 27 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -2943,11 +3028,11 @@ module.exports =
   Object.defineProperty(exports, '__esModule', {
   	value: true
   });
-  exports['default'] = [__webpack_require__(28), __webpack_require__(29), __webpack_require__(22), __webpack_require__(26), __webpack_require__(35), __webpack_require__(30), __webpack_require__(36), __webpack_require__(31), __webpack_require__(33), __webpack_require__(37), __webpack_require__(23), __webpack_require__(32), __webpack_require__(21), __webpack_require__(34), __webpack_require__(24), __webpack_require__(25)];
+  exports['default'] = [__webpack_require__(25), __webpack_require__(26), __webpack_require__(19), __webpack_require__(23), __webpack_require__(32), __webpack_require__(27), __webpack_require__(33), __webpack_require__(28), __webpack_require__(30), __webpack_require__(34), __webpack_require__(20), __webpack_require__(29), __webpack_require__(18), __webpack_require__(31), __webpack_require__(21), __webpack_require__(22)];
   module.exports = exports['default'];
 
 /***/ },
-/* 28 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3047,7 +3132,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 29 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3147,7 +3232,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 30 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3252,7 +3337,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3363,7 +3448,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 32 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3465,7 +3550,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3563,7 +3648,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 34 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3669,7 +3754,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3769,7 +3854,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 36 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3871,7 +3956,7 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
-/* 37 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -3973,25 +4058,53 @@ module.exports =
   module.exports = exports['default'];
 
 /***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+  // removed by extract-text-webpack-plugin
+  module.exports = {"smallTitle":"RjoJ0b2Hz2NAr6ry3fk49","nav":"_25YUENO5uH2IrLsPAA-YMI","image":"aSM9SDwY0mfRCWOr1x2vw","access":"_2vKxsSa3sl_FPD_bZkENAE","description":"_2AQ0yp-lyVr_a_YbMcDV6z","small":"_2t3Ubwoez5mX6-2WaCdnT4","achievement":"PcKCuLSumtEXIWP1SJaFX","title":"_3TSCGmtQs2HFm4gKJ-eemz","skipHelp":"_2mC5qjA5QJJuPakF_EVSIw","skipHelpMobile":"_28cuAtuZtX6yzdg5PtL51-"};
+
+/***/ },
+/* 36 */
+/***/ function(module, exports) {
+
+  // removed by extract-text-webpack-plugin
+  module.exports = {"smallTitle":"_1Sa9-gITV43l5U4rkod9TY","nav":"_3cCdNKfX-BgxGA2SHNNgtj","image":"_1S0L-kyXP0G5naSuOmp0vB","access":"_3ZTMzobdI63F21zAEdSJOT","description":"_3QbWE1IAVrOTly3A8bexYk","small":"_2-aI-SWHvTAJh14p3oqCRs"};
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+  // removed by extract-text-webpack-plugin
+  module.exports = {"Link":"_1bdDNy9DBd2brlhpxBvH-1"};
+
+/***/ },
 /* 38 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/createBrowserHistory");
+  // removed by extract-text-webpack-plugin
+  module.exports = {"timeline":"_2SIcR-ZxY1_lTnOw1hvP4a","spine":"_3Ju1FqE6WAPmW6N7Gnyte0","left":"_1vo1j0Yxj9K5IKYXhFoFMN","right":"Jm_do-V1MkzFeTxuzqE0I","center":"S3vnqzuhSrlVT9ueHG9Vy","year":"_1F8whUvPYR1UaFxcL7OqdU","box":"_1RPv89XfNcC10GTDxGd0Tu","multi":"_2es0gqjdxYacTX9VTNngK7","clearfix":"_1AEPYkTVVpJvq-V7PhiUnC"};
 
 /***/ },
 /* 39 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/createMemoryHistory");
+  module.exports = require("history/lib/createBrowserHistory");
 
 /***/ },
 /* 40 */
 /***/ function(module, exports) {
 
-  module.exports = require("history/lib/useQueries");
+  module.exports = require("history/lib/createMemoryHistory");
 
 /***/ },
 /* 41 */
+/***/ function(module, exports) {
+
+  module.exports = require("history/lib/useQueries");
+
+/***/ },
+/* 42 */
 /***/ function(module, exports) {
 
   module.exports = require("react-dom");
