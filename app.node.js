@@ -1677,7 +1677,13 @@ module.exports =
   							{ href: 'https://chrome.google.com/webstore/detail/mylive-enhancements-2/dkkapfcpodifgaabdlmohjpokenggcml', target: '_blank' },
   							'MyLive Enhancements'
   						),
-  						' รบกวนระบุชื่อที่ให้ลงเครดิตไว้ด้วยครับ จะลงให้ในรุ่นถัดไป'
+  						' รบกวน ',
+  						_react2['default'].createElement(
+  							'a',
+  							{ href: 'http://mylive.in.th/inbox' },
+  							'inbox'
+  						),
+  						' ชื่อที่ให้ลงเครดิตไว้ด้วยครับ'
   					)
   				),
   				_react2['default'].createElement(
@@ -1696,21 +1702,19 @@ module.exports =
   								' PayPal'
   							),
   							_react2['default'].createElement(
-  								'p',
-  								null,
-  								'PayPal หักค่าธรรมเนียม 11 บาท + 3.9% รบกวนระบุจำนวนเงินมากกว่า 11 บาทครับ'
-  							),
-  							_react2['default'].createElement(
   								'form',
   								{ action: 'https://www.paypal.com/cgi-bin/webscr', method: 'post', target: '_top', style: { margin: 'auto' } },
   								_react2['default'].createElement('input', { type: 'hidden', name: 'cmd', value: '_donations' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'business', value: 'manatsawin@gmail.com' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'lc', value: 'th_TH' }),
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'no_note', value: '0' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'item_name', value: 'Donation' }),
+  								_react2['default'].createElement('input', { type: 'number', name: 'amount', min: '12', placeholder: 'ระบุจำนวนเงิน (บาท)', required: true }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'currency_code', value: 'THB' }),
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'bn', value: 'PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest' }),
-  								_react2['default'].createElement('input', { type: 'image', src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif', border: '0', name: 'submit', alt: 'PayPal - The safer, easier way to pay online!' }),
-  								_react2['default'].createElement('img', { alt: '', border: '0', src: 'https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width: '1', height: '1' })
+  								_react2['default'].createElement(
+  									'p',
+  									null,
+  									_react2['default'].createElement('input', { type: 'image', src: 'https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png', border: '0', name: 'submit' })
+  								)
   							)
   						)
   					),
@@ -1851,9 +1855,13 @@ module.exports =
   								_react2['default'].createElement('input', { type: 'hidden', name: 'lc', value: 'US' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'no_note', value: '0' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'currency_code', value: 'USD' }),
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'bn', value: 'PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest' }),
-  								_react2['default'].createElement('input', { type: 'image', src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif', border: '0', name: 'submit', alt: 'PayPal - The safer, easier way to pay online!' }),
-  								_react2['default'].createElement('img', { alt: '', border: '0', src: 'https://www.paypalobjects.com/en_US/i/scr/pixel.gif', width: '1', height: '1' })
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'item_name', value: 'Donation' }),
+  								_react2['default'].createElement('input', { type: 'number', name: 'amount', min: '1', placeholder: 'Enter amount in USD', required: true }),
+  								_react2['default'].createElement(
+  									'p',
+  									null,
+  									_react2['default'].createElement('input', { type: 'image', src: 'https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png', border: '0', name: 'submit' })
+  								)
   							)
   						)
   					),
