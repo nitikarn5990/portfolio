@@ -12,22 +12,20 @@ export default class extends Component {
 				</h1>
 				<div className={style.message}>
 					<strong>ขอบคุณที่สนใจงานของผมครับ สามารถบริจาคสนับสนุนงานพัฒนาได้ที่หน้านี้</strong>
-					<p>สำหรับ <a href="https://chrome.google.com/webstore/detail/mylive-enhancements-2/dkkapfcpodifgaabdlmohjpokenggcml" target="_blank">MyLive Enhancements</a> รบกวนระบุชื่อที่ให้ลงเครดิตไว้ด้วยครับ จะลงให้ในรุ่นถัดไป</p>
+					<p>สำหรับ <a href="https://chrome.google.com/webstore/detail/mylive-enhancements-2/dkkapfcpodifgaabdlmohjpokenggcml" target="_blank">MyLive Enhancements</a> รบกวน <a href="http://mylive.in.th/inbox">inbox</a> ชื่อที่ให้ลงเครดิตไว้ด้วยครับ</p>
 				</div>
 				<div className="row">
 					<div className="col-xs-12 col-sm-6 col-md-4">
 						<div className={style.tocblock}>
 							<h2><i className="fa fa-paypal" /> PayPal</h2>
-							<p>PayPal หักค่าธรรมเนียม 11 บาท + 3.9% รบกวนระบุจำนวนเงินมากกว่า 11 บาทครับ</p>
 							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style={{margin: 'auto'}}>
 								<input type="hidden" name="cmd" value="_donations" />
 								<input type="hidden" name="business" value="manatsawin@gmail.com" />
 								<input type="hidden" name="lc" value="th_TH" />
-								<input type="hidden" name="no_note" value="0" />
+								<input type="hidden" name="item_name" value="Donation" />
+								<input type="number" name="amount" min="12" placeholder="ระบุจำนวนเงิน (บาท)" required />
 								<input type="hidden" name="currency_code" value="THB" />
-								<input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest" />
-								<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-								<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+								<p><input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png" border="0" name="submit" /></p>
 							</form>
 						</div>
 					</div>
