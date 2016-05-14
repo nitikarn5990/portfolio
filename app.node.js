@@ -1704,7 +1704,7 @@ module.exports =
   							_react2['default'].createElement(
   								'form',
   								{ action: 'https://www.paypal.com/cgi-bin/webscr', method: 'post', target: '_top', style: { margin: 'auto' } },
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'cmd', value: '_donations' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'cmd', value: '_xclick' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'business', value: 'manatsawin@gmail.com' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'lc', value: 'th_TH' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'item_name', value: 'Donation' }),
@@ -1850,7 +1850,7 @@ module.exports =
   							_react2['default'].createElement(
   								'form',
   								{ action: 'https://www.paypal.com/cgi-bin/webscr', method: 'post', target: '_top' },
-  								_react2['default'].createElement('input', { type: 'hidden', name: 'cmd', value: '_donations' }),
+  								_react2['default'].createElement('input', { type: 'hidden', name: 'cmd', value: '_xclick' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'business', value: 'manatsawin@gmail.com' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'lc', value: 'US' }),
   								_react2['default'].createElement('input', { type: 'hidden', name: 'no_note', value: '0' }),
