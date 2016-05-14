@@ -19,7 +19,7 @@ export default class extends Component {
 						<div className={style.tocblock}>
 							<h2><i className="fa fa-paypal" /> PayPal</h2>
 							<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style={{margin: 'auto'}}>
-								<input type="hidden" name="cmd" value="_donations" />
+								<input type="hidden" name="cmd" value="_xclick" />
 								<input type="hidden" name="business" value="manatsawin@gmail.com" />
 								<input type="hidden" name="lc" value="th_TH" />
 								<input type="hidden" name="item_name" value="Donation" />
