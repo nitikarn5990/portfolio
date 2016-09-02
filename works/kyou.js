@@ -7,7 +7,7 @@ export default class Work extends Component{
 	static title = 'project Kyou';
 	static badges = [
 		'NSC15 winner',
-		'APICTA 2013 Merit'
+		'APICTA 2013 Merit',
 	];
 
 	render(){

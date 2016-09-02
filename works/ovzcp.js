@@ -7,7 +7,7 @@ export default class Work extends Component{
 	static title = 'OvzCP';
 	static badges = [
 		'NSC13 2nd prize',
-		'TICTA 2011 Runner up'
+		'TICTA 2011 Runner up',
 	];
 
 	render(){

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
+import { Item, Image, Description } from '../components/Item';
 
 export default class Work extends Component{
 	static id = 'menome';

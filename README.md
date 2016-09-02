@@ -2,8 +2,6 @@ This repository contains my personal portfolio.
 
 All contents (C) All rights reserved 2011-2013 Manatsawin Hanmongkolchai.
 
-Template from [react-static-boilerplate](https://github.com/koistya/react-static-boilerplate).
-
 ------------------------------------------------
 
 All other public repositories in my accounts are dual licensed under StealItPL
@@ -20,7 +18,7 @@ This limitation does not apply to other forms of contents apart of programming
 code and text documents nor to 3rd party source codes or codes explicitly
 licensed under other license.
 
-"Active users" means unique users who have accessed or used the product, 
+"Active users" means unique users who have accessed or used the product,
 registered or not in one past month.
 
 "Your copy" means all copies of the software or content that is being run or

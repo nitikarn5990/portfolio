@@ -1,5 +1,0 @@
-{
-  "private": true,
-  "name": "ScrubImage",
-  "main": "./ScrubImage.js"
-}

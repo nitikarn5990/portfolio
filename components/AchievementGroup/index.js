@@ -4,16 +4,16 @@ import ScrubImage from '../ScrubImage';
 import style from '../style.scss';
 import itemstyle from './style.scss';
 
-export class AchievementGroup extends Component {
+export class AchievementGroup extends Component{
 	static propTypes = {
-		year: React.PropTypes.number.isRequired
+		year: React.PropTypes.number.isRequired,
 	};
 
-	render() {
+	render(){
 		return (
 			<div className={`${style.item} container-fluid`} id={this.props.year} key={this.props.year}>
 				<div className="row">
-					<h2 className={`col-xs-12 col-sm-8 col-md-9`}>{this.props.year}</h2>
+					<h2 className={'col-xs-12 col-sm-8 col-md-9'}>{this.props.year}</h2>
 					<div className={`col-xs-12 col-sm-4 col-md-3 ${itemstyle.nav}`}>
 						<a href="/" onClick={Link.handleClick}>Portfolio</a> <a href="#top">To Top</a>
 					</div>
@@ -35,11 +35,11 @@ export class AchievementItem extends Component{
 		category: React.PropTypes.string,
 		image: React.PropTypes.oneOfType([
 			React.PropTypes.string,
-			React.PropTypes.arrayOf(React.PropTypes.string)
-		])
+			React.PropTypes.arrayOf(React.PropTypes.string),
+		]),
 	};
 
-	render() {
+	render(){
 		return (
 			<div className={`${itemstyle.achievement} col-xs-12 col-sm-6`}>
 				<ScrubImage src={this.props.image} />

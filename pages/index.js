@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Link from '../components/Link';
 import style from '../components/style.scss';
 
-export default class extends Component {
+export default class extends Component{
 
-	render() {
+	render(){
 		return (
 			<div className={`${style.main} container-fluid`}>
 				<div className="row">

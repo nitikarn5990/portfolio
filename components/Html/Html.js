@@ -8,7 +8,7 @@ import React, { PropTypes } from 'react';
 import GoogleAnalytics from '../GoogleAnalytics';
 import config from '../../config';
 
-function Html({ title, description, body, debug }) {
+function Html({ title, description, body, debug }){
 	return (
 		<html className="no-js" lang="">
 			<head>
@@ -22,7 +22,7 @@ function Html({ title, description, body, debug }) {
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" integrity="sha384-gFTAvnQMdZ1wfeb9vay1SlC/c+jfgXz8qMUgAGRrTso3Q6f6J6qvcUOdYFuEP9cE" crossOrigin="anonymous" />
 				<link rel="stylesheet" href="https://cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" integrity="sha384-iexT94C+awefX8jwGeXKk09qL7P8+robWXj/877zcs5kllUcayy+OtHhFDUzlOXc" crossOrigin="anonymous" />
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossOrigin="anonymous" />
-				<link href='/style.css' rel='stylesheet' type='text/css' />
+				<link href="/style.css" rel="stylesheet" type="text/css" />
 				<script src="/app.js" />
 			</head>
 			<body>

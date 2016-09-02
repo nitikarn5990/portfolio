@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 
-export default class extends Component {
+export default class extends Component{
 	static propTypes = {
 		src: React.PropTypes.oneOfType([
 			React.PropTypes.string,
-			React.PropTypes.arrayOf(React.PropTypes.string)
-		])
+			React.PropTypes.arrayOf(React.PropTypes.string),
+		]),
 	};
 
 	state = {
 		image: 0,
 		height: 300,
-		initial: true
+		initial: true,
 	};
 
-	render() {
+	render(){
 		let image = this.props.src;
 		if(!Array.isArray(image)){
 			image = [image];
@@ -26,16 +26,16 @@ export default class extends Component {
 		}
 
 		image = image.map((url, index) => {
-			return <img key={index} src={url} onLoad={this.onImageLoad.bind(this)} style={{
-				display: this.state.image == index ? 'inline' : 'none'
-			}} />
+			return (<img key={index} src={url} onLoad={this.onImageLoad.bind(this)} style={{
+				display: this.state.image === index ? 'inline' : 'none',
+			}} />);
 		});
 
 		return (
 			<div style={{
 				width: '100%',
 				minHeight: this.state.height,
-				textAlign: 'center'
+				textAlign: 'center',
 			}} onMouseMove={this.onMouseMove.bind(this)} onTouchMove={this.onMouseMove.bind(this)} ref={(elem) => this._elem = elem}>
 				{image}
 			</div>
@@ -53,17 +53,17 @@ export default class extends Component {
 
 		let rect = this._elem.getBoundingClientRect();
 		let elemX = e.clientX - rect.left;
-		let percent = elemX/rect.width;
+		let percent = elemX / rect.width;
 		let image = Math.min(Math.round(percent * (this.props.src.length - 1)), this.props.src.length - 1);
 
 		this.setState({
-			image: image
+			image: image,
 		});
 	}
 
 	onImageLoad(e){
 		this.setState({
-			height: Math.max(e.target.getBoundingClientRect().height, this.state.height)
+			height: Math.max(e.target.getBoundingClientRect().height, this.state.height),
 		});
 	}
 }

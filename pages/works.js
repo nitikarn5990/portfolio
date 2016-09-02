@@ -4,9 +4,9 @@ import style from '../components/style.scss';
 
 import workList from '../works/index';
 
-export default class extends Component {
+export default class extends Component{
 
-	render() {
+	render(){
 		return (
 			<div className={style.works}>
 				<div className={`${style.item} container-fluid ${style.toc}`} id="top">

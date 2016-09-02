@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
 
 export default class Work extends Component{
 	static id = 'cdpb';
 	static title = 'Club Distro Package Builder';
 	static badges = [
-		'NSC11 Finalist'
+		'NSC11 Finalist',
 	];
 
 	render(){

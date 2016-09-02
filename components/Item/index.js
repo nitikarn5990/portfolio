@@ -3,19 +3,19 @@ import Link from '../Link';
 import style from '../style.scss';
 import itemstyle from './style.scss';
 
-export class Item extends Component {
+export class Item extends Component{
 	static propTypes = {
 		title: React.PropTypes.string.isRequired,
 		key: React.PropTypes.string,
 		badges: React.PropTypes.arrayOf(React.PropTypes.string),
-		small: React.PropTypes.bool
+		small: React.PropTypes.bool,
 	};
 
-	render() {
+	render(){
 		let badges = [];
 		if(this.props.badges){
 			badges = this.props.badges.map((badge, index) => {
-				return <span className={style.badge} key={index}>{badge}</span>
+				return <span className={style.badge} key={index}>{badge}</span>;
 			});
 		}
 
@@ -31,19 +31,19 @@ export class Item extends Component {
 				</div>
 				<div className="row reverse">
 					<div className={`col-xs-12 col-sm-4 ${itemstyle.image}`}>
-						{React.Children.toArray(this.props.children).filter((x) => x.type == Image)}
+						{React.Children.toArray(this.props.children).filter((x) => x.type === Image)}
 						<div className={itemstyle.access}>
-							{React.Children.toArray(this.props.children).filter((x) => x.type == Access)}
+							{React.Children.toArray(this.props.children).filter((x) => x.type === Access)}
 						</div>
 					</div>
-					{React.Children.toArray(this.props.children).filter((x) => x.type == Description)}
+					{React.Children.toArray(this.props.children).filter((x) => x.type === Description)}
 				</div>
 			</div>
 		);
 	}
 
 }
-export class Image extends Component {
+export class Image extends Component{
 	render(){
 		return (
 			<div>
@@ -52,9 +52,9 @@ export class Image extends Component {
 		);
 	}
 }
-export class Description extends Component {
+export class Description extends Component{
 	static propTypes = {
-		small: React.PropTypes.bool
+		small: React.PropTypes.bool,
 	};
 
 	render(){
@@ -71,7 +71,7 @@ export class Description extends Component {
 		);
 	}
 }
-export class Access extends Component {
+export class Access extends Component{
 	render(){
 		return (
 			<div style={{display: 'inline'}}>

@@ -6,7 +6,7 @@ export default class Work extends Component{
 	static id = 'juiz';
 	static title = 'project Juiz';
 	static badges = [
-		'NSC17 3rd place'
+		'NSC17 3rd place',
 	];
 
 	render(){

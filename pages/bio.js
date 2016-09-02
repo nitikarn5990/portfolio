@@ -3,9 +3,9 @@ import Link from '../components/Link';
 import { Timeline, TimelineItem } from '../components/Timeline';
 import style from '../components/style.scss';
 
-export default class extends Component {
+export default class extends Component{
 
-	render() {
+	render(){
 		return (
 			<div className={`${style.bio} container-fluid`}>
 				<h1>
