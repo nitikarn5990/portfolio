@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Link from '../Link';
 import ScrubImage from '../ScrubImage';
 import style from '../style.scss';
 import itemstyle from './style.scss';
 
-export class AchievementGroup extends Component{
+export class AchievementGroup extends React.Component{
 	static propTypes = {
 		year: React.PropTypes.number.isRequired,
 	};
@@ -29,7 +29,7 @@ export class AchievementGroup extends Component{
 
 }
 
-export class AchievementItem extends Component{
+export class AchievementItem extends React.Component{
 	static propTypes = {
 		title: React.PropTypes.string.isRequired,
 		category: React.PropTypes.string,

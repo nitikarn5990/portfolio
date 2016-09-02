@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Item, Image, Description } from '../components/Item';
 
-export default class Work extends Component{
+export default class Work extends React.Component{
 	static id = 'bd2';
 	static title = 'bd2.in.th';
 

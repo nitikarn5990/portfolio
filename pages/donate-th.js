@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import style from '../components/style.scss';
 
-export default class extends Component{
+export default class DonateThPage extends React.Component{
 
 	render(){
 		return (

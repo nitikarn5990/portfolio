@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Link from '../components/Link';
 import { AchievementGroup, AchievementItem } from '../components/AchievementGroup';
 import style from '../components/style.scss';
 
-export default class extends Component{
+export default class AchievementPage extends React.Component{
 
 	render(){
 		return (

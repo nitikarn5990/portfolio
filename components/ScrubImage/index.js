@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class extends Component{
+export default class ScrubImage extends React.Component{
 	static propTypes = {
 		src: React.PropTypes.oneOfType([
 			React.PropTypes.string,

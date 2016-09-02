@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Link from '../Link';
 import style from '../style.scss';
 import itemstyle from './style.scss';
 
-export class Item extends Component{
+export class Item extends React.Component{
 	static propTypes = {
 		title: React.PropTypes.string.isRequired,
 		key: React.PropTypes.string,
@@ -43,7 +43,7 @@ export class Item extends Component{
 	}
 
 }
-export class Image extends Component{
+export class Image extends React.Component{
 	render(){
 		return (
 			<div>
@@ -52,7 +52,7 @@ export class Image extends Component{
 		);
 	}
 }
-export class Description extends Component{
+export class Description extends React.Component{
 	static propTypes = {
 		small: React.PropTypes.bool,
 	};
@@ -71,7 +71,7 @@ export class Description extends Component{
 		);
 	}
 }
-export class Access extends Component{
+export class Access extends React.Component{
 	render(){
 		return (
 			<div style={{display: 'inline'}}>

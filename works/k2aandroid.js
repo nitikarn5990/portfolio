@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Item, Image, Description, Access } from '../components/Item';
 import style from '../components/style.scss';
 
-export default class Work extends Component{
+export default class Work extends React.Component{
 	static id = 'k2aandroid';
 	static title = 'K2A USB Keyboard plugin';
 

@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Link from '../components/Link';
 import { Timeline, TimelineItem } from '../components/Timeline';
 import style from '../components/style.scss';
 
-export default class extends Component{
+export default class BioPage extends React.Component{
 
 	render(){
 		return (

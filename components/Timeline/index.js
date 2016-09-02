@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import style from './style.scss';
 
-export class Timeline extends Component{
+export class Timeline extends React.Component{
 	render(){
 		return (
 			<div className={style.timeline}>
@@ -13,7 +13,7 @@ export class Timeline extends Component{
 	}
 
 }
-export class TimelineItem extends Component{
+export class TimelineItem extends React.Component{
 	static propTypes = {
 		side: React.PropTypes.oneOf(['center', 'left', 'right']).isRequired,
 		year: React.PropTypes.number,
