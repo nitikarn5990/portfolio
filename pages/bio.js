@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../components/Link';
+import { Link } from 'react-router';
 import { Timeline, TimelineItem } from '../components/Timeline';
 import style from '../components/style.scss';
 
@@ -9,7 +9,7 @@ export default class BioPage extends React.Component{
 		return (
 			<div className={`${style.bio} container-fluid`}>
 				<h1>
-					<a href="/" onClick={Link.handleClick}>Portfolio/ <small>&lt;&mdash; Click to go back</small></a>
+					<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>
 					Biography
 				</h1>
 				<Timeline>
@@ -50,7 +50,7 @@ export default class BioPage extends React.Component{
 						International Undergraduate Program, Software and Knowledge Engineering
 					</TimelineItem>
 					<TimelineItem side="center">
-						<a href="/" onClick={Link.handleClick}>Back to front page</a>
+						<Link to="/">Back to front page</Link>
 					</TimelineItem>
 				</Timeline>
 			</div>

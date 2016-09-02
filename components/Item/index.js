@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../Link';
+import { Link } from 'react-router';
 import style from '../style.scss';
 import itemstyle from './style.scss';
 
@@ -26,7 +26,7 @@ export class Item extends React.Component{
 				<div className="row">
 					<h2 className={`col-xs-12 col-sm-8 col-md-9 ${smallTitle}`}>{this.props.title} {badges}</h2>
 					<div className={`col-xs-12 col-sm-4 col-md-3 ${itemstyle.nav}`}>
-						<a href="/" onClick={Link.handleClick}>Portfolio</a> <a href="#top">To Top</a>
+						<Link to="/">Portfolio</Link> <a href="#top">To Top</a>
 					</div>
 				</div>
 				<div className="row reverse">

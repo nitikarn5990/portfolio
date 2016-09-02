@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "./variables.scss";
 
 html, body, :global(#app){
 	height: 100%;
@@ -152,7 +152,7 @@ h2{
 	background-color: $color3;
 }
 .item:nth-child(even){
-	background-color: $color2;	
+	background-color: $color2;
 }
 .item:nth-child(even) .icon{
 	display: inline-block;

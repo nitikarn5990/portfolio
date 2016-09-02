@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../components/Link';
+import { Link } from 'react-router';
 import style from '../components/style.scss';
 
 export default class IndexPage extends React.Component{
@@ -26,11 +26,11 @@ export default class IndexPage extends React.Component{
 					</div>
 					<div className={`col-xs-12 col-md-4 ${style.menu}`}>
 						<div className="row">
-							<div className={`${style.box} col-xs-12`}><a href="bio" onClick={Link.handleClick}><span>Biography</span></a></div>
+							<div className={`${style.box} col-xs-12`}><Link to="bio"><span>Biography</span></Link></div>
 						</div>
 						<div className="row">
-							<div className={`${style.box} col-xs-6`}><a href="works" onClick={Link.handleClick}><span>Works</span></a></div>
-							<div className={`${style.box} col-xs-6`}><a href="achievements" onClick={Link.handleClick}><span>Achievements</span></a></div>
+							<div className={`${style.box} col-xs-6`}><Link to="works"><span>Works</span></Link></div>
+							<div className={`${style.box} col-xs-6`}><Link to="achievements"><span>Achievements</span></Link></div>
 						</div>
 					</div>
 				</div>

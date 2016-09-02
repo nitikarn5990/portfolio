@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../components/Link';
+import { Link } from 'react-router';
 import { AchievementGroup, AchievementItem } from '../components/AchievementGroup';
 import style from '../components/style.scss';
 
@@ -10,7 +10,7 @@ export default class AchievementPage extends React.Component{
 			<div className={style.achievements}>
 				<div className={`${style.item} container-fluid ${style.toc}`} id="top">
 					<h1>
-						<a href="/" onClick={Link.handleClick}>Portfolio/ <small>&lt;&mdash; Click to go back</small></a>
+						<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>
 						Achievements
 					</h1>
 					<div className="row">
@@ -85,7 +85,7 @@ export default class AchievementPage extends React.Component{
 					image={['/achfile/nsc11.jpg', '/achimg/nsc11-1.jpg', '/work/cdpb.png']}
 					title="National Software Competition 2009 (NSC11)"
 					category="Finalist, student's application software category">
-					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#cdpb" onClick={Link.handleClick}>Club Distro Package Builder</a>
+					<span style={{fontWeight: 400}}>Project:</span> <Link to="/works#cdpb">Club Distro Package Builder</Link>
 				</AchievementItem>
 				<AchievementItem
 					image="/achfile/student.jpg"
@@ -100,7 +100,7 @@ export default class AchievementPage extends React.Component{
 					image={['/achfile/nsc13.jpg', '/achimg/nsc13-1.jpg', '/achimg/nsc13-2.jpg', '/work/ovzcp.png']}
 					title="National Software Competition 2011 (NSC13)"
 					category="Second place, student's application software category">
-					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#ovzcp" onClick={Link.handleClick}>Web-based Linux virtualisation control panel (OvzCP)</a>
+					<span style={{fontWeight: 400}}>Project:</span> <Link to="/works#ovzcp">Web-based Linux virtualisation control panel (OvzCP)</Link>
 				</AchievementItem>
 			</AchievementGroup>,
 			<AchievementGroup year={2011} key={2011}>
@@ -127,7 +127,7 @@ export default class AchievementPage extends React.Component{
 					title="National Software Competition 2013 (NSC15)"
 					category="Winner, student's application software category">
 					<div>H.R.H. Maha Chakri Sirindhorn's cup.</div>
-					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#kyou" onClick={Link.handleClick}>Kyou: HTML5 Interactive Digital Magazine Creator</a>
+					<span style={{fontWeight: 400}}>Project:</span> <Link to="/works#kyou" onClick={Link.handleClick}>Kyou: HTML5 Interactive Digital Magazine Creator</Link>
 				</AchievementItem>
 				<AchievementItem
 					image="/achimg/security-1.jpeg"
@@ -143,7 +143,7 @@ export default class AchievementPage extends React.Component{
 					image={['/achfile/apicta.jpg', '/achimg/apicta-1.jpg', '/achimg/apicta-2.jpg', '/achimg/apicta-3.jpg', '/achimg/apicta-4.jpg']}
 					title="Asia Pacific ICT Award 2013 (APICTA 2013), Hong Kong"
 					category="Merit, school project category">
-					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#kyou" onClick={Link.handleClick}>Kyou: HTML5 Interactive Digital Magazine Creator</a>
+					<span style={{fontWeight: 400}}>Project:</span> <Link to="/works#kyou">Kyou: HTML5 Interactive Digital Magazine Creator</Link>
 				</AchievementItem>
 			</AchievementGroup>,
 			<AchievementGroup year={2014} key={2014}>
@@ -165,7 +165,7 @@ export default class AchievementPage extends React.Component{
 					image={['/achimg/nsc17-1.jpg', '/achimg/nsc17-2.jpg', '/achimg/nsc17-3.jpg']}
 					title="National Software Competition 2015 (NSC17)"
 					category="Third place, Linux desktop software category">
-					<span style={{fontWeight: 400}}>Project:</span> <a href="/works#juiz" onClick={Link.handleClick}>Juiz: Locally installed Platform as a Service</a>
+					<span style={{fontWeight: 400}}>Project:</span> <Link to="/works#juiz">Juiz: Locally installed Platform as a Service</Link>
 				</AchievementItem>
 				<AchievementItem
 					image={['/achfile/asc.jpg', '/achimg/asc-1.jpg', '/achimg/asc-2.jpg', '/achimg/asc-3.jpg']}

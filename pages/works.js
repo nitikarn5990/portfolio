@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from '../components/Link';
+import { Link } from 'react-router';
 import style from '../components/style.scss';
 
-import workList from '../works/index';
+import workList from 'works';
 
 export default class WorksPage extends React.Component{
 
@@ -11,7 +11,7 @@ export default class WorksPage extends React.Component{
 			<div className={style.works}>
 				<div className={`${style.item} container-fluid ${style.toc}`} id="top">
 					<h1>
-						<a href="/" onClick={Link.handleClick}>Portfolio/ <small>&lt;&mdash; Click to go back</small></a>
+						<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>
 						Works
 					</h1>
 					<ul className={style.workList}>

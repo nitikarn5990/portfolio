@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '../components/Link';
+import { Link } from 'react-router';
 import style from '../components/style.scss';
 
 export default class DonatePage extends React.Component{
@@ -8,7 +8,7 @@ export default class DonatePage extends React.Component{
 		return (
 			<div className={`${style.donate} container`}>
 				<h1 style={{marginTop: 0, paddingTop: 40}}>
-					<a href="/" onClick={Link.handleClick}>Portfolio/ <small>&lt;&mdash; Click to go back</small></a>
+					<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>
 					Donate
 				</h1>
 				<div className={style.message}>

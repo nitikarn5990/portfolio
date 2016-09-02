@@ -15,4 +15,4 @@ export default [
 	require('./ovzcp'),
 	require('./bd2score'),
 	require('./cdpb'),
-];
+].map((item) => item.default);
