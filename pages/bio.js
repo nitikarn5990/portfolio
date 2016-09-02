@@ -49,6 +49,9 @@ export default class BioPage extends React.Component{
 						<div><a href="http://www.ku.ac.th" target="_blank"><strong>Kasetsart University</strong></a></div>
 						International Undergraduate Program, Software and Knowledge Engineering
 					</TimelineItem>
+					<TimelineItem side="left" year={2016}>
+						Internship program at <a href="https://www.wongnai.com" target="_blank">wongnai.com</a>
+					</TimelineItem>
 					<TimelineItem side="center">
 						<Link to="/">Back to front page</Link>
 					</TimelineItem>
