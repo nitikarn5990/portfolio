@@ -40,11 +40,12 @@ gulp.task('webpack_server', () => {
 	let config = deepAssign(clone(webpackConfig), webpackConfigServer);
 	return gulp.src(config.entry)
 		.pipe(webpackStream(config))
+		.on('error', () => {})
 		.pipe(gulp.dest(DEST_SERVER));
 });
 
 for(let route of routes){
-	gulp.task(`build-${route.path}`, ['webpack_server'], () => {
+	gulp.task(`build-${route.path}`, ['copy', 'webpack_server'], () => {
 		let match = require(`${DEST_SERVER}/bundle.js`).default;
 		return match({location: route.path}).then((props) => {
 			let body = renderToString(React.createElement(RouterContext, props));
