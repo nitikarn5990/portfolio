@@ -1,3 +1,5 @@
+// This file is NOT compiled!
+
 function createRoute(path, getComponent){
 	return {
 		path,
@@ -10,6 +12,8 @@ function createRoute(path, getComponent){
 	};
 }
 
+// Make sure require() is parsable by webpack
+
 module.exports = [
 	createRoute('/', (cb) => require(['pages/index'], cb)),
 	createRoute('/bio', (cb) => require(['pages/bio'], cb)),
@@ -18,3 +22,7 @@ module.exports = [
 	createRoute('/donate-th', (cb) => require(['pages/donate-th'], cb)),
 	createRoute('/works', (cb) => require(['pages/works'], cb)),
 ];
+
+for(let item of ['arg', 'bcbk5', 'bd2', 'bd2score', 'cdpb', 'grader', 'juiz', 'k2aandroid', 'kusmartbus', 'kyou', 'memorial', 'menome', 'ovzcp', 'snakerun', 'streaming', 'twitica']){
+	module.exports.push(createRoute(`/works/${item}`, (cb) => require([`works/${item}`], cb)));
+}
