@@ -6,6 +6,7 @@ module.exports = {
 		path: '/',
 		filename: 'bundle.js',
 		chunkFilename: '[name].[chunkhash].js',
+		publicPath: '/',
 	},
 	module: {
 		loaders: [
