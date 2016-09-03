@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import style from '../components/style.scss';
 
 export default class DonateThPage extends React.Component{
@@ -6,6 +7,7 @@ export default class DonateThPage extends React.Component{
 	render(){
 		return (
 			<div className={`${style.donate} container`}>
+				<Helmet title="Donate | Manatsawin Hanmongkolchai" />
 				<h1 style={{marginTop: 0, paddingTop: 40}}>
 					Donate
 				</h1>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 import style from '../components/style.scss';
 
 import workList from 'works';
@@ -9,6 +10,7 @@ export default class WorksPage extends React.Component{
 	render(){
 		return (
 			<div className={style.works}>
+				<Helmet title="Works | Manatsawin Hanmongkolchai" />
 				<div className={`${style.item} container-fluid ${style.toc}`} id="top">
 					<h1>
 						<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>

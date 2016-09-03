@@ -10,6 +10,7 @@ const deepAssign = require('deep-assign');
 const React = require('react');
 const { renderToString, renderToStaticMarkup } = require('react-dom/server');
 const { RouterContext } = require('react-router');
+const Helmet = require('react-helmet');
 
 const DEST = 'build/';
 const DEST_SERVER = './build_server/';
@@ -50,7 +51,7 @@ for(let route of routes){
 
 		return match({location: route.path}).then((props) => {
 			let body = renderToString(React.createElement(RouterContext, props));
-			let html = renderToStaticMarkup(React.createElement(Html, {html: body}));
+			let html = renderToStaticMarkup(React.createElement(Html, {html: body, head: Helmet.rewind()}));
 			let filename = route.path;
 			if(route.path.endsWith('/')){
 				filename += 'index.html';

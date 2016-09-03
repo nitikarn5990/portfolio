@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 import { AchievementGroup, AchievementItem } from '../components/AchievementGroup';
 import style from '../components/style.scss';
 
@@ -8,6 +9,7 @@ export default class AchievementPage extends React.Component{
 	render(){
 		return (
 			<div className={style.achievements}>
+				<Helmet title="Achievements | Manatsawin Hanmongkolchai" />
 				<div className={`${style.item} container-fluid ${style.toc}`} id="top">
 					<h1>
 						<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>

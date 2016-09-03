@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 import style from '../components/style.scss';
 
 export default class IndexPage extends React.Component{
@@ -7,6 +8,7 @@ export default class IndexPage extends React.Component{
 	render(){
 		return (
 			<div className={`${style.main} container-fluid`}>
+				<Helmet title="Manatsawin Hanmongkolchai" />
 				<div className="row">
 					<div className={`col-xs-12 col-md-8 ${style.profile}`}>
 						<h1 className={style.name}>Manatsawin Hanmongkolchai</h1>

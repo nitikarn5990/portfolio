@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 import { Timeline, TimelineItem } from '../components/Timeline';
 import style from '../components/style.scss';
 
@@ -8,6 +9,7 @@ export default class BioPage extends React.Component{
 	render(){
 		return (
 			<div className={`${style.bio} container-fluid`}>
+				<Helmet title="Biography | Manatsawin Hanmongkolchai" />
 				<h1>
 					<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>
 					Biography

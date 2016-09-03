@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Helmet from 'react-helmet';
 import style from '../components/style.scss';
 
 export default class DonatePage extends React.Component{
@@ -7,6 +8,7 @@ export default class DonatePage extends React.Component{
 	render(){
 		return (
 			<div className={`${style.donate} container`}>
+				<Helmet title="Donate | Manatsawin Hanmongkolchai" />
 				<h1 style={{marginTop: 0, paddingTop: 40}}>
 					<Link to="/">Portfolio/ <small>&lt;&mdash; Click to go back</small></Link>
 					Donate
