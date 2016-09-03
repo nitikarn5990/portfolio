@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const webpackStream = require('webpack-stream');
-const replace = require('gulp-replace');
-const rename = require('gulp-rename');
+const file = require('gulp-file');
 const routes = require('./components/routes');
 const webpackConfig = require('./webpack.config');
 const webpackConfigServer = require('./webpack.config.server');
@@ -9,12 +8,11 @@ const webpackConfigProd = require('./webpack.config.prod');
 const clone = require('clone');
 const deepAssign = require('deep-assign');
 const React = require('react');
-const { renderToString } = require('react-dom/server');
+const { renderToString, renderToStaticMarkup } = require('react-dom/server');
 const { RouterContext } = require('react-router');
 
 const DEST = 'build/';
 const DEST_SERVER = './build_server/';
-const TEMPLATE = 'static/index.html';
 
 gulp.task('default', ['copy', 'webpack', 'ssr']);
 
@@ -46,9 +44,13 @@ gulp.task('webpack_server', () => {
 
 for(let route of routes){
 	gulp.task(`build-${route.path}`, ['copy', 'webpack_server'], () => {
-		let match = require(`${DEST_SERVER}/bundle.js`).default;
+		let bundle = require(`${DEST_SERVER}/bundle.js`);
+		let match = bundle.default;
+		let Html = bundle.Html;
+
 		return match({location: route.path}).then((props) => {
 			let body = renderToString(React.createElement(RouterContext, props));
+			let html = renderToStaticMarkup(React.createElement(Html, {html: body}));
 			let filename = route.path;
 			if(route.path.endsWith('/')){
 				filename += 'index.html';
@@ -60,9 +62,7 @@ for(let route of routes){
 				filename = filename.substr(1);
 			}
 
-			return gulp.src(TEMPLATE)
-				.pipe(replace('<div id="app"></div>', '<div id="app">' + body + '</div>'))
-				.pipe(rename(filename))
+			return file(filename, '<!DOCTYPE html>' + html, {src: true})
 				.pipe(gulp.dest(DEST));
 		});
 	});
