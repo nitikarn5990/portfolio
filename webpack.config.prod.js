@@ -19,10 +19,6 @@ module.exports = {
 		loaders: loaders,
 	},
 
-	postcss: () => {
-		return [...config.postcss(), require('cssnano')];
-	},
-
 	plugins: [
 		new webpack.DefinePlugin({
 			'process.env': {

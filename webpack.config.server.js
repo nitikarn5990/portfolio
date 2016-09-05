@@ -20,8 +20,4 @@ module.exports = {
 		library: true,
 		libraryTarget: 'commonjs2',
 	},
-
-	postcss: () => {
-		return [...config.postcss(), require('cssnano')];
-	},
 };
