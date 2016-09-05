@@ -12,11 +12,11 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-				loaders: ['babel-loader'],
+				loader: 'babel-loader',
 			},
 			{
 				test: /.scss$/,
-				loaders: ['style-loader', 'css-loader?modules', 'postcss-loader'],
+				loaders: ['style-loader', 'css-loader?modules&localIdentName=[hash:base64:5]', 'postcss-loader'],
 			},
 		],
 	},
