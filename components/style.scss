@@ -1,6 +1,6 @@
 @import "./variables.scss";
 
-html, body, :global(#app){
+html, body, :global(#app), :global(.app){
 	height: 100%;
 }
 

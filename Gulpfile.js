@@ -15,10 +15,12 @@ const Helmet = require('react-helmet');
 const DEST = 'build/';
 const DEST_SERVER = './build_server/';
 
+let buildRoutes = routes[0].childRoutes;
+
 gulp.task('default', ['copy', 'webpack', 'ssr']);
 
 let ssrTargets = [];
-for(let route of routes){
+for(let route of buildRoutes){
 	ssrTargets.push(`build-${route.path}`);
 }
 gulp.task('ssr', ssrTargets);
@@ -43,7 +45,7 @@ gulp.task('webpack_server', () => {
 		.pipe(gulp.dest(DEST_SERVER));
 });
 
-for(let route of routes){
+for(let route of buildRoutes){
 	gulp.task(`build-${route.path}`, ['copy', 'webpack_server'], () => {
 		let bundle = require(`${DEST_SERVER}/bundle.js`);
 		let match = bundle.default;
