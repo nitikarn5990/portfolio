@@ -24,7 +24,7 @@ for(let route of routes){
 gulp.task('ssr', ssrTargets);
 
 gulp.task('copy', () => {
-	return gulp.src('static/**/*')
+	return gulp.src(['static/**/*', '!static/index.html'])
 		.pipe(gulp.dest(DEST));
 });
 

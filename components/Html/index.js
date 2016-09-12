@@ -19,7 +19,7 @@ export default (props) => {
                 {props.head && props.head.link.toComponent()}
 			</head>
 			<body>
-				<div id="app" dangerouslySetInnerHTML={{__html: props.html}}>{props.children}</div>
+				<div id="app" dangerouslySetInnerHTML={{__html: props.html}} />
 				<script src="/bundle.js"></script>
 			</body>
 		</html>
