@@ -10,7 +10,7 @@ export default class Work extends React.Component{
 
 	render(){
 		return (
-			<Item id={Work.id} title={Work.title} badges={Work.badges} small={true}>
+			<Item id={Work.id} title={Work.title} badges={Work.badges} small={true} {...this.props}>
 				<Image>
 					<img src={require('./cdpb.png')} />
 				</Image>

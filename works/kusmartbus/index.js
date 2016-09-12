@@ -8,7 +8,7 @@ export default class Work extends React.Component{
 
 	render(){
 		return (
-			<Item id={Work.id} title={Work.title}>
+			<Item id={Work.id} title={Work.title} {...this.props}>
 				<Image>
 					<img src="/work/kusmartbus-android.png" />
 				</Image>

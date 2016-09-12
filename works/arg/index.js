@@ -8,7 +8,7 @@ export default class Work extends React.Component{
 
 	render(){
 		return (
-			<Item id={Work.id} title={Work.title} small={true}>
+			<Item id={Work.id} title={Work.title} small={true} {...this.props}>
 				<Image>
 					<img src={require('./arg.png')} />
 				</Image>

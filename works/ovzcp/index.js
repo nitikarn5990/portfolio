@@ -12,7 +12,7 @@ export default class Work extends React.Component{
 
 	render(){
 		return (
-			<Item id={Work.id} title={Work.title} badges={Work.badges}>
+			<Item id={Work.id} title={Work.title} badges={Work.badges} {...this.props}>
 				<Image>
 					<img src={require('./ovzcp.png')} />
 				</Image>

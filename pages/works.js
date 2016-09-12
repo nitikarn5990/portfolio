@@ -29,7 +29,7 @@ export default class WorksPage extends React.Component{
 		let contents = [];
 
 		for(let element of workList){
-			contents.push(React.createElement(element, {key: element.id}));
+			contents.push(React.createElement(element, {key: element.id, toTop: true}));
 		}
 
 		return contents;
