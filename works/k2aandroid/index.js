@@ -1,6 +1,6 @@
 import React from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
+import { Item, Image, Description, Access } from 'components/Item';
+import style from 'components/style.scss';
 
 export default class Work extends React.Component{
 	static id = 'k2aandroid';
@@ -10,7 +10,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title}>
 				<Image>
-					<img src="/work/k2usb.png" />
+					<img src={require('./k2usb.png')} />
 				</Image>
 				<Access>
 					<a href="https://play.google.com/store/apps/details?id=th.in.whs.k2ausbkbd" className={style.icon}>

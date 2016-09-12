@@ -1,6 +1,6 @@
 import React from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
+import { Item, Image, Description, Access } from 'components/Item';
+import style from 'components/style.scss';
 
 export default class Work extends React.Component{
 	static id = 'snakerun';
@@ -10,7 +10,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title}>
 				<Image>
-					<img src="/work/snakerun.png" />
+					<img src={require('./snakerun.png')} />
 				</Image>
 				<Access>
 					<a href="http://ske.whs.in.th/awkwin/snake/" className={style.icon}>

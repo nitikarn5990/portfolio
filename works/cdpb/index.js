@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
+import { Item, Image, Description, Access } from 'components/Item';
 
 export default class Work extends React.Component{
 	static id = 'cdpb';
@@ -12,7 +12,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title} badges={Work.badges} small={true}>
 				<Image>
-					<img src="/work/cdpb.png" />
+					<img src={require('./cdpb.png')} />
 				</Image>
 				<Access>
 					Source code is lost

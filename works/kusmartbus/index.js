@@ -1,6 +1,6 @@
 import React from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
+import { Item, Image, Description, Access } from 'components/Item';
+import style from 'components/style.scss';
 
 export default class Work extends React.Component{
 	static id = 'kusmartbus';

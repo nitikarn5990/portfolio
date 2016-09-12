@@ -1,6 +1,6 @@
 import React from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
+import { Item, Image, Description, Access } from 'components/Item';
+import style from 'components/style.scss';
 
 export default class Work extends React.Component{
 	static id = 'juiz';
@@ -13,7 +13,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title} badges={Work.badges}>
 				<Image>
-					<img src="/work/juiz.png" />
+					<img src={require('./juiz.png')} />
 				</Image>
 				<Access>
 					<a href="https://github.com/whs/juiz" className={style.icon}>

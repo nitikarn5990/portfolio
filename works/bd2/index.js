@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item, Image, Description } from '../components/Item';
+import { Item, Image, Description } from 'components/Item';
 
 export default class Work extends React.Component{
 	static id = 'bd2';
@@ -9,7 +9,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title}>
 				<Image>
-					<img src="/work/bd2.in.th.png" />
+					<img src={require('./bd2.png')} />
 				</Image>
 				<Description small={true}>
 					<p>bd2.in.th was created by @ntklp in 2009. The first version was named Dek-BD2 and the forum ran on my personal server at my home. In 2010, we rebranded the site to bd2.in.th. The site was powered by WordPress and Simple Machines Forum. Later, WordPress was changed to Drupal with custom theme.</p>

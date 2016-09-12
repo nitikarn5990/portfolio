@@ -1,6 +1,6 @@
 import React from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
+import { Item, Image, Description, Access } from 'components/Item';
+import style from 'components/style.scss';
 
 export default class Work extends React.Component{
 	static id = 'memorial';
@@ -10,7 +10,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title} small={true}>
 				<Image>
-					<img src="/work/anusorn17.png" />
+					<img src={require('./anusorn17.png')} />
 				</Image>
 				<Access>
 					<a href="http://anusorn18.bd2.in.th.s3-website-ap-southeast-1.amazonaws.com/register/" className={style.icon}>

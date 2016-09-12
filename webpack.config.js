@@ -18,6 +18,10 @@ module.exports = {
 				test: /.scss$/,
 				loaders: ['style-loader', 'css-loader?modules&localIdentName=[hash:base64:5]', 'postcss-loader'],
 			},
+			{
+				test: /.(jpg|png)/,
+				loaders: ['file-loader?name=i/[sha512:hash:base64:6].[ext]'],
+			},
 		],
 	},
 	resolve: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item, Image, Description } from '../components/Item';
+import { Item, Image, Description } from 'components/Item';
 
 export default class Work extends React.Component{
 	static id = 'menome';
@@ -9,7 +9,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title}>
 				<Image>
-					<img src="/work/menome.png" />
+					<img src={require('./menome.png')} />
 				</Image>
 				<Description>
 					<p>menome started in 2011 from the idea that there's no anime database in available in Thai. Created under the concept "Social + Anime", menome brings socializing to anime by letting you know whenever your friends watched anime.</p>

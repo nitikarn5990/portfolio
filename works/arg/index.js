@@ -1,6 +1,6 @@
 import React from 'react';
-import { Item, Image, Description, Access } from '../components/Item';
-import style from '../components/style.scss';
+import { Item, Image, Description, Access } from 'components/Item';
+import style from 'components/style.scss';
 
 export default class Work extends React.Component{
 	static id = 'arg';
@@ -10,7 +10,7 @@ export default class Work extends React.Component{
 		return (
 			<Item id={Work.id} title={Work.title} small={true}>
 				<Image>
-					<img src="/work/arg.png" />
+					<img src={require('./arg.png')} />
 				</Image>
 				<Access>
 					<a href="http://valvearg.com/thankyou/whiteboard/" className={style.icon}><i className="fa fa-globe" /></a>
