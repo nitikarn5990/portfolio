@@ -24,7 +24,9 @@ export class Item extends React.Component{
 		return (
 			<div className={`${style.item} container-fluid`} id={this.props.id} key={this.props.id}>
 				<div className="row">
-					<h2 className={`col-xs-12 col-sm-8 col-md-9 ${smallTitle}`}>{this.props.title} {badges}</h2>
+					<h2 className={`col-xs-12 col-sm-8 col-md-9 ${smallTitle}`}>
+						<Link to={`/works/${this.props.id}`}>{this.props.title}</Link> {badges}
+					</h2>
 					<div className={`col-xs-12 col-sm-4 col-md-3 ${itemstyle.nav}`}>
 						<Link to="/">Portfolio</Link> <a href="#top">To Top</a>
 					</div>
