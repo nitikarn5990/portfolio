@@ -1,10 +1,11 @@
 const webpack = require('webpack');
+const clone = require('clone');
 const config = require('./webpack.config');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StatsWriterPlugin = require('webpack-stats-plugin').StatsWriterPlugin;
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
-let loaders = config.module.loaders.slice(0);
+let loaders = clone(config.module.loaders);
 loaders[0] = Object.assign({}, loaders[0], {
 	query: {
 		plugins: ['transform-react-constant-elements', 'transform-react-inline-elements'],

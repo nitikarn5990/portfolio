@@ -1,7 +1,8 @@
 const config = require('./webpack.config');
+const clone = require('clone');
 const nodeExternals = require('webpack-node-externals');
 
-let loaders = config.module.loaders.slice(0);
+let loaders = clone(config.module.loaders);
 loaders[1] = {
 	test: /.scss$/,
 	loaders: [
