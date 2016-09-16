@@ -1,4 +1,5 @@
 const path = require('path');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
 	entry: './index.js',
@@ -16,20 +17,37 @@ module.exports = {
 			},
 			{
 				test: /.scss$/,
-				loaders: ['style-loader', 'css-loader?modules&localIdentName=[hash:base64:5]', 'postcss-loader'],
+				loaders: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						query: {
+							modules: true,
+							localIdentName: '[hash:base64:5]',
+						},
+					},
+					'postcss-loader',
+				],
 			},
 			{
 				test: /.(jpg|png)/,
-				loaders: ['file-loader?name=i/[sha512:hash:base64:6].[ext]'],
+				loader: 'file-loader',
+				query: {
+					name: 'i/[sha512:hash:base64:6].[ext]',
+				},
 			},
 		],
 	},
 	resolve: {
-		root: [
+		modules: [
 			path.resolve('.'),
+			'node_modules',
 		],
 	},
 	postcss: () => [
 		require('precss'),
+	],
+	plugins: [
+		new ProgressBarPlugin(),
 	],
 };

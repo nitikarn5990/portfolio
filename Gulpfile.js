@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
 const file = require('gulp-file');
 const routes = require('./components/routes');
 const webpackConfig = require('./webpack.config');
@@ -33,14 +34,14 @@ gulp.task('copy', () => {
 gulp.task('webpack', () => {
 	let config = deepAssign(clone(webpackConfig), webpackConfigProd);
 	return gulp.src('components/root.js')
-		.pipe(webpackStream(config))
+		.pipe(webpackStream(config, webpack))
 		.pipe(gulp.dest(DEST));
 });
 
 gulp.task('webpack_server', () => {
 	let config = deepAssign(clone(webpackConfig), webpackConfigServer);
 	return gulp.src(config.entry)
-		.pipe(webpackStream(config))
+		.pipe(webpackStream(config, webpack))
 		.on('error', () => {})
 		.pipe(gulp.dest(DEST_SERVER));
 });

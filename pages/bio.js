@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router/es6';
 import Helmet from 'react-helmet';
 import { Timeline, TimelineItem } from '../components/Timeline';
 import style from '../components/style.scss';

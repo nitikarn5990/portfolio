@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router/es6';
 import ScrubImage from '../ScrubImage';
 import style from '../style.scss';
 import itemstyle from './style.scss';

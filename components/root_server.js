@@ -1,4 +1,4 @@
-import match from 'react-router/lib/match';
+import match from 'react-router/es6/match';
 import routes from './routes';
 import Html from './Html';
 

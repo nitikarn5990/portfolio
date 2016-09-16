@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link } from 'react-router/es6';
 import Helmet from 'react-helmet';
 import { AchievementGroup, AchievementItem } from '../components/AchievementGroup';
 import style from '../components/style.scss';
