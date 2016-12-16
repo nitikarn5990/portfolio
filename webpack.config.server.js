@@ -1,3 +1,4 @@
+const path = require('path');
 const config = require('./webpack.config');
 const clone = require('clone');
 const nodeExternals = require('webpack-node-externals');
@@ -36,8 +37,15 @@ module.exports = {
 		loaders: loaders,
 	},
 
+	resolve: {
+		modules: [
+			path.resolve('.'),
+			'node_modules',
+		],
+	},
+
 	output: {
-		library: true,
+		library: 'portfolio',
 		libraryTarget: 'commonjs2',
 	},
 };

@@ -18,7 +18,7 @@ module.exports = {
 			{
 				test: /.scss$/,
 				loaders: [
-					'style-loader',
+					{loader: 'style-loader'},
 					{
 						loader: 'css-loader',
 						query: {
@@ -26,7 +26,7 @@ module.exports = {
 							localIdentName: '[hash:base64:5]',
 						},
 					},
-					'postcss-loader',
+					{loader: 'postcss-loader'},
 				],
 			},
 			{
@@ -44,9 +44,6 @@ module.exports = {
 			'node_modules',
 		],
 	},
-	postcss: () => [
-		require('precss'),
-	],
 	plugins: [
 		new ProgressBarPlugin(),
 	],
